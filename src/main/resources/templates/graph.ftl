@@ -19,7 +19,7 @@
     //links source 起始节点id，target 目的节点id，lable tooltip显示连接关系的文字
     var categories=[{name:"核心人物"},{name:"家人"},{name:"朋友"}]
     var nodes=[
-        {id:1,category:1,name: '乔布斯',lable:'史蒂夫·乔布斯,美国发明家、企业家、美国苹果公司联合创办人。', symbolSize: 30},
+        {id:1,name: '乔布斯',lable:'史蒂夫·乔布斯,美国发明家、企业家、美国苹果公司联合创办人。', symbolSize: 30},
         {id:2,category:1,name: '丽萨-乔布斯', lable:'史蒂夫·乔布斯的女儿',symbolSize: 20},
         {id:3,category:1,name: '保罗-乔布斯',lable:'史蒂夫·乔布斯的父亲', symbolSize: 20},
         {id:4,category:1,name: '克拉拉-乔布斯',lable:'史蒂夫·乔布斯的母亲', symbolSize: 20},

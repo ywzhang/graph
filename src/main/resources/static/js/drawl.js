@@ -21,7 +21,7 @@ function getOption(graphInfo){
     }else{
         repulsion = 10;
     }
-    console.log(nodes.length+","+repulsion)
+
     //设置option样式
     option = {
         title: {

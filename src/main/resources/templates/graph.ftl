@@ -17,7 +17,7 @@
     //创建数据
     //node id 主键id，category 类别分类，name 名称，lable tooltip显示的文字，symbolSize 节点大小 越大显示越大
     //links source 起始节点id，target 目的节点id，lable tooltip显示连接关系的文字
-    $.get('/data/mongo.json', function (webkitDep) {
+    $.get('/data/webkit-dep.json', function (webkitDep) {
         jsondata={"title":"人物关系图","categories":webkitDep.categories,"nodes":webkitDep.nodes,"links":webkitDep.links}
         createGraph(myChart,jsondata);
     });

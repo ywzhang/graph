@@ -4,6 +4,24 @@ function getOption(graphInfo){
     links=graphInfo['links']
     categories=graphInfo['categories']
 
+    var repulsion = 20;
+    var isShow = false;
+    var nodeSize = nodes.length;
+    if(nodeSize<=50){
+        isShow = true;
+        repulsion = 300;
+    }else if(50<nodeSize && nodeSize<=200){
+        isShow = true;
+        repulsion = 100;
+    }else if(200<nodeSize && nodeSize<=400){
+        isShow = true;
+        repulsion = 50;
+    }else if(400<nodeSize && nodeSize<=800){
+        repulsion = 20;
+    }else{
+        repulsion = 10;
+    }
+    console.log(nodes.length+","+repulsion)
     //设置option样式
     option = {
         title: {
@@ -14,19 +32,12 @@ function getOption(graphInfo){
         tooltip : {//提示框，鼠标悬浮交互时的信息提示
             trigger: 'item',//数据触发类型
             formatter: function(params){//触发之后返回的参数，这个函数是关键
-                if (params.data.category !=undefined) {//如果触发节点
-                    return params.data.lable;//返回标签
-                }else {//如果触发边
-                    if(params.data.lable == undefined){
-                        return "关系:未知"
-                    }else{
-                        return '关系:'+params.data.lable;
-                    }
+                if(params.data!=undefined){
+                    return params.data.label;//返回标签
                 }
             },
         },
         color : ['#EE6A50','#4F94CD','#B3EE3A','#DAA520','#f845f1', '#ad46f3','#5045f6','#4777f5','#44aff0','#45dbf7','#f6d54a','#ff4343','#fa827d','#3db18a','#ff5897','#372dc4','#c42d6d','#82c42d'],
-        // color:['#EE6A50','#4F94CD','#B3EE3A','#DAA520'],
         //工具箱，每个图表最多仅有一个工具箱
         toolbox: {
             show : true,
@@ -34,7 +45,7 @@ function getOption(graphInfo){
                 //dataView数据视图，打开数据视图，可设置更多属性,readOnly 默认数据视图为只读(即值为true)，可指定readOnly为false打开编辑功能
                 dataView: {show: true, readOnly: true},
                 restore : {show: true},//restore，还原，复位原始图表
-                saveAsImage : {show: true}//saveAsImage，保存图片
+                saveAsImage : {show: true},//saveAsImage，保存图片
             }
         },
         legend: [{
@@ -52,18 +63,23 @@ function getOption(graphInfo){
                 layout: 'force',
                 draggable: true,//指示节点是否可以拖动
                 focusNodeAdjacency: true, //当鼠标移动到节点上，突出显示节点以及节点的边和邻接节点
+                // focusNodeAdjacencyOn: 'click',
+                // symbolSize: function (value) {
+                //     console.log(value);
+                // },
                 roam: true,//是否开启鼠标缩放和平移漫游。默认不开启。如果只想要开启缩放或者平移，可以设置成 'scale' 或者 'move'。设置成 true 为都开启
                 symbol: 'circle',
                 force : { //力引导图基本配置
-                    repulsion : 100,//节点之间的斥力因子。支持数组表达斥力范围，值越大斥力越大。
-                    gravity : 0.03,//节点受到的向中心的引力因子。该值越大节点越往中心点靠拢。
-                    edgeLength :[80,100],//边的两个节点之间的距离，这个距离也会受 repulsion。[10, 50] 。值越小则长度越长
+                    repulsion : repulsion,//节点之间的斥力因子。支持数组表达斥力范围，值越大斥力越大。
+                    // gravity : 0.03,//节点受到的向
+                    // // 中心的引力因子。该值越大节点越往中心点靠拢。
+                    // edgeLength :[10,50],//边的两个节点之间的距离，这个距离也会受 repulsion。[10, 50] 。值越小则长度越长
                     layoutAnimation : true//因为力引导布局会在多次迭代后才会稳定，这个参数决定是否显示布局的迭代动画，在浏览器端节点数据较多（>100）的时候不建议关闭，布局过程会造成浏览器假死。
                 },
                 itemStyle: {
                     normal: {
                         label: {
-                            show: true,
+                            show: isShow,
                             textStyle: {
                                 color: '#333'
                             },
@@ -81,17 +97,17 @@ function getOption(graphInfo){
                     normal: {
                         show : true,
                         color: 'target',//决定边的颜色是与起点相同还是与终点相同
-                        curveness: 0.3//边的曲度，支持从 0 到 1 的值，值越大曲度越大。
+                        // curveness: 0.2//边的曲度，支持从 0 到 1 的值，值越大曲度越大。
                     }
                 },
                 emphasis: {
                     lineStyle: {
-                        width: 10
+                        width: 5
                     }
                 },
                 data: nodes,
                 links:links,
-                categories: categories,
+                categories: categories
             }
         ]
     };
@@ -102,13 +118,58 @@ function createGraph(myChart,mygraph){
     //设置option样式
     option=getOption(mygraph)
     //使用Option填充图形
-    myChart.setOption(option);
-    //点可以跳转页面
+    myChart.setOption(option,true);
+    //点击node实现缩放
     myChart.on('click', function (params) {
-        if(params.data.source == undefined){
-            nodeId=params.data.id;
-            console.log(nodeId);
+        if (params.seriesType === 'graph') {
+            if (params.dataType === 'node') {
+                var curnode = params.data;
+                if(curnode["hasenlarge"]){
+                    $.get('/data/mongo.json', function (webkitDep) {
+                        jsondata={"title":"人物关系图","categories":webkitDep.categories,"nodes":webkitDep.nodes,"links":webkitDep.links}
+                        myChart.dispose();
+                        var mychart = echarts.init(document.getElementById('container'), 'macarons');
+                        mychart.showLoading();
+                        createGraph(mychart,jsondata);
+                    });
+                }else{
+                    var id = params.data.id;
+                    var set = [];
+                    var jsondata = {};
+                    var nodes = [];
+                    var links =[];
+                    set.push(id);
+                    for(var i=0;i<mygraph.links.length;i++){
+                        var link = mygraph.links[i];
+                        if(link.target == id){
+                            set.push(link.source);
+                            links.push(link);
+                        }
+                    }
+                    for(var i=0;i<mygraph.nodes.length;i++){
+                        var node = mygraph.nodes[i];
+                        var nid = node.id;
+                        for(var j=0;j<set.length;j++){
+                            if(set[j]==nid){
+                                if(id == nid){
+                                    node["hasenlarge"]=true;
+                                }
+                                nodes.push(node)
+                            }
+                        }
+                    }
+                    jsondata["title"]=mygraph.title;
+                    jsondata["categories"]=mygraph.categories;
+                    jsondata["nodes"]=nodes;
+                    jsondata["links"]=links;
+                    myChart.dispose();
+                    var mychart = echarts.init(document.getElementById('container'), 'macarons');
+                    mychart.showLoading();
+                    createGraph(mychart,jsondata);
+                }
+            }
         }
     });
     myChart.hideLoading();
 }
+

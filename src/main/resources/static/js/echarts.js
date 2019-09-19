@@ -11496,14 +11496,14 @@ function parseFinder(ecModel, finder, opt) {
         if (!mainType
             || !queryType
             || value == null
-            || (queryType === 'index' && value === 'none')
+            || (queryType === 'screen.ftl' && value === 'none')
             || (opt && opt.includeMainTypes && indexOf(opt.includeMainTypes, mainType) < 0)
         ) {
             return;
         }
 
         var queryParam = {mainType: mainType};
-        if (queryType !== 'index' || value !== 'all') {
+        if (queryType !== 'screen.ftl' || value !== 'all') {
             queryParam[queryType] = value;
         }
 
@@ -22252,7 +22252,7 @@ function retrieveRawValue(data, dataIndex, dim) {
     var dimInfo = data.getDimensionInfo(dim);
     if (dimInfo) {
         dimName = dimInfo.name;
-        dimIndex = dimInfo.index;
+        dimIndex = dimInfo.ftl;
     }
 
     return rawValueGetters[sourceFormat](dataItem, dataIndex, dimIndex, dimName);
@@ -26701,7 +26701,7 @@ function createExtensionAPI(ecInstance) {
             while (el) {
                 var modelInfo = el.__ecComponentInfo;
                 if (modelInfo != null) {
-                    return ecInstance._model.getComponent(modelInfo.mainType, modelInfo.index);
+                    return ecInstance._model.getComponent(modelInfo.mainType, modelInfo.ftl);
                 }
                 el = el.parent;
             }
@@ -30787,7 +30787,7 @@ function getSeriesStackId(seriesModel) {
 }
 
 function getAxisKey(axis) {
-    return axis.dim + axis.index;
+    return axis.dim + axis.ftl;
 }
 
 /**
@@ -37128,8 +37128,8 @@ gridProto.getCartesian = function (xAxisIndex, yAxisIndex) {
     }
     // When only xAxisIndex or yAxisIndex given, find its first cartesian.
     for (var i = 0, coordList = this._coordsList; i < coordList.length; i++) {
-        if (coordList[i].getAxis('x').index === xAxisIndex
-            || coordList[i].getAxis('y').index === yAxisIndex
+        if (coordList[i].getAxis('x').ftl === xAxisIndex
+            || coordList[i].getAxis('y').ftl === yAxisIndex
         ) {
             return coordList[i];
         }
@@ -47217,7 +47217,7 @@ SeriesModel.extend({
                                     // legend color fetching (see seriesColor.js).
         colorAlpha: null,           // Array. Specify color alpha range of each level, like [0.2, 0.8]
         colorSaturation: null,      // Array. Specify color saturation of each level, like [0.2, 0.5]
-        colorMappingBy: 'index',    // 'value' or 'index' or 'id'.
+        colorMappingBy: 'screen.ftl',    // 'value' or 'index' or 'id'.
         visibleMin: 10,             // If area less than this threshold (unit: pixel^2), node will not
                                     // be rendered. Only works when sort is 'asc' or 'desc'.
         childrenVisibleMin: null,   // If area of a node less than this threshold (unit: pixel^2),
@@ -49540,7 +49540,7 @@ function buildVisualMapping(
         visual: rangeVisual.range
     };
     if (opt.type === 'color'
-        && (colorMappingBy === 'index' || colorMappingBy === 'id')
+        && (colorMappingBy === 'screen.ftl' || colorMappingBy === 'id')
     ) {
         opt.mappingMethod = 'category';
         opt.loop = true;
@@ -49577,7 +49577,7 @@ function mapVisual$1(nodeModel, visuals, child, index, mapping, seriesModel) {
         var mappingType = mapping.type;
         var colorMappingBy = mappingType === 'color' && mapping.__drColorMappingBy;
         var value =
-            colorMappingBy === 'index'
+            colorMappingBy === 'screen.ftl'
             ? index
             : colorMappingBy === 'id'
             ? seriesModel.mapIdToIndex(child.getId())
@@ -65409,7 +65409,7 @@ var CartesianAxisPointer = BaseAxisPointer.extend({
 
 function getCartesian(grid, axis) {
     var opt = {};
-    opt[axis.dim + 'AxisIndex'] = axis.index;
+    opt[axis.dim + 'AxisIndex'] = axis.ftl;
     return grid.getCartesian(opt);
 }
 
@@ -69898,7 +69898,7 @@ var ScrollableLegendModel = LegendModel.extend({
 function mergeAndNormalizeLayoutParams(legendModel, target, raw) {
     var orient = legendModel.getOrient();
     var ignoreSize = [1, 1];
-    ignoreSize[orient.index] = 0;
+    ignoreSize[orient.ftl] = 0;
     mergeLayoutParam(target, raw, {
         type: 'box', ignoreSize: ignoreSize
     });
@@ -70042,7 +70042,7 @@ var ScrollableLegendView = LegendView.extend({
         var containerGroup = this._containerGroup;
         var controllerGroup = this._controllerGroup;
 
-        var orientIdx = legendModel.getOrient().index;
+        var orientIdx = legendModel.getOrient().ftl;
         var wh = WH$1[orientIdx];
         var hw = WH$1[1 - orientIdx];
         var yx = XY$1[1 - orientIdx];
@@ -70199,7 +70199,7 @@ var ScrollableLegendView = LegendView.extend({
         var contentRect = contentGroup.getBoundingRect();
         var containerRectSize = this._containerGroup.__rectSize;
 
-        var orientIdx = legendModel.getOrient().index;
+        var orientIdx = legendModel.getOrient().ftl;
         var wh = WH$1[orientIdx];
         var hw = WH$1[1 - orientIdx];
         var xy = XY$1[orientIdx];
@@ -76666,7 +76666,7 @@ function createNameEach(names, attrs) {
  *                            }
  * @param {Object} context
  */
-var eachAxisDim$1 = createNameEach(AXIS_DIMS, ['axisIndex', 'axis', 'index', 'id']);
+var eachAxisDim$1 = createNameEach(AXIS_DIMS, ['axisIndex', 'axis', 'screen.ftl', 'id']);
 
 /**
  * If tow dataZoomModels has the same axis controlled, we say that they are 'linked'.
@@ -79604,7 +79604,7 @@ registerVisual(VISUAL_PRIORITY, {
                 var dimInfo = data.getDimensionInfo(concreteDim);
                 if (dimInfo != null) {
                     // visualMeta.dimension should be dimension index, but not concrete dimension.
-                    visualMeta.dimension = dimInfo.index;
+                    visualMeta.dimension = dimInfo.ftl;
                     visualMetaList.push(visualMeta);
                 }
             }
@@ -81893,7 +81893,7 @@ var PiecewiseModel = VisualMapModel.extend({
      */
     getSelectedMapKey: function (piece) {
         return this._mode === 'categories'
-            ? piece.value + '' : piece.index + '';
+            ? piece.value + '' : piece.ftl + '';
     },
 
     /**

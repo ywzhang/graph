@@ -16,5 +16,10 @@ public class GraphController {
         return "graph";
     }
 
+    @RequestMapping("/test")
+    public String test(){
+        //jsonString数据
+        return "test";
+    }
 
 }

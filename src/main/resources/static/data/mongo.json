@@ -1,1510 +1,1510 @@
 {
   "type": "force",
-  "categories": [{"name":"姓名"},{"name":"家庭住址"},{"name":"出生日期"},{"name":"电话号码"},{"name":"身份证"}],
+  "categories": [{"name":"老人"},{"name":"姓名"},{"name":"家庭住址"},{"name":"出生日期"},{"name":"电话号码"},{"name":"身份证"}],
   "nodes": [
 
     {
-      "id":1,"name":"老人","label":"老人","symbolSize":20
+      "id":1,"category":0,"name":"老人","label":"老人","symbolSize":20
     },
     {
-      "id":2,"category":0,"name":"张怀山","label":"张怀山","symbolSize":15
+      "id":2,"category":1,"name":"张怀山","label":"张怀山","symbolSize":15
     },
     {
-      "id":3,"category":1,"name":"大大大","label":"大大大","symbolSize":10
+      "id":3,"category":2,"name":"大大大","label":"大大大","symbolSize":10
     },
     {
-      "id":4,"category":2,"name":"1951-09-02","label":"1951-09-02","symbolSize":10
+      "id":4,"category":3,"name":"1951-09-02","label":"1951-09-02","symbolSize":10
     },
     {
-      "id":5,"category":3,"name":"00000000","label":"00000000","symbolSize":10
+      "id":5,"category":4,"name":"00000000","label":"00000000","symbolSize":10
     },
     {
-      "id":6,"category":4,"name":"610121195109021142","label":"610121195109021142","symbolSize":10
+      "id":6,"category":5,"name":"610121195109021142","label":"610121195109021142","symbolSize":10
     },
     {
-      "id":7,"category":0,"name":"沈德昌","label":"沈德昌","symbolSize":15
+      "id":7,"category":1,"name":"沈德昌","label":"沈德昌","symbolSize":15
     },
     {
-      "id":8,"category":1,"name":"万家湖","label":"万家湖","symbolSize":10
+      "id":8,"category":2,"name":"万家湖","label":"万家湖","symbolSize":10
     },
     {
-      "id":9,"category":2,"name":"1961-03-07","label":"1961-03-07","symbolSize":10
+      "id":9,"category":3,"name":"1961-03-07","label":"1961-03-07","symbolSize":10
     },
     {
-      "id":10,"category":3,"name":"00000000","label":"00000000","symbolSize":10
+      "id":10,"category":4,"name":"00000000","label":"00000000","symbolSize":10
     },
     {
-      "id":11,"category":4,"name":"370202196103075932","label":"370202196103075932","symbolSize":10
+      "id":11,"category":5,"name":"370202196103075932","label":"370202196103075932","symbolSize":10
     },
     {
-      "id":12,"category":0,"name":"肖福群","label":"肖福群","symbolSize":15
+      "id":12,"category":1,"name":"肖福群","label":"肖福群","symbolSize":15
     },
     {
-      "id":13,"category":1,"name":"西安市长安区子午镇张村","label":"西安市长安区子午镇张村","symbolSize":10
+      "id":13,"category":2,"name":"西安市长安区子午镇张村","label":"西安市长安区子午镇张村","symbolSize":10
     },
     {
-      "id":14,"category":2,"name":"1967-07-20","label":"1967-07-20","symbolSize":10
+      "id":14,"category":3,"name":"1967-07-20","label":"1967-07-20","symbolSize":10
     },
     {
-      "id":15,"category":3,"name":"13572933338","label":"13572933338","symbolSize":10
+      "id":15,"category":4,"name":"13572933338","label":"13572933338","symbolSize":10
     },
     {
-      "id":16,"category":4,"name":"610121196707204233","label":"610121196707204233","symbolSize":10
+      "id":16,"category":5,"name":"610121196707204233","label":"610121196707204233","symbolSize":10
     },
     {
-      "id":17,"category":0,"name":"王乃普","label":"王乃普","symbolSize":15
+      "id":17,"category":1,"name":"王乃普","label":"王乃普","symbolSize":15
     },
     {
-      "id":18,"category":1,"name":"户县","label":"户县","symbolSize":10
+      "id":18,"category":2,"name":"户县","label":"户县","symbolSize":10
     },
     {
-      "id":19,"category":2,"name":"1959-05-17","label":"1959-05-17","symbolSize":10
+      "id":19,"category":3,"name":"1959-05-17","label":"1959-05-17","symbolSize":10
     },
     {
-      "id":20,"category":3,"name":"13609259895","label":"13609259895","symbolSize":10
+      "id":20,"category":4,"name":"13609259895","label":"13609259895","symbolSize":10
     },
     {
-      "id":21,"category":4,"name":"610125195905171912","label":"610125195905171912","symbolSize":10
+      "id":21,"category":5,"name":"610125195905171912","label":"610125195905171912","symbolSize":10
     },
     {
-      "id":22,"category":0,"name":"张秀娥","label":"张秀娥","symbolSize":15
+      "id":22,"category":1,"name":"张秀娥","label":"张秀娥","symbolSize":15
     },
     {
-      "id":23,"category":1,"name":"西安市户县石井乡潘家堡二组","label":"西安市户县石井乡潘家堡二组","symbolSize":10
+      "id":23,"category":2,"name":"西安市户县石井乡潘家堡二组","label":"西安市户县石井乡潘家堡二组","symbolSize":10
     },
     {
-      "id":24,"category":2,"name":"1950-05-04","label":"1950-05-04","symbolSize":10
+      "id":24,"category":3,"name":"1950-05-04","label":"1950-05-04","symbolSize":10
     },
     {
-      "id":25,"category":3,"name":"15229329056","label":"15229329056","symbolSize":10
+      "id":25,"category":4,"name":"15229329056","label":"15229329056","symbolSize":10
     },
     {
-      "id":26,"category":4,"name":"610125195005041928","label":"610125195005041928","symbolSize":10
+      "id":26,"category":5,"name":"610125195005041928","label":"610125195005041928","symbolSize":10
     },
     {
-      "id":27,"category":0,"name":"张永花","label":"张永花","symbolSize":15
+      "id":27,"category":1,"name":"张永花","label":"张永花","symbolSize":15
     },
     {
-      "id":28,"category":1,"name":"户县","label":"户县","symbolSize":10
+      "id":28,"category":2,"name":"户县","label":"户县","symbolSize":10
     },
     {
-      "id":29,"category":2,"name":"1960-09-10","label":"1960-09-10","symbolSize":10
+      "id":29,"category":3,"name":"1960-09-10","label":"1960-09-10","symbolSize":10
     },
     {
-      "id":30,"category":3,"name":"13519132168","label":"13519132168","symbolSize":10
+      "id":30,"category":4,"name":"13519132168","label":"13519132168","symbolSize":10
     },
     {
-      "id":31,"category":4,"name":"610125196009101945","label":"610125196009101945","symbolSize":10
+      "id":31,"category":5,"name":"610125196009101945","label":"610125196009101945","symbolSize":10
     },
     {
-      "id":32,"category":0,"name":"施海","label":"施海","symbolSize":15
+      "id":32,"category":1,"name":"施海","label":"施海","symbolSize":15
     },
     {
-      "id":33,"category":1,"name":"芜湖","label":"芜湖","symbolSize":10
+      "id":33,"category":2,"name":"芜湖","label":"芜湖","symbolSize":10
     },
     {
-      "id":34,"category":2,"name":"1961-03-07","label":"1961-03-07","symbolSize":10
+      "id":34,"category":3,"name":"1961-03-07","label":"1961-03-07","symbolSize":10
     },
     {
-      "id":35,"category":3,"name":"18236521459","label":"18236521459","symbolSize":10
+      "id":35,"category":4,"name":"18236521459","label":"18236521459","symbolSize":10
     },
     {
-      "id":36,"category":4,"name":"370202196103075975","label":"370202196103075975","symbolSize":10
+      "id":36,"category":5,"name":"370202196103075975","label":"370202196103075975","symbolSize":10
     },
     {
-      "id":37,"category":0,"name":"宁淑霞","label":"宁淑霞","symbolSize":15
+      "id":37,"category":1,"name":"宁淑霞","label":"宁淑霞","symbolSize":15
     },
     {
-      "id":38,"category":1,"name":"户县","label":"户县","symbolSize":10
+      "id":38,"category":2,"name":"户县","label":"户县","symbolSize":10
     },
     {
-      "id":39,"category":2,"name":"1956-04-03","label":"1956-04-03","symbolSize":10
+      "id":39,"category":3,"name":"1956-04-03","label":"1956-04-03","symbolSize":10
     },
     {
-      "id":40,"category":3,"name":"15029956005","label":"15029956005","symbolSize":10
+      "id":40,"category":4,"name":"15029956005","label":"15029956005","symbolSize":10
     },
     {
-      "id":41,"category":4,"name":"610125195604036661","label":"610125195604036661","symbolSize":10
+      "id":41,"category":5,"name":"610125195604036661","label":"610125195604036661","symbolSize":10
     },
     {
-      "id":42,"category":0,"name":"马景梅","label":"马景梅","symbolSize":15
+      "id":42,"category":1,"name":"马景梅","label":"马景梅","symbolSize":15
     },
     {
-      "id":43,"category":1,"name":"户县","label":"户县","symbolSize":10
+      "id":43,"category":2,"name":"户县","label":"户县","symbolSize":10
     },
     {
-      "id":44,"category":2,"name":"1962-01-12","label":"1962-01-12","symbolSize":10
+      "id":44,"category":3,"name":"1962-01-12","label":"1962-01-12","symbolSize":10
     },
     {
-      "id":45,"category":3,"name":"18392123336","label":"18392123336","symbolSize":10
+      "id":45,"category":4,"name":"18392123336","label":"18392123336","symbolSize":10
     },
     {
-      "id":46,"category":4,"name":"61012519620112192x","label":"61012519620112192x","symbolSize":10
+      "id":46,"category":5,"name":"61012519620112192x","label":"61012519620112192x","symbolSize":10
     },
     {
-      "id":47,"category":0,"name":"殷芳琴","label":"殷芳琴","symbolSize":15
+      "id":47,"category":1,"name":"殷芳琴","label":"殷芳琴","symbolSize":15
     },
     {
-      "id":48,"category":1,"name":"户县","label":"户县","symbolSize":10
+      "id":48,"category":2,"name":"户县","label":"户县","symbolSize":10
     },
     {
-      "id":49,"category":2,"name":"1945-12-10","label":"1945-12-10","symbolSize":10
+      "id":49,"category":3,"name":"1945-12-10","label":"1945-12-10","symbolSize":10
     },
     {
-      "id":50,"category":3,"name":"15102988475","label":"15102988475","symbolSize":10
+      "id":50,"category":4,"name":"15102988475","label":"15102988475","symbolSize":10
     },
     {
-      "id":51,"category":4,"name":"610125194512100841","label":"610125194512100841","symbolSize":10
+      "id":51,"category":5,"name":"610125194512100841","label":"610125194512100841","symbolSize":10
     },
     {
-      "id":52,"category":0,"name":"潘爱玲","label":"潘爱玲","symbolSize":15
+      "id":52,"category":1,"name":"潘爱玲","label":"潘爱玲","symbolSize":15
     },
     {
-      "id":53,"category":1,"name":"户县","label":"户县","symbolSize":10
+      "id":53,"category":2,"name":"户县","label":"户县","symbolSize":10
     },
     {
-      "id":54,"category":2,"name":"1958-03-27","label":"1958-03-27","symbolSize":10
+      "id":54,"category":3,"name":"1958-03-27","label":"1958-03-27","symbolSize":10
     },
     {
-      "id":55,"category":3,"name":"15809239491","label":"15809239491","symbolSize":10
+      "id":55,"category":4,"name":"15809239491","label":"15809239491","symbolSize":10
     },
     {
-      "id":56,"category":4,"name":"610125195803271947","label":"610125195803271947","symbolSize":10
+      "id":56,"category":5,"name":"610125195803271947","label":"610125195803271947","symbolSize":10
     },
     {
-      "id":57,"category":0,"name":"王展涛","label":"王展涛","symbolSize":15
+      "id":57,"category":1,"name":"王展涛","label":"王展涛","symbolSize":15
     },
     {
-      "id":58,"category":1,"name":"户县","label":"户县","symbolSize":10
+      "id":58,"category":2,"name":"户县","label":"户县","symbolSize":10
     },
     {
-      "id":59,"category":2,"name":"1947-03-13","label":"1947-03-13","symbolSize":10
+      "id":59,"category":3,"name":"1947-03-13","label":"1947-03-13","symbolSize":10
     },
     {
-      "id":60,"category":3,"name":"15289363812","label":"15289363812","symbolSize":10
+      "id":60,"category":4,"name":"15289363812","label":"15289363812","symbolSize":10
     },
     {
-      "id":61,"category":4,"name":"610125194703131918","label":"610125194703131918","symbolSize":10
+      "id":61,"category":5,"name":"610125194703131918","label":"610125194703131918","symbolSize":10
     },
     {
-      "id":62,"category":0,"name":"戈兰盈","label":"戈兰盈","symbolSize":15
+      "id":62,"category":1,"name":"戈兰盈","label":"戈兰盈","symbolSize":15
     },
     {
-      "id":63,"category":1,"name":"户县","label":"户县","symbolSize":10
+      "id":63,"category":2,"name":"户县","label":"户县","symbolSize":10
     },
     {
-      "id":64,"category":2,"name":"1962-01-23","label":"1962-01-23","symbolSize":10
+      "id":64,"category":3,"name":"1962-01-23","label":"1962-01-23","symbolSize":10
     },
     {
-      "id":65,"category":3,"name":"13279213683","label":"13279213683","symbolSize":10
+      "id":65,"category":4,"name":"13279213683","label":"13279213683","symbolSize":10
     },
     {
-      "id":66,"category":4,"name":"610125196201231926","label":"610125196201231926","symbolSize":10
+      "id":66,"category":5,"name":"610125196201231926","label":"610125196201231926","symbolSize":10
     },
     {
-      "id":67,"category":0,"name":"张银霞","label":"张银霞","symbolSize":15
+      "id":67,"category":1,"name":"张银霞","label":"张银霞","symbolSize":15
     },
     {
-      "id":68,"category":1,"name":"户县","label":"户县","symbolSize":10
+      "id":68,"category":2,"name":"户县","label":"户县","symbolSize":10
     },
     {
-      "id":69,"category":2,"name":"1955-11-23","label":"1955-11-23","symbolSize":10
+      "id":69,"category":3,"name":"1955-11-23","label":"1955-11-23","symbolSize":10
     },
     {
-      "id":70,"category":3,"name":"15191851380","label":"15191851380","symbolSize":10
+      "id":70,"category":4,"name":"15191851380","label":"15191851380","symbolSize":10
     },
     {
-      "id":71,"category":4,"name":"610125195511230027","label":"610125195511230027","symbolSize":10
+      "id":71,"category":5,"name":"610125195511230027","label":"610125195511230027","symbolSize":10
     },
     {
-      "id":72,"category":0,"name":"何幼春","label":"何幼春","symbolSize":15
+      "id":72,"category":1,"name":"何幼春","label":"何幼春","symbolSize":15
     },
     {
-      "id":73,"category":1,"name":"2","label":"2","symbolSize":10
+      "id":73,"category":2,"name":"2","label":"2","symbolSize":10
     },
     {
-      "id":74,"category":2,"name":"1932-04-11","label":"1932-04-11","symbolSize":10
+      "id":74,"category":3,"name":"1932-04-11","label":"1932-04-11","symbolSize":10
     },
     {
-      "id":75,"category":3,"name":"","label":"","symbolSize":10
+      "id":75,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":76,"category":4,"name":"530111193204110028","label":"530111193204110028","symbolSize":10
+      "id":76,"category":5,"name":"530111193204110028","label":"530111193204110028","symbolSize":10
     },
     {
-      "id":77,"category":0,"name":"李韵华","label":"李韵华","symbolSize":15
+      "id":77,"category":1,"name":"李韵华","label":"李韵华","symbolSize":15
     },
     {
-      "id":78,"category":1,"name":"3","label":"3","symbolSize":10
+      "id":78,"category":2,"name":"3","label":"3","symbolSize":10
     },
     {
-      "id":79,"category":2,"name":"1939-06-30","label":"1939-06-30","symbolSize":10
+      "id":79,"category":3,"name":"1939-06-30","label":"1939-06-30","symbolSize":10
     },
     {
-      "id":80,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":80,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":81,"category":4,"name":"530102193906301121","label":"530102193906301121","symbolSize":10
+      "id":81,"category":5,"name":"530102193906301121","label":"530102193906301121","symbolSize":10
     },
     {
-      "id":82,"category":0,"name":"张爱仙","label":"张爱仙","symbolSize":15
+      "id":82,"category":1,"name":"张爱仙","label":"张爱仙","symbolSize":15
     },
     {
-      "id":83,"category":1,"name":"5","label":"5","symbolSize":10
+      "id":83,"category":2,"name":"5","label":"5","symbolSize":10
     },
     {
-      "id":84,"category":2,"name":"1942-06-05","label":"1942-06-05","symbolSize":10
+      "id":84,"category":3,"name":"1942-06-05","label":"1942-06-05","symbolSize":10
     },
     {
-      "id":85,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":85,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":86,"category":4,"name":"530113194206050345","label":"530113194206050345","symbolSize":10
+      "id":86,"category":5,"name":"530113194206050345","label":"530113194206050345","symbolSize":10
     },
     {
-      "id":87,"category":0,"name":"陈庆佐","label":"陈庆佐","symbolSize":15
+      "id":87,"category":1,"name":"陈庆佐","label":"陈庆佐","symbolSize":15
     },
     {
-      "id":88,"category":1,"name":"4","label":"4","symbolSize":10
+      "id":88,"category":2,"name":"4","label":"4","symbolSize":10
     },
     {
-      "id":89,"category":2,"name":"1938-02-20","label":"1938-02-20","symbolSize":10
+      "id":89,"category":3,"name":"1938-02-20","label":"1938-02-20","symbolSize":10
     },
     {
-      "id":90,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":90,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":91,"category":4,"name":"53010219380220073X","label":"53010219380220073X","symbolSize":10
+      "id":91,"category":5,"name":"53010219380220073X","label":"53010219380220073X","symbolSize":10
     },
     {
-      "id":92,"category":0,"name":"禹玉明","label":"禹玉明","symbolSize":15
+      "id":92,"category":1,"name":"禹玉明","label":"禹玉明","symbolSize":15
     },
     {
-      "id":93,"category":1,"name":"6","label":"6","symbolSize":10
+      "id":93,"category":2,"name":"6","label":"6","symbolSize":10
     },
     {
-      "id":94,"category":2,"name":"1932-07-18","label":"1932-07-18","symbolSize":10
+      "id":94,"category":3,"name":"1932-07-18","label":"1932-07-18","symbolSize":10
     },
     {
-      "id":95,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":95,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":96,"category":4,"name":"532124193207181116","label":"532124193207181116","symbolSize":10
+      "id":96,"category":5,"name":"532124193207181116","label":"532124193207181116","symbolSize":10
     },
     {
-      "id":97,"category":0,"name":"李铭","label":"李铭","symbolSize":15
+      "id":97,"category":1,"name":"李铭","label":"李铭","symbolSize":15
     },
     {
-      "id":98,"category":1,"name":"7","label":"7","symbolSize":10
+      "id":98,"category":2,"name":"7","label":"7","symbolSize":10
     },
     {
-      "id":99,"category":2,"name":"1934-06-01","label":"1934-06-01","symbolSize":10
+      "id":99,"category":3,"name":"1934-06-01","label":"1934-06-01","symbolSize":10
     },
     {
-      "id":100,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":100,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":101,"category":4,"name":"530111193406010033","label":"530111193406010033","symbolSize":10
+      "id":101,"category":5,"name":"530111193406010033","label":"530111193406010033","symbolSize":10
     },
     {
-      "id":102,"category":0,"name":"李秀云","label":"李秀云","symbolSize":15
+      "id":102,"category":1,"name":"李秀云","label":"李秀云","symbolSize":15
     },
     {
-      "id":103,"category":1,"name":"8","label":"8","symbolSize":10
+      "id":103,"category":2,"name":"8","label":"8","symbolSize":10
     },
     {
-      "id":104,"category":2,"name":"1948-03-14","label":"1948-03-14","symbolSize":10
+      "id":104,"category":3,"name":"1948-03-14","label":"1948-03-14","symbolSize":10
     },
     {
-      "id":105,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":105,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":106,"category":4,"name":"532201194803140367","label":"532201194803140367","symbolSize":10
+      "id":106,"category":5,"name":"532201194803140367","label":"532201194803140367","symbolSize":10
     },
     {
-      "id":107,"category":0,"name":"李秀兰","label":"李秀兰","symbolSize":15
+      "id":107,"category":1,"name":"李秀兰","label":"李秀兰","symbolSize":15
     },
     {
-      "id":108,"category":1,"name":"新安花苑三区","label":"新安花苑三区","symbolSize":10
+      "id":108,"category":2,"name":"新安花苑三区","label":"新安花苑三区","symbolSize":10
     },
     {
-      "id":109,"category":2,"name":"1929-11-10","label":"1929-11-10","symbolSize":10
+      "id":109,"category":3,"name":"1929-11-10","label":"1929-11-10","symbolSize":10
     },
     {
-      "id":110,"category":3,"name":"","label":"","symbolSize":10
+      "id":110,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":111,"category":4,"name":"530102192911102421","label":"530102192911102421","symbolSize":10
+      "id":111,"category":5,"name":"530102192911102421","label":"530102192911102421","symbolSize":10
     },
     {
-      "id":112,"category":0,"name":"黄自声","label":"黄自声","symbolSize":15
+      "id":112,"category":1,"name":"黄自声","label":"黄自声","symbolSize":15
     },
     {
-      "id":113,"category":1,"name":"新安花苑三区","label":"新安花苑三区","symbolSize":10
+      "id":113,"category":2,"name":"新安花苑三区","label":"新安花苑三区","symbolSize":10
     },
     {
-      "id":114,"category":2,"name":"1939-05-15","label":"1939-05-15","symbolSize":10
+      "id":114,"category":3,"name":"1939-05-15","label":"1939-05-15","symbolSize":10
     },
     {
-      "id":115,"category":3,"name":"","label":"","symbolSize":10
+      "id":115,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":116,"category":4,"name":"530112193905153238","label":"530112193905153238","symbolSize":10
+      "id":116,"category":5,"name":"530112193905153238","label":"530112193905153238","symbolSize":10
     },
     {
-      "id":117,"category":0,"name":"李桂芬","label":"李桂芬","symbolSize":15
+      "id":117,"category":1,"name":"李桂芬","label":"李桂芬","symbolSize":15
     },
     {
-      "id":118,"category":1,"name":"11","label":"11","symbolSize":10
+      "id":118,"category":2,"name":"11","label":"11","symbolSize":10
     },
     {
-      "id":119,"category":2,"name":"1945-07-15","label":"1945-07-15","symbolSize":10
+      "id":119,"category":3,"name":"1945-07-15","label":"1945-07-15","symbolSize":10
     },
     {
-      "id":120,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":120,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":121,"category":4,"name":"530112194507153245","label":"530112194507153245","symbolSize":10
+      "id":121,"category":5,"name":"530112194507153245","label":"530112194507153245","symbolSize":10
     },
     {
-      "id":122,"category":0,"name":"陶树明","label":"陶树明","symbolSize":15
+      "id":122,"category":1,"name":"陶树明","label":"陶树明","symbolSize":15
     },
     {
-      "id":123,"category":1,"name":"12","label":"12","symbolSize":10
+      "id":123,"category":2,"name":"12","label":"12","symbolSize":10
     },
     {
-      "id":124,"category":2,"name":"1933-10-10","label":"1933-10-10","symbolSize":10
+      "id":124,"category":3,"name":"1933-10-10","label":"1933-10-10","symbolSize":10
     },
     {
-      "id":125,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":125,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":126,"category":4,"name":"53322319331010002X","label":"53322319331010002X","symbolSize":10
+      "id":126,"category":5,"name":"53322319331010002X","label":"53322319331010002X","symbolSize":10
     },
     {
-      "id":127,"category":0,"name":"许文英","label":"许文英","symbolSize":15
+      "id":127,"category":1,"name":"许文英","label":"许文英","symbolSize":15
     },
     {
-      "id":128,"category":1,"name":"13","label":"13","symbolSize":10
+      "id":128,"category":2,"name":"13","label":"13","symbolSize":10
     },
     {
-      "id":129,"category":2,"name":"1934-08-10","label":"1934-08-10","symbolSize":10
+      "id":129,"category":3,"name":"1934-08-10","label":"1934-08-10","symbolSize":10
     },
     {
-      "id":130,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":130,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":131,"category":4,"name":"530103193408100622","label":"530103193408100622","symbolSize":10
+      "id":131,"category":5,"name":"530103193408100622","label":"530103193408100622","symbolSize":10
     },
     {
-      "id":132,"category":0,"name":"刘润华","label":"刘润华","symbolSize":15
+      "id":132,"category":1,"name":"刘润华","label":"刘润华","symbolSize":15
     },
     {
-      "id":133,"category":1,"name":"14","label":"14","symbolSize":10
+      "id":133,"category":2,"name":"14","label":"14","symbolSize":10
     },
     {
-      "id":134,"category":2,"name":"1926-10-21","label":"1926-10-21","symbolSize":10
+      "id":134,"category":3,"name":"1926-10-21","label":"1926-10-21","symbolSize":10
     },
     {
-      "id":135,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":135,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":136,"category":4,"name":"530102192610210322","label":"530102192610210322","symbolSize":10
+      "id":136,"category":5,"name":"530102192610210322","label":"530102192610210322","symbolSize":10
     },
     {
-      "id":137,"category":0,"name":"徐鹏","label":"徐鹏","symbolSize":15
+      "id":137,"category":1,"name":"徐鹏","label":"徐鹏","symbolSize":15
     },
     {
-      "id":138,"category":1,"name":"15","label":"15","symbolSize":10
+      "id":138,"category":2,"name":"15","label":"15","symbolSize":10
     },
     {
-      "id":139,"category":2,"name":"1932-11-05","label":"1932-11-05","symbolSize":10
+      "id":139,"category":3,"name":"1932-11-05","label":"1932-11-05","symbolSize":10
     },
     {
-      "id":140,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":140,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":141,"category":4,"name":"530103193211051513","label":"530103193211051513","symbolSize":10
+      "id":141,"category":5,"name":"530103193211051513","label":"530103193211051513","symbolSize":10
     },
     {
-      "id":142,"category":0,"name":"孙守新","label":"孙守新","symbolSize":15
+      "id":142,"category":1,"name":"孙守新","label":"孙守新","symbolSize":15
     },
     {
-      "id":143,"category":1,"name":"16","label":"16","symbolSize":10
+      "id":143,"category":2,"name":"16","label":"16","symbolSize":10
     },
     {
-      "id":144,"category":2,"name":"1941-08-05","label":"1941-08-05","symbolSize":10
+      "id":144,"category":3,"name":"1941-08-05","label":"1941-08-05","symbolSize":10
     },
     {
-      "id":145,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":145,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":146,"category":4,"name":"530103194108052918","label":"530103194108052918","symbolSize":10
+      "id":146,"category":5,"name":"530103194108052918","label":"530103194108052918","symbolSize":10
     },
     {
-      "id":147,"category":0,"name":"林龙","label":"林龙","symbolSize":15
+      "id":147,"category":1,"name":"林龙","label":"林龙","symbolSize":15
     },
     {
-      "id":148,"category":1,"name":"17","label":"17","symbolSize":10
+      "id":148,"category":2,"name":"17","label":"17","symbolSize":10
     },
     {
-      "id":149,"category":2,"name":"1969-03-05","label":"1969-03-05","symbolSize":10
+      "id":149,"category":3,"name":"1969-03-05","label":"1969-03-05","symbolSize":10
     },
     {
-      "id":150,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":150,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":151,"category":4,"name":"530103196903052510","label":"530103196903052510","symbolSize":10
+      "id":151,"category":5,"name":"530103196903052510","label":"530103196903052510","symbolSize":10
     },
     {
-      "id":152,"category":0,"name":"王克新","label":"王克新","symbolSize":15
+      "id":152,"category":1,"name":"王克新","label":"王克新","symbolSize":15
     },
     {
-      "id":153,"category":1,"name":"18","label":"18","symbolSize":10
+      "id":153,"category":2,"name":"18","label":"18","symbolSize":10
     },
     {
-      "id":154,"category":2,"name":"1954-03-18","label":"1954-03-18","symbolSize":10
+      "id":154,"category":3,"name":"1954-03-18","label":"1954-03-18","symbolSize":10
     },
     {
-      "id":155,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":155,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":156,"category":4,"name":"530102195403181112","label":"530102195403181112","symbolSize":10
+      "id":156,"category":5,"name":"530102195403181112","label":"530102195403181112","symbolSize":10
     },
     {
-      "id":157,"category":0,"name":"程晓林","label":"程晓林","symbolSize":15
+      "id":157,"category":1,"name":"程晓林","label":"程晓林","symbolSize":15
     },
     {
-      "id":158,"category":1,"name":"19","label":"19","symbolSize":10
+      "id":158,"category":2,"name":"19","label":"19","symbolSize":10
     },
     {
-      "id":159,"category":2,"name":"1949-03-18","label":"1949-03-18","symbolSize":10
+      "id":159,"category":3,"name":"1949-03-18","label":"1949-03-18","symbolSize":10
     },
     {
-      "id":160,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":160,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":161,"category":4,"name":"530102194903182758","label":"530102194903182758","symbolSize":10
+      "id":161,"category":5,"name":"530102194903182758","label":"530102194903182758","symbolSize":10
     },
     {
-      "id":162,"category":0,"name":"李伟生","label":"李伟生","symbolSize":15
+      "id":162,"category":1,"name":"李伟生","label":"李伟生","symbolSize":15
     },
     {
-      "id":163,"category":1,"name":"20","label":"20","symbolSize":10
+      "id":163,"category":2,"name":"20","label":"20","symbolSize":10
     },
     {
-      "id":164,"category":2,"name":"1949-09-27","label":"1949-09-27","symbolSize":10
+      "id":164,"category":3,"name":"1949-09-27","label":"1949-09-27","symbolSize":10
     },
     {
-      "id":165,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":165,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":166,"category":4,"name":"530102194909271831","label":"530102194909271831","symbolSize":10
+      "id":166,"category":5,"name":"530102194909271831","label":"530102194909271831","symbolSize":10
     },
     {
-      "id":167,"category":0,"name":"陈淑英","label":"陈淑英","symbolSize":15
+      "id":167,"category":1,"name":"陈淑英","label":"陈淑英","symbolSize":15
     },
     {
-      "id":168,"category":1,"name":"21","label":"21","symbolSize":10
+      "id":168,"category":2,"name":"21","label":"21","symbolSize":10
     },
     {
-      "id":169,"category":2,"name":"1938-03-23","label":"1938-03-23","symbolSize":10
+      "id":169,"category":3,"name":"1938-03-23","label":"1938-03-23","symbolSize":10
     },
     {
-      "id":170,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":170,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":171,"category":4,"name":"53011219380323052X","label":"53011219380323052X","symbolSize":10
+      "id":171,"category":5,"name":"53011219380323052X","label":"53011219380323052X","symbolSize":10
     },
     {
-      "id":172,"category":0,"name":"倪冷梅","label":"倪冷梅","symbolSize":15
+      "id":172,"category":1,"name":"倪冷梅","label":"倪冷梅","symbolSize":15
     },
     {
-      "id":173,"category":1,"name":"23","label":"23","symbolSize":10
+      "id":173,"category":2,"name":"23","label":"23","symbolSize":10
     },
     {
-      "id":174,"category":2,"name":"1931-07-03","label":"1931-07-03","symbolSize":10
+      "id":174,"category":3,"name":"1931-07-03","label":"1931-07-03","symbolSize":10
     },
     {
-      "id":175,"category":3,"name":"","label":"","symbolSize":10
+      "id":175,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":176,"category":4,"name":"530102193107031815","label":"530102193107031815","symbolSize":10
+      "id":176,"category":5,"name":"530102193107031815","label":"530102193107031815","symbolSize":10
     },
     {
-      "id":177,"category":0,"name":"王宿礼","label":"王宿礼","symbolSize":15
+      "id":177,"category":1,"name":"王宿礼","label":"王宿礼","symbolSize":15
     },
     {
-      "id":178,"category":1,"name":"22","label":"22","symbolSize":10
+      "id":178,"category":2,"name":"22","label":"22","symbolSize":10
     },
     {
-      "id":179,"category":2,"name":"1935-05-10","label":"1935-05-10","symbolSize":10
+      "id":179,"category":3,"name":"1935-05-10","label":"1935-05-10","symbolSize":10
     },
     {
-      "id":180,"category":3,"name":"13888171301","label":"13888171301","symbolSize":10
+      "id":180,"category":4,"name":"13888171301","label":"13888171301","symbolSize":10
     },
     {
-      "id":181,"category":4,"name":"530112193505100516","label":"530112193505100516","symbolSize":10
+      "id":181,"category":5,"name":"530112193505100516","label":"530112193505100516","symbolSize":10
     },
     {
-      "id":182,"category":0,"name":"张翠仙","label":"张翠仙","symbolSize":15
+      "id":182,"category":1,"name":"张翠仙","label":"张翠仙","symbolSize":15
     },
     {
-      "id":183,"category":1,"name":"24","label":"24","symbolSize":10
+      "id":183,"category":2,"name":"24","label":"24","symbolSize":10
     },
     {
-      "id":184,"category":2,"name":"1940-04-16","label":"1940-04-16","symbolSize":10
+      "id":184,"category":3,"name":"1940-04-16","label":"1940-04-16","symbolSize":10
     },
     {
-      "id":185,"category":3,"name":"","label":"","symbolSize":10
+      "id":185,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":186,"category":4,"name":"530102194004162147","label":"530102194004162147","symbolSize":10
+      "id":186,"category":5,"name":"530102194004162147","label":"530102194004162147","symbolSize":10
     },
     {
-      "id":187,"category":0,"name":"饶绍学","label":"饶绍学","symbolSize":15
+      "id":187,"category":1,"name":"饶绍学","label":"饶绍学","symbolSize":15
     },
     {
-      "id":188,"category":1,"name":"25","label":"25","symbolSize":10
+      "id":188,"category":2,"name":"25","label":"25","symbolSize":10
     },
     {
-      "id":189,"category":2,"name":"1937-03-15","label":"1937-03-15","symbolSize":10
+      "id":189,"category":3,"name":"1937-03-15","label":"1937-03-15","symbolSize":10
     },
     {
-      "id":190,"category":3,"name":"","label":"","symbolSize":10
+      "id":190,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":191,"category":4,"name":"532726193703150015","label":"532726193703150015","symbolSize":10
+      "id":191,"category":5,"name":"532726193703150015","label":"532726193703150015","symbolSize":10
     },
     {
-      "id":192,"category":0,"name":"戚会英","label":"戚会英","symbolSize":15
+      "id":192,"category":1,"name":"戚会英","label":"戚会英","symbolSize":15
     },
     {
-      "id":193,"category":1,"name":"28","label":"28","symbolSize":10
+      "id":193,"category":2,"name":"28","label":"28","symbolSize":10
     },
     {
-      "id":194,"category":2,"name":"1935-06-12","label":"1935-06-12","symbolSize":10
+      "id":194,"category":3,"name":"1935-06-12","label":"1935-06-12","symbolSize":10
     },
     {
-      "id":195,"category":3,"name":"13193789323","label":"13193789323","symbolSize":10
+      "id":195,"category":4,"name":"13193789323","label":"13193789323","symbolSize":10
     },
     {
-      "id":196,"category":4,"name":"530111193506123545","label":"530111193506123545","symbolSize":10
+      "id":196,"category":5,"name":"530111193506123545","label":"530111193506123545","symbolSize":10
     },
     {
-      "id":197,"category":0,"name":"丁品仁","label":"丁品仁","symbolSize":15
+      "id":197,"category":1,"name":"丁品仁","label":"丁品仁","symbolSize":15
     },
     {
-      "id":198,"category":1,"name":"26","label":"26","symbolSize":10
+      "id":198,"category":2,"name":"26","label":"26","symbolSize":10
     },
     {
-      "id":199,"category":2,"name":"1925-08-11","label":"1925-08-11","symbolSize":10
+      "id":199,"category":3,"name":"1925-08-11","label":"1925-08-11","symbolSize":10
     },
     {
-      "id":200,"category":3,"name":"13368808717","label":"13368808717","symbolSize":10
+      "id":200,"category":4,"name":"13368808717","label":"13368808717","symbolSize":10
     },
     {
-      "id":201,"category":4,"name":"530102192508113315","label":"530102192508113315","symbolSize":10
+      "id":201,"category":5,"name":"530102192508113315","label":"530102192508113315","symbolSize":10
     },
     {
-      "id":202,"category":0,"name":"朱觉民","label":"朱觉民","symbolSize":15
+      "id":202,"category":1,"name":"朱觉民","label":"朱觉民","symbolSize":15
     },
     {
-      "id":203,"category":1,"name":"30","label":"30","symbolSize":10
+      "id":203,"category":2,"name":"30","label":"30","symbolSize":10
     },
     {
-      "id":204,"category":2,"name":"1946-06-13","label":"1946-06-13","symbolSize":10
+      "id":204,"category":3,"name":"1946-06-13","label":"1946-06-13","symbolSize":10
     },
     {
-      "id":205,"category":3,"name":"13193789325","label":"13193789325","symbolSize":10
+      "id":205,"category":4,"name":"13193789325","label":"13193789325","symbolSize":10
     },
     {
-      "id":206,"category":4,"name":"530103194606131512","label":"530103194606131512","symbolSize":10
+      "id":206,"category":5,"name":"530103194606131512","label":"530103194606131512","symbolSize":10
     },
     {
-      "id":207,"category":0,"name":"李紫英","label":"李紫英","symbolSize":15
+      "id":207,"category":1,"name":"李紫英","label":"李紫英","symbolSize":15
     },
     {
-      "id":208,"category":1,"name":"31","label":"31","symbolSize":10
+      "id":208,"category":2,"name":"31","label":"31","symbolSize":10
     },
     {
-      "id":209,"category":2,"name":"1925-10-06","label":"1925-10-06","symbolSize":10
+      "id":209,"category":3,"name":"1925-10-06","label":"1925-10-06","symbolSize":10
     },
     {
-      "id":210,"category":3,"name":"13193789326","label":"13193789326","symbolSize":10
+      "id":210,"category":4,"name":"13193789326","label":"13193789326","symbolSize":10
     },
     {
-      "id":211,"category":4,"name":"530103192510060925","label":"530103192510060925","symbolSize":10
+      "id":211,"category":5,"name":"530103192510060925","label":"530103192510060925","symbolSize":10
     },
     {
-      "id":212,"category":0,"name":"李顺兰","label":"李顺兰","symbolSize":15
+      "id":212,"category":1,"name":"李顺兰","label":"李顺兰","symbolSize":15
     },
     {
-      "id":213,"category":1,"name":"27","label":"27","symbolSize":10
+      "id":213,"category":2,"name":"27","label":"27","symbolSize":10
     },
     {
-      "id":214,"category":2,"name":"1939-12-17","label":"1939-12-17","symbolSize":10
+      "id":214,"category":3,"name":"1939-12-17","label":"1939-12-17","symbolSize":10
     },
     {
-      "id":215,"category":3,"name":"","label":"","symbolSize":10
+      "id":215,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":216,"category":4,"name":"532123193912170029","label":"532123193912170029","symbolSize":10
+      "id":216,"category":5,"name":"532123193912170029","label":"532123193912170029","symbolSize":10
     },
     {
-      "id":217,"category":0,"name":"周全","label":"周全","symbolSize":15
+      "id":217,"category":1,"name":"周全","label":"周全","symbolSize":15
     },
     {
-      "id":218,"category":1,"name":"33","label":"33","symbolSize":10
+      "id":218,"category":2,"name":"33","label":"33","symbolSize":10
     },
     {
-      "id":219,"category":2,"name":"1944-10-09","label":"1944-10-09","symbolSize":10
+      "id":219,"category":3,"name":"1944-10-09","label":"1944-10-09","symbolSize":10
     },
     {
-      "id":220,"category":3,"name":"13193789328","label":"13193789328","symbolSize":10
+      "id":220,"category":4,"name":"13193789328","label":"13193789328","symbolSize":10
     },
     {
-      "id":221,"category":4,"name":"530111194410093518","label":"530111194410093518","symbolSize":10
+      "id":221,"category":5,"name":"530111194410093518","label":"530111194410093518","symbolSize":10
     },
     {
-      "id":222,"category":0,"name":"陈桂芬","label":"陈桂芬","symbolSize":15
+      "id":222,"category":1,"name":"陈桂芬","label":"陈桂芬","symbolSize":15
     },
     {
-      "id":223,"category":1,"name":"32","label":"32","symbolSize":10
+      "id":223,"category":2,"name":"32","label":"32","symbolSize":10
     },
     {
-      "id":224,"category":2,"name":"1948-10-10","label":"1948-10-10","symbolSize":10
+      "id":224,"category":3,"name":"1948-10-10","label":"1948-10-10","symbolSize":10
     },
     {
-      "id":225,"category":3,"name":"13193789327","label":"13193789327","symbolSize":10
+      "id":225,"category":4,"name":"13193789327","label":"13193789327","symbolSize":10
     },
     {
-      "id":226,"category":4,"name":"530103194810101214","label":"530103194810101214","symbolSize":10
+      "id":226,"category":5,"name":"530103194810101214","label":"530103194810101214","symbolSize":10
     },
     {
-      "id":227,"category":0,"name":"赵文荣","label":"赵文荣","symbolSize":15
+      "id":227,"category":1,"name":"赵文荣","label":"赵文荣","symbolSize":15
     },
     {
-      "id":228,"category":1,"name":"29","label":"29","symbolSize":10
+      "id":228,"category":2,"name":"29","label":"29","symbolSize":10
     },
     {
-      "id":229,"category":2,"name":"1952-05-20","label":"1952-05-20","symbolSize":10
+      "id":229,"category":3,"name":"1952-05-20","label":"1952-05-20","symbolSize":10
     },
     {
-      "id":230,"category":3,"name":"13193789324","label":"13193789324","symbolSize":10
+      "id":230,"category":4,"name":"13193789324","label":"13193789324","symbolSize":10
     },
     {
-      "id":231,"category":4,"name":"532901195205201433","label":"532901195205201433","symbolSize":10
+      "id":231,"category":5,"name":"532901195205201433","label":"532901195205201433","symbolSize":10
     },
     {
-      "id":232,"category":0,"name":"王淑敏","label":"王淑敏","symbolSize":15
+      "id":232,"category":1,"name":"王淑敏","label":"王淑敏","symbolSize":15
     },
     {
-      "id":233,"category":1,"name":"34","label":"34","symbolSize":10
+      "id":233,"category":2,"name":"34","label":"34","symbolSize":10
     },
     {
-      "id":234,"category":2,"name":"1932-08-06","label":"1932-08-06","symbolSize":10
+      "id":234,"category":3,"name":"1932-08-06","label":"1932-08-06","symbolSize":10
     },
     {
-      "id":235,"category":3,"name":"13193789329","label":"13193789329","symbolSize":10
+      "id":235,"category":4,"name":"13193789329","label":"13193789329","symbolSize":10
     },
     {
-      "id":236,"category":4,"name":"530102193208060746","label":"530102193208060746","symbolSize":10
+      "id":236,"category":5,"name":"530102193208060746","label":"530102193208060746","symbolSize":10
     },
     {
-      "id":237,"category":0,"name":"刘映月","label":"刘映月","symbolSize":15
+      "id":237,"category":1,"name":"刘映月","label":"刘映月","symbolSize":15
     },
     {
-      "id":238,"category":1,"name":"35","label":"35","symbolSize":10
+      "id":238,"category":2,"name":"35","label":"35","symbolSize":10
     },
     {
-      "id":239,"category":2,"name":"1933-04-12","label":"1933-04-12","symbolSize":10
+      "id":239,"category":3,"name":"1933-04-12","label":"1933-04-12","symbolSize":10
     },
     {
-      "id":240,"category":3,"name":"13193789330","label":"13193789330","symbolSize":10
+      "id":240,"category":4,"name":"13193789330","label":"13193789330","symbolSize":10
     },
     {
-      "id":241,"category":4,"name":"530102193304120729","label":"530102193304120729","symbolSize":10
+      "id":241,"category":5,"name":"530102193304120729","label":"530102193304120729","symbolSize":10
     },
     {
-      "id":242,"category":0,"name":"张志强","label":"张志强","symbolSize":15
+      "id":242,"category":1,"name":"张志强","label":"张志强","symbolSize":15
     },
     {
-      "id":243,"category":1,"name":"37","label":"37","symbolSize":10
+      "id":243,"category":2,"name":"37","label":"37","symbolSize":10
     },
     {
-      "id":244,"category":2,"name":"1942-12-15","label":"1942-12-15","symbolSize":10
+      "id":244,"category":3,"name":"1942-12-15","label":"1942-12-15","symbolSize":10
     },
     {
-      "id":245,"category":3,"name":"13193789332","label":"13193789332","symbolSize":10
+      "id":245,"category":4,"name":"13193789332","label":"13193789332","symbolSize":10
     },
     {
-      "id":246,"category":4,"name":"530103194212153313","label":"530103194212153313","symbolSize":10
+      "id":246,"category":5,"name":"530103194212153313","label":"530103194212153313","symbolSize":10
     },
     {
-      "id":247,"category":0,"name":"张云生","label":"张云生","symbolSize":15
+      "id":247,"category":1,"name":"张云生","label":"张云生","symbolSize":15
     },
     {
-      "id":248,"category":1,"name":"38","label":"38","symbolSize":10
+      "id":248,"category":2,"name":"38","label":"38","symbolSize":10
     },
     {
-      "id":249,"category":2,"name":"1935-10-15","label":"1935-10-15","symbolSize":10
+      "id":249,"category":3,"name":"1935-10-15","label":"1935-10-15","symbolSize":10
     },
     {
-      "id":250,"category":3,"name":"13193789333","label":"13193789333","symbolSize":10
+      "id":250,"category":4,"name":"13193789333","label":"13193789333","symbolSize":10
     },
     {
-      "id":251,"category":4,"name":"111111351015112","label":"111111351015112","symbolSize":10
+      "id":251,"category":5,"name":"111111351015112","label":"111111351015112","symbolSize":10
     },
     {
-      "id":252,"category":0,"name":"解恒珍","label":"解恒珍","symbolSize":15
+      "id":252,"category":1,"name":"解恒珍","label":"解恒珍","symbolSize":15
     },
     {
-      "id":253,"category":1,"name":"36","label":"36","symbolSize":10
+      "id":253,"category":2,"name":"36","label":"36","symbolSize":10
     },
     {
-      "id":254,"category":2,"name":"1932-06-18","label":"1932-06-18","symbolSize":10
+      "id":254,"category":3,"name":"1932-06-18","label":"1932-06-18","symbolSize":10
     },
     {
-      "id":255,"category":3,"name":"13193789331","label":"13193789331","symbolSize":10
+      "id":255,"category":4,"name":"13193789331","label":"13193789331","symbolSize":10
     },
     {
-      "id":256,"category":4,"name":"532901193206181869","label":"532901193206181869","symbolSize":10
+      "id":256,"category":5,"name":"532901193206181869","label":"532901193206181869","symbolSize":10
     },
     {
-      "id":257,"category":0,"name":"张淑英","label":"张淑英","symbolSize":15
+      "id":257,"category":1,"name":"张淑英","label":"张淑英","symbolSize":15
     },
     {
-      "id":258,"category":1,"name":"42","label":"42","symbolSize":10
+      "id":258,"category":2,"name":"42","label":"42","symbolSize":10
     },
     {
-      "id":259,"category":2,"name":"1935-10-15","label":"1935-10-15","symbolSize":10
+      "id":259,"category":3,"name":"1935-10-15","label":"1935-10-15","symbolSize":10
     },
     {
-      "id":260,"category":3,"name":"13193789337","label":"13193789337","symbolSize":10
+      "id":260,"category":4,"name":"13193789337","label":"13193789337","symbolSize":10
     },
     {
-      "id":261,"category":4,"name":"111111351015114","label":"111111351015114","symbolSize":10
+      "id":261,"category":5,"name":"111111351015114","label":"111111351015114","symbolSize":10
     },
     {
-      "id":262,"category":0,"name":"万向新","label":"万向新","symbolSize":15
+      "id":262,"category":1,"name":"万向新","label":"万向新","symbolSize":15
     },
     {
-      "id":263,"category":1,"name":"43","label":"43","symbolSize":10
+      "id":263,"category":2,"name":"43","label":"43","symbolSize":10
     },
     {
-      "id":264,"category":2,"name":"1934-06-12","label":"1934-06-12","symbolSize":10
+      "id":264,"category":3,"name":"1934-06-12","label":"1934-06-12","symbolSize":10
     },
     {
-      "id":265,"category":3,"name":"13193789338","label":"13193789338","symbolSize":10
+      "id":265,"category":4,"name":"13193789338","label":"13193789338","symbolSize":10
     },
     {
-      "id":266,"category":4,"name":"530102193406121829","label":"530102193406121829","symbolSize":10
+      "id":266,"category":5,"name":"530102193406121829","label":"530102193406121829","symbolSize":10
     },
     {
-      "id":267,"category":0,"name":"艾启","label":"艾启","symbolSize":15
+      "id":267,"category":1,"name":"艾启","label":"艾启","symbolSize":15
     },
     {
-      "id":268,"category":1,"name":"39","label":"39","symbolSize":10
+      "id":268,"category":2,"name":"39","label":"39","symbolSize":10
     },
     {
-      "id":269,"category":2,"name":"1935-10-15","label":"1935-10-15","symbolSize":10
+      "id":269,"category":3,"name":"1935-10-15","label":"1935-10-15","symbolSize":10
     },
     {
-      "id":270,"category":3,"name":"13193789334","label":"13193789334","symbolSize":10
+      "id":270,"category":4,"name":"13193789334","label":"13193789334","symbolSize":10
     },
     {
-      "id":271,"category":4,"name":"111111351015113","label":"111111351015113","symbolSize":10
+      "id":271,"category":5,"name":"111111351015113","label":"111111351015113","symbolSize":10
     },
     {
-      "id":272,"category":0,"name":"朱荣昌","label":"朱荣昌","symbolSize":15
+      "id":272,"category":1,"name":"朱荣昌","label":"朱荣昌","symbolSize":15
     },
     {
-      "id":273,"category":1,"name":"46","label":"46","symbolSize":10
+      "id":273,"category":2,"name":"46","label":"46","symbolSize":10
     },
     {
-      "id":274,"category":2,"name":"1926-10-29","label":"1926-10-29","symbolSize":10
+      "id":274,"category":3,"name":"1926-10-29","label":"1926-10-29","symbolSize":10
     },
     {
-      "id":275,"category":3,"name":"13193789341","label":"13193789341","symbolSize":10
+      "id":275,"category":4,"name":"13193789341","label":"13193789341","symbolSize":10
     },
     {
-      "id":276,"category":4,"name":"530102192610290334","label":"530102192610290334","symbolSize":10
+      "id":276,"category":5,"name":"530102192610290334","label":"530102192610290334","symbolSize":10
     },
     {
-      "id":277,"category":0,"name":"汤宪","label":"汤宪","symbolSize":15
+      "id":277,"category":1,"name":"汤宪","label":"汤宪","symbolSize":15
     },
     {
-      "id":278,"category":1,"name":"45","label":"45","symbolSize":10
+      "id":278,"category":2,"name":"45","label":"45","symbolSize":10
     },
     {
-      "id":279,"category":2,"name":"1951-03-07","label":"1951-03-07","symbolSize":10
+      "id":279,"category":3,"name":"1951-03-07","label":"1951-03-07","symbolSize":10
     },
     {
-      "id":280,"category":3,"name":"13193789340","label":"13193789340","symbolSize":10
+      "id":280,"category":4,"name":"13193789340","label":"13193789340","symbolSize":10
     },
     {
-      "id":281,"category":4,"name":"530127195103074718","label":"530127195103074718","symbolSize":10
+      "id":281,"category":5,"name":"530127195103074718","label":"530127195103074718","symbolSize":10
     },
     {
-      "id":282,"category":0,"name":"赵永烇","label":"赵永烇","symbolSize":15
+      "id":282,"category":1,"name":"赵永烇","label":"赵永烇","symbolSize":15
     },
     {
-      "id":283,"category":1,"name":"40","label":"40","symbolSize":10
+      "id":283,"category":2,"name":"40","label":"40","symbolSize":10
     },
     {
-      "id":284,"category":2,"name":"1956-06-18","label":"1956-06-18","symbolSize":10
+      "id":284,"category":3,"name":"1956-06-18","label":"1956-06-18","symbolSize":10
     },
     {
-      "id":285,"category":3,"name":"13193789335","label":"13193789335","symbolSize":10
+      "id":285,"category":4,"name":"13193789335","label":"13193789335","symbolSize":10
     },
     {
-      "id":286,"category":4,"name":"530112195606181633","label":"530112195606181633","symbolSize":10
+      "id":286,"category":5,"name":"530112195606181633","label":"530112195606181633","symbolSize":10
     },
     {
-      "id":287,"category":0,"name":"林伟芬","label":"林伟芬","symbolSize":15
+      "id":287,"category":1,"name":"林伟芬","label":"林伟芬","symbolSize":15
     },
     {
-      "id":288,"category":1,"name":"47","label":"47","symbolSize":10
+      "id":288,"category":2,"name":"47","label":"47","symbolSize":10
     },
     {
-      "id":289,"category":2,"name":"1932-07-07","label":"1932-07-07","symbolSize":10
+      "id":289,"category":3,"name":"1932-07-07","label":"1932-07-07","symbolSize":10
     },
     {
-      "id":290,"category":3,"name":"13193789342","label":"13193789342","symbolSize":10
+      "id":290,"category":4,"name":"13193789342","label":"13193789342","symbolSize":10
     },
     {
-      "id":291,"category":4,"name":"530103193207071247","label":"530103193207071247","symbolSize":10
+      "id":291,"category":5,"name":"530103193207071247","label":"530103193207071247","symbolSize":10
     },
     {
-      "id":292,"category":0,"name":"张道明","label":"张道明","symbolSize":15
+      "id":292,"category":1,"name":"张道明","label":"张道明","symbolSize":15
     },
     {
-      "id":293,"category":1,"name":"41","label":"41","symbolSize":10
+      "id":293,"category":2,"name":"41","label":"41","symbolSize":10
     },
     {
-      "id":294,"category":2,"name":"1951-07-01","label":"1951-07-01","symbolSize":10
+      "id":294,"category":3,"name":"1951-07-01","label":"1951-07-01","symbolSize":10
     },
     {
-      "id":295,"category":3,"name":"13193789336","label":"13193789336","symbolSize":10
+      "id":295,"category":4,"name":"13193789336","label":"13193789336","symbolSize":10
     },
     {
-      "id":296,"category":4,"name":"412821195107010011","label":"412821195107010011","symbolSize":10
+      "id":296,"category":5,"name":"412821195107010011","label":"412821195107010011","symbolSize":10
     },
     {
-      "id":297,"category":0,"name":"谢家蓉","label":"谢家蓉","symbolSize":15
+      "id":297,"category":1,"name":"谢家蓉","label":"谢家蓉","symbolSize":15
     },
     {
-      "id":298,"category":1,"name":"49","label":"49","symbolSize":10
+      "id":298,"category":2,"name":"49","label":"49","symbolSize":10
     },
     {
-      "id":299,"category":2,"name":"1927-05-08","label":"1927-05-08","symbolSize":10
+      "id":299,"category":3,"name":"1927-05-08","label":"1927-05-08","symbolSize":10
     },
     {
-      "id":300,"category":3,"name":"13193789344","label":"13193789344","symbolSize":10
+      "id":300,"category":4,"name":"13193789344","label":"13193789344","symbolSize":10
     },
     {
-      "id":301,"category":4,"name":"530103192705082120","label":"530103192705082120","symbolSize":10
+      "id":301,"category":5,"name":"530103192705082120","label":"530103192705082120","symbolSize":10
     },
     {
-      "id":302,"category":0,"name":"王丽宣","label":"王丽宣","symbolSize":15
+      "id":302,"category":1,"name":"王丽宣","label":"王丽宣","symbolSize":15
     },
     {
-      "id":303,"category":1,"name":"44","label":"44","symbolSize":10
+      "id":303,"category":2,"name":"44","label":"44","symbolSize":10
     },
     {
-      "id":304,"category":2,"name":"1932-06-19","label":"1932-06-19","symbolSize":10
+      "id":304,"category":3,"name":"1932-06-19","label":"1932-06-19","symbolSize":10
     },
     {
-      "id":305,"category":3,"name":"13193789339","label":"13193789339","symbolSize":10
+      "id":305,"category":4,"name":"13193789339","label":"13193789339","symbolSize":10
     },
     {
-      "id":306,"category":4,"name":"530103193206192522","label":"530103193206192522","symbolSize":10
+      "id":306,"category":5,"name":"530103193206192522","label":"530103193206192522","symbolSize":10
     },
     {
-      "id":307,"category":0,"name":"曹锦珍","label":"曹锦珍","symbolSize":15
+      "id":307,"category":1,"name":"曹锦珍","label":"曹锦珍","symbolSize":15
     },
     {
-      "id":308,"category":1,"name":"48","label":"48","symbolSize":10
+      "id":308,"category":2,"name":"48","label":"48","symbolSize":10
     },
     {
-      "id":309,"category":2,"name":"1940-11-28","label":"1940-11-28","symbolSize":10
+      "id":309,"category":3,"name":"1940-11-28","label":"1940-11-28","symbolSize":10
     },
     {
-      "id":310,"category":3,"name":"13193789343","label":"13193789343","symbolSize":10
+      "id":310,"category":4,"name":"13193789343","label":"13193789343","symbolSize":10
     },
     {
-      "id":311,"category":4,"name":"530102194011282745","label":"530102194011282745","symbolSize":10
+      "id":311,"category":5,"name":"530102194011282745","label":"530102194011282745","symbolSize":10
     },
     {
-      "id":312,"category":0,"name":"陈开珍","label":"陈开珍","symbolSize":15
+      "id":312,"category":1,"name":"陈开珍","label":"陈开珍","symbolSize":15
     },
     {
-      "id":313,"category":1,"name":"50","label":"50","symbolSize":10
+      "id":313,"category":2,"name":"50","label":"50","symbolSize":10
     },
     {
-      "id":314,"category":2,"name":"1937-05-24","label":"1937-05-24","symbolSize":10
+      "id":314,"category":3,"name":"1937-05-24","label":"1937-05-24","symbolSize":10
     },
     {
-      "id":315,"category":3,"name":"13193789345","label":"13193789345","symbolSize":10
+      "id":315,"category":4,"name":"13193789345","label":"13193789345","symbolSize":10
     },
     {
-      "id":316,"category":4,"name":"530102193705241820","label":"530102193705241820","symbolSize":10
+      "id":316,"category":5,"name":"530102193705241820","label":"530102193705241820","symbolSize":10
     },
     {
-      "id":317,"category":0,"name":"吴桂珍","label":"吴桂珍","symbolSize":15
+      "id":317,"category":1,"name":"吴桂珍","label":"吴桂珍","symbolSize":15
     },
     {
-      "id":318,"category":1,"name":"51","label":"51","symbolSize":10
+      "id":318,"category":2,"name":"51","label":"51","symbolSize":10
     },
     {
-      "id":319,"category":2,"name":"1935-10-13","label":"1935-10-13","symbolSize":10
+      "id":319,"category":3,"name":"1935-10-13","label":"1935-10-13","symbolSize":10
     },
     {
-      "id":320,"category":3,"name":"13193789346","label":"13193789346","symbolSize":10
+      "id":320,"category":4,"name":"13193789346","label":"13193789346","symbolSize":10
     },
     {
-      "id":321,"category":4,"name":"530103193510130342","label":"530103193510130342","symbolSize":10
+      "id":321,"category":5,"name":"530103193510130342","label":"530103193510130342","symbolSize":10
     },
     {
-      "id":322,"category":0,"name":"陈润英","label":"陈润英","symbolSize":15
+      "id":322,"category":1,"name":"陈润英","label":"陈润英","symbolSize":15
     },
     {
-      "id":323,"category":1,"name":"52","label":"52","symbolSize":10
+      "id":323,"category":2,"name":"52","label":"52","symbolSize":10
     },
     {
-      "id":324,"category":2,"name":"1946-01-13","label":"1946-01-13","symbolSize":10
+      "id":324,"category":3,"name":"1946-01-13","label":"1946-01-13","symbolSize":10
     },
     {
-      "id":325,"category":3,"name":"13193789347","label":"13193789347","symbolSize":10
+      "id":325,"category":4,"name":"13193789347","label":"13193789347","symbolSize":10
     },
     {
-      "id":326,"category":4,"name":"530111194601133527","label":"530111194601133527","symbolSize":10
+      "id":326,"category":5,"name":"530111194601133527","label":"530111194601133527","symbolSize":10
     },
     {
-      "id":327,"category":0,"name":"戴方珍","label":"戴方珍","symbolSize":15
+      "id":327,"category":1,"name":"戴方珍","label":"戴方珍","symbolSize":15
     },
     {
-      "id":328,"category":1,"name":"53","label":"53","symbolSize":10
+      "id":328,"category":2,"name":"53","label":"53","symbolSize":10
     },
     {
-      "id":329,"category":2,"name":"1937-08-24","label":"1937-08-24","symbolSize":10
+      "id":329,"category":3,"name":"1937-08-24","label":"1937-08-24","symbolSize":10
     },
     {
-      "id":330,"category":3,"name":"13193789348","label":"13193789348","symbolSize":10
+      "id":330,"category":4,"name":"13193789348","label":"13193789348","symbolSize":10
     },
     {
-      "id":331,"category":4,"name":"530102193708240321","label":"530102193708240321","symbolSize":10
+      "id":331,"category":5,"name":"530102193708240321","label":"530102193708240321","symbolSize":10
     },
     {
-      "id":332,"category":0,"name":"许崇仁","label":"许崇仁","symbolSize":15
+      "id":332,"category":1,"name":"许崇仁","label":"许崇仁","symbolSize":15
     },
     {
-      "id":333,"category":1,"name":"55","label":"55","symbolSize":10
+      "id":333,"category":2,"name":"55","label":"55","symbolSize":10
     },
     {
-      "id":334,"category":2,"name":"1935-10-15","label":"1935-10-15","symbolSize":10
+      "id":334,"category":3,"name":"1935-10-15","label":"1935-10-15","symbolSize":10
     },
     {
-      "id":335,"category":3,"name":"13193789350","label":"13193789350","symbolSize":10
+      "id":335,"category":4,"name":"13193789350","label":"13193789350","symbolSize":10
     },
     {
-      "id":336,"category":4,"name":"111111351015111","label":"111111351015111","symbolSize":10
+      "id":336,"category":5,"name":"111111351015111","label":"111111351015111","symbolSize":10
     },
     {
-      "id":337,"category":0,"name":"赵建新","label":"赵建新","symbolSize":15
+      "id":337,"category":1,"name":"赵建新","label":"赵建新","symbolSize":15
     },
     {
-      "id":338,"category":1,"name":"54","label":"54","symbolSize":10
+      "id":338,"category":2,"name":"54","label":"54","symbolSize":10
     },
     {
-      "id":339,"category":2,"name":"1934-08-23","label":"1934-08-23","symbolSize":10
+      "id":339,"category":3,"name":"1934-08-23","label":"1934-08-23","symbolSize":10
     },
     {
-      "id":340,"category":3,"name":"13193789349","label":"13193789349","symbolSize":10
+      "id":340,"category":4,"name":"13193789349","label":"13193789349","symbolSize":10
     },
     {
-      "id":341,"category":4,"name":"530102193408230324","label":"530102193408230324","symbolSize":10
+      "id":341,"category":5,"name":"530102193408230324","label":"530102193408230324","symbolSize":10
     },
     {
-      "id":342,"category":0,"name":"俞志忠","label":"俞志忠","symbolSize":15
+      "id":342,"category":1,"name":"俞志忠","label":"俞志忠","symbolSize":15
     },
     {
-      "id":343,"category":1,"name":"56","label":"56","symbolSize":10
+      "id":343,"category":2,"name":"56","label":"56","symbolSize":10
     },
     {
-      "id":344,"category":2,"name":"1937-09-20","label":"1937-09-20","symbolSize":10
+      "id":344,"category":3,"name":"1937-09-20","label":"1937-09-20","symbolSize":10
     },
     {
-      "id":345,"category":3,"name":"13193789351","label":"13193789351","symbolSize":10
+      "id":345,"category":4,"name":"13193789351","label":"13193789351","symbolSize":10
     },
     {
-      "id":346,"category":4,"name":"530102193709200719","label":"530102193709200719","symbolSize":10
+      "id":346,"category":5,"name":"530102193709200719","label":"530102193709200719","symbolSize":10
     },
     {
-      "id":347,"category":0,"name":"洪祥林","label":"洪祥林","symbolSize":15
+      "id":347,"category":1,"name":"洪祥林","label":"洪祥林","symbolSize":15
     },
     {
-      "id":348,"category":1,"name":"57","label":"57","symbolSize":10
+      "id":348,"category":2,"name":"57","label":"57","symbolSize":10
     },
     {
-      "id":349,"category":2,"name":"1924-10-18","label":"1924-10-18","symbolSize":10
+      "id":349,"category":3,"name":"1924-10-18","label":"1924-10-18","symbolSize":10
     },
     {
-      "id":350,"category":3,"name":"","label":"","symbolSize":10
+      "id":350,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":351,"category":4,"name":"530103192410182511","label":"530103192410182511","symbolSize":10
+      "id":351,"category":5,"name":"530103192410182511","label":"530103192410182511","symbolSize":10
     },
     {
-      "id":352,"category":0,"name":"席振榕","label":"席振榕","symbolSize":15
+      "id":352,"category":1,"name":"席振榕","label":"席振榕","symbolSize":15
     },
     {
-      "id":353,"category":1,"name":"60","label":"60","symbolSize":10
+      "id":353,"category":2,"name":"60","label":"60","symbolSize":10
     },
     {
-      "id":354,"category":2,"name":"1936-09-07","label":"1936-09-07","symbolSize":10
+      "id":354,"category":3,"name":"1936-09-07","label":"1936-09-07","symbolSize":10
     },
     {
-      "id":355,"category":3,"name":"","label":"","symbolSize":10
+      "id":355,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":356,"category":4,"name":"530112193609070550","label":"530112193609070550","symbolSize":10
+      "id":356,"category":5,"name":"530112193609070550","label":"530112193609070550","symbolSize":10
     },
     {
-      "id":357,"category":0,"name":"黄碧清","label":"黄碧清","symbolSize":15
+      "id":357,"category":1,"name":"黄碧清","label":"黄碧清","symbolSize":15
     },
     {
-      "id":358,"category":1,"name":"62","label":"62","symbolSize":10
+      "id":358,"category":2,"name":"62","label":"62","symbolSize":10
     },
     {
-      "id":359,"category":2,"name":"1939-12-31","label":"1939-12-31","symbolSize":10
+      "id":359,"category":3,"name":"1939-12-31","label":"1939-12-31","symbolSize":10
     },
     {
-      "id":360,"category":3,"name":"","label":"","symbolSize":10
+      "id":360,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":361,"category":4,"name":"530102193912312724","label":"530102193912312724","symbolSize":10
+      "id":361,"category":5,"name":"530102193912312724","label":"530102193912312724","symbolSize":10
     },
     {
-      "id":362,"category":0,"name":"孙智章","label":"孙智章","symbolSize":15
+      "id":362,"category":1,"name":"孙智章","label":"孙智章","symbolSize":15
     },
     {
-      "id":363,"category":1,"name":"58","label":"58","symbolSize":10
+      "id":363,"category":2,"name":"58","label":"58","symbolSize":10
     },
     {
-      "id":364,"category":2,"name":"1938-08-26","label":"1938-08-26","symbolSize":10
+      "id":364,"category":3,"name":"1938-08-26","label":"1938-08-26","symbolSize":10
     },
     {
-      "id":365,"category":3,"name":"13577166488","label":"13577166488","symbolSize":10
+      "id":365,"category":4,"name":"13577166488","label":"13577166488","symbolSize":10
     },
     {
-      "id":366,"category":4,"name":"530102193808260717","label":"530102193808260717","symbolSize":10
+      "id":366,"category":5,"name":"530102193808260717","label":"530102193808260717","symbolSize":10
     },
     {
-      "id":367,"category":0,"name":"李莲英","label":"李莲英","symbolSize":15
+      "id":367,"category":1,"name":"李莲英","label":"李莲英","symbolSize":15
     },
     {
-      "id":368,"category":1,"name":"59","label":"59","symbolSize":10
+      "id":368,"category":2,"name":"59","label":"59","symbolSize":10
     },
     {
-      "id":369,"category":2,"name":"1938-07-25","label":"1938-07-25","symbolSize":10
+      "id":369,"category":3,"name":"1938-07-25","label":"1938-07-25","symbolSize":10
     },
     {
-      "id":370,"category":3,"name":"","label":"","symbolSize":10
+      "id":370,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":371,"category":4,"name":"530102193807252424","label":"530102193807252424","symbolSize":10
+      "id":371,"category":5,"name":"530102193807252424","label":"530102193807252424","symbolSize":10
     },
     {
-      "id":372,"category":0,"name":"殷传桢","label":"殷传桢","symbolSize":15
+      "id":372,"category":1,"name":"殷传桢","label":"殷传桢","symbolSize":15
     },
     {
-      "id":373,"category":1,"name":"61","label":"61","symbolSize":10
+      "id":373,"category":2,"name":"61","label":"61","symbolSize":10
     },
     {
-      "id":374,"category":2,"name":"1933-12-01","label":"1933-12-01","symbolSize":10
+      "id":374,"category":3,"name":"1933-12-01","label":"1933-12-01","symbolSize":10
     },
     {
-      "id":375,"category":3,"name":"","label":"","symbolSize":10
+      "id":375,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":376,"category":4,"name":"530111193312010411","label":"530111193312010411","symbolSize":10
+      "id":376,"category":5,"name":"530111193312010411","label":"530111193312010411","symbolSize":10
     },
     {
-      "id":377,"category":0,"name":"毛大菊","label":"毛大菊","symbolSize":15
+      "id":377,"category":1,"name":"毛大菊","label":"毛大菊","symbolSize":15
     },
     {
-      "id":378,"category":1,"name":"63","label":"63","symbolSize":10
+      "id":378,"category":2,"name":"63","label":"63","symbolSize":10
     },
     {
-      "id":379,"category":2,"name":"1939-02-12","label":"1939-02-12","symbolSize":10
+      "id":379,"category":3,"name":"1939-02-12","label":"1939-02-12","symbolSize":10
     },
     {
-      "id":380,"category":3,"name":"","label":"","symbolSize":10
+      "id":380,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":381,"category":4,"name":"532724193902123922","label":"532724193902123922","symbolSize":10
+      "id":381,"category":5,"name":"532724193902123922","label":"532724193902123922","symbolSize":10
     },
     {
-      "id":382,"category":0,"name":"文惠芳","label":"文惠芳","symbolSize":15
+      "id":382,"category":1,"name":"文惠芳","label":"文惠芳","symbolSize":15
     },
     {
-      "id":383,"category":1,"name":"87","label":"87","symbolSize":10
+      "id":383,"category":2,"name":"87","label":"87","symbolSize":10
     },
     {
-      "id":384,"category":2,"name":"1932-07-27","label":"1932-07-27","symbolSize":10
+      "id":384,"category":3,"name":"1932-07-27","label":"1932-07-27","symbolSize":10
     },
     {
-      "id":385,"category":3,"name":"18913861932","label":"18913861932","symbolSize":10
+      "id":385,"category":4,"name":"18913861932","label":"18913861932","symbolSize":10
     },
     {
-      "id":386,"category":4,"name":"532501193207270327","label":"532501193207270327","symbolSize":10
+      "id":386,"category":5,"name":"532501193207270327","label":"532501193207270327","symbolSize":10
     },
     {
-      "id":387,"category":0,"name":"朱洪亮","label":"朱洪亮","symbolSize":15
+      "id":387,"category":1,"name":"朱洪亮","label":"朱洪亮","symbolSize":15
     },
     {
-      "id":388,"category":1,"name":"86","label":"86","symbolSize":10
+      "id":388,"category":2,"name":"86","label":"86","symbolSize":10
     },
     {
-      "id":389,"category":2,"name":"1936-01-07","label":"1936-01-07","symbolSize":10
+      "id":389,"category":3,"name":"1936-01-07","label":"1936-01-07","symbolSize":10
     },
     {
-      "id":390,"category":3,"name":"","label":"","symbolSize":10
+      "id":390,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":391,"category":4,"name":"532326193601071613","label":"532326193601071613","symbolSize":10
+      "id":391,"category":5,"name":"532326193601071613","label":"532326193601071613","symbolSize":10
     },
     {
-      "id":392,"category":0,"name":"郭惠昌","label":"郭惠昌","symbolSize":15
+      "id":392,"category":1,"name":"郭惠昌","label":"郭惠昌","symbolSize":15
     },
     {
-      "id":393,"category":1,"name":"88","label":"88","symbolSize":10
+      "id":393,"category":2,"name":"88","label":"88","symbolSize":10
     },
     {
-      "id":394,"category":2,"name":"1931-11-18","label":"1931-11-18","symbolSize":10
+      "id":394,"category":3,"name":"1931-11-18","label":"1931-11-18","symbolSize":10
     },
     {
-      "id":395,"category":3,"name":"","label":"","symbolSize":10
+      "id":395,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":396,"category":4,"name":"530112193111180322","label":"530112193111180322","symbolSize":10
+      "id":396,"category":5,"name":"530112193111180322","label":"530112193111180322","symbolSize":10
     },
     {
-      "id":397,"category":0,"name":"杨光辉","label":"杨光辉","symbolSize":15
+      "id":397,"category":1,"name":"杨光辉","label":"杨光辉","symbolSize":15
     },
     {
-      "id":398,"category":1,"name":"89","label":"89","symbolSize":10
+      "id":398,"category":2,"name":"89","label":"89","symbolSize":10
     },
     {
-      "id":399,"category":2,"name":"1937-11-15","label":"1937-11-15","symbolSize":10
+      "id":399,"category":3,"name":"1937-11-15","label":"1937-11-15","symbolSize":10
     },
     {
-      "id":400,"category":3,"name":"","label":"","symbolSize":10
+      "id":400,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":401,"category":4,"name":"530112193711150346","label":"530112193711150346","symbolSize":10
+      "id":401,"category":5,"name":"530112193711150346","label":"530112193711150346","symbolSize":10
     },
     {
-      "id":402,"category":0,"name":"李秀萍","label":"李秀萍","symbolSize":15
+      "id":402,"category":1,"name":"李秀萍","label":"李秀萍","symbolSize":15
     },
     {
-      "id":403,"category":1,"name":"90","label":"90","symbolSize":10
+      "id":403,"category":2,"name":"90","label":"90","symbolSize":10
     },
     {
-      "id":404,"category":2,"name":"1951-08-24","label":"1951-08-24","symbolSize":10
+      "id":404,"category":3,"name":"1951-08-24","label":"1951-08-24","symbolSize":10
     },
     {
-      "id":405,"category":3,"name":"15925207306","label":"15925207306","symbolSize":10
+      "id":405,"category":4,"name":"15925207306","label":"15925207306","symbolSize":10
     },
     {
-      "id":406,"category":4,"name":"530102195108240722","label":"530102195108240722","symbolSize":10
+      "id":406,"category":5,"name":"530102195108240722","label":"530102195108240722","symbolSize":10
     },
     {
-      "id":407,"category":0,"name":"施文祥","label":"施文祥","symbolSize":15
+      "id":407,"category":1,"name":"施文祥","label":"施文祥","symbolSize":15
     },
     {
-      "id":408,"category":1,"name":"92","label":"92","symbolSize":10
+      "id":408,"category":2,"name":"92","label":"92","symbolSize":10
     },
     {
-      "id":409,"category":2,"name":"1929-05-12","label":"1929-05-12","symbolSize":10
+      "id":409,"category":3,"name":"1929-05-12","label":"1929-05-12","symbolSize":10
     },
     {
-      "id":410,"category":3,"name":"13888966376","label":"13888966376","symbolSize":10
+      "id":410,"category":4,"name":"13888966376","label":"13888966376","symbolSize":10
     },
     {
-      "id":411,"category":4,"name":"530102192905122418","label":"530102192905122418","symbolSize":10
+      "id":411,"category":5,"name":"530102192905122418","label":"530102192905122418","symbolSize":10
     },
     {
-      "id":412,"category":0,"name":"杨桂芬","label":"杨桂芬","symbolSize":15
+      "id":412,"category":1,"name":"杨桂芬","label":"杨桂芬","symbolSize":15
     },
     {
-      "id":413,"category":1,"name":"91","label":"91","symbolSize":10
+      "id":413,"category":2,"name":"91","label":"91","symbolSize":10
     },
     {
-      "id":414,"category":2,"name":"1935-08-15","label":"1935-08-15","symbolSize":10
+      "id":414,"category":3,"name":"1935-08-15","label":"1935-08-15","symbolSize":10
     },
     {
-      "id":415,"category":3,"name":"","label":"","symbolSize":10
+      "id":415,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":416,"category":4,"name":"530112193508150922","label":"530112193508150922","symbolSize":10
+      "id":416,"category":5,"name":"530112193508150922","label":"530112193508150922","symbolSize":10
     },
     {
-      "id":417,"category":0,"name":"赵德芳","label":"赵德芳","symbolSize":15
+      "id":417,"category":1,"name":"赵德芳","label":"赵德芳","symbolSize":15
     },
     {
-      "id":418,"category":1,"name":"94","label":"94","symbolSize":10
+      "id":418,"category":2,"name":"94","label":"94","symbolSize":10
     },
     {
-      "id":419,"category":2,"name":"1927-04-21","label":"1927-04-21","symbolSize":10
+      "id":419,"category":3,"name":"1927-04-21","label":"1927-04-21","symbolSize":10
     },
     {
-      "id":420,"category":3,"name":"13908841211","label":"13908841211","symbolSize":10
+      "id":420,"category":4,"name":"13908841211","label":"13908841211","symbolSize":10
     },
     {
-      "id":421,"category":4,"name":"420601192704214522","label":"420601192704214522","symbolSize":10
+      "id":421,"category":5,"name":"420601192704214522","label":"420601192704214522","symbolSize":10
     },
     {
-      "id":422,"category":0,"name":"高桂珍","label":"高桂珍","symbolSize":15
+      "id":422,"category":1,"name":"高桂珍","label":"高桂珍","symbolSize":15
     },
     {
-      "id":423,"category":1,"name":"96","label":"96","symbolSize":10
+      "id":423,"category":2,"name":"96","label":"96","symbolSize":10
     },
     {
-      "id":424,"category":2,"name":"1938-12-25","label":"1938-12-25","symbolSize":10
+      "id":424,"category":3,"name":"1938-12-25","label":"1938-12-25","symbolSize":10
     },
     {
-      "id":425,"category":3,"name":"18213902665","label":"18213902665","symbolSize":10
+      "id":425,"category":4,"name":"18213902665","label":"18213902665","symbolSize":10
     },
     {
-      "id":426,"category":4,"name":"532502193812250064","label":"532502193812250064","symbolSize":10
+      "id":426,"category":5,"name":"532502193812250064","label":"532502193812250064","symbolSize":10
     },
     {
-      "id":427,"category":0,"name":"赵靖飞","label":"赵靖飞","symbolSize":15
+      "id":427,"category":1,"name":"赵靖飞","label":"赵靖飞","symbolSize":15
     },
     {
-      "id":428,"category":1,"name":"95","label":"95","symbolSize":10
+      "id":428,"category":2,"name":"95","label":"95","symbolSize":10
     },
     {
-      "id":429,"category":2,"name":"1950-05-21","label":"1950-05-21","symbolSize":10
+      "id":429,"category":3,"name":"1950-05-21","label":"1950-05-21","symbolSize":10
     },
     {
-      "id":430,"category":3,"name":"13987650894","label":"13987650894","symbolSize":10
+      "id":430,"category":4,"name":"13987650894","label":"13987650894","symbolSize":10
     },
     {
-      "id":431,"category":4,"name":"530102195005211865","label":"530102195005211865","symbolSize":10
+      "id":431,"category":5,"name":"530102195005211865","label":"530102195005211865","symbolSize":10
     },
     {
-      "id":432,"category":0,"name":"湛美英","label":"湛美英","symbolSize":15
+      "id":432,"category":1,"name":"湛美英","label":"湛美英","symbolSize":15
     },
     {
-      "id":433,"category":1,"name":"93","label":"93","symbolSize":10
+      "id":433,"category":2,"name":"93","label":"93","symbolSize":10
     },
     {
-      "id":434,"category":2,"name":"1942-08-16","label":"1942-08-16","symbolSize":10
+      "id":434,"category":3,"name":"1942-08-16","label":"1942-08-16","symbolSize":10
     },
     {
-      "id":435,"category":3,"name":"","label":"","symbolSize":10
+      "id":435,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":436,"category":4,"name":"530102194208162421","label":"530102194208162421","symbolSize":10
+      "id":436,"category":5,"name":"530102194208162421","label":"530102194208162421","symbolSize":10
     },
     {
-      "id":437,"category":0,"name":"陈玉仙","label":"陈玉仙","symbolSize":15
+      "id":437,"category":1,"name":"陈玉仙","label":"陈玉仙","symbolSize":15
     },
     {
-      "id":438,"category":1,"name":"98","label":"98","symbolSize":10
+      "id":438,"category":2,"name":"98","label":"98","symbolSize":10
     },
     {
-      "id":439,"category":2,"name":"1947-04-20","label":"1947-04-20","symbolSize":10
+      "id":439,"category":3,"name":"1947-04-20","label":"1947-04-20","symbolSize":10
     },
     {
-      "id":440,"category":3,"name":"15587177017","label":"15587177017","symbolSize":10
+      "id":440,"category":4,"name":"15587177017","label":"15587177017","symbolSize":10
     },
     {
-      "id":441,"category":4,"name":"530102194704200343","label":"530102194704200343","symbolSize":10
+      "id":441,"category":5,"name":"530102194704200343","label":"530102194704200343","symbolSize":10
     },
     {
-      "id":442,"category":0,"name":"杨家靖","label":"杨家靖","symbolSize":15
+      "id":442,"category":1,"name":"杨家靖","label":"杨家靖","symbolSize":15
     },
     {
-      "id":443,"category":1,"name":"97","label":"97","symbolSize":10
+      "id":443,"category":2,"name":"97","label":"97","symbolSize":10
     },
     {
-      "id":444,"category":2,"name":"1935-11-15","label":"1935-11-15","symbolSize":10
+      "id":444,"category":3,"name":"1935-11-15","label":"1935-11-15","symbolSize":10
     },
     {
-      "id":445,"category":3,"name":"15915196771","label":"15915196771","symbolSize":10
+      "id":445,"category":4,"name":"15915196771","label":"15915196771","symbolSize":10
     },
     {
-      "id":446,"category":4,"name":"530102193511150314","label":"530102193511150314","symbolSize":10
+      "id":446,"category":5,"name":"530102193511150314","label":"530102193511150314","symbolSize":10
     },
     {
-      "id":447,"category":0,"name":"周曼萍","label":"周曼萍","symbolSize":15
+      "id":447,"category":1,"name":"周曼萍","label":"周曼萍","symbolSize":15
     },
     {
-      "id":448,"category":1,"name":"99","label":"99","symbolSize":10
+      "id":448,"category":2,"name":"99","label":"99","symbolSize":10
     },
     {
-      "id":449,"category":2,"name":"1930-06-27","label":"1930-06-27","symbolSize":10
+      "id":449,"category":3,"name":"1930-06-27","label":"1930-06-27","symbolSize":10
     },
     {
-      "id":450,"category":3,"name":"13619671991","label":"13619671991","symbolSize":10
+      "id":450,"category":4,"name":"13619671991","label":"13619671991","symbolSize":10
     },
     {
-      "id":451,"category":4,"name":"530102193006270323","label":"530102193006270323","symbolSize":10
+      "id":451,"category":5,"name":"530102193006270323","label":"530102193006270323","symbolSize":10
     },
     {
-      "id":452,"category":0,"name":"王同英","label":"王同英","symbolSize":15
+      "id":452,"category":1,"name":"王同英","label":"王同英","symbolSize":15
     },
     {
-      "id":453,"category":1,"name":"100","label":"100","symbolSize":10
+      "id":453,"category":2,"name":"100","label":"100","symbolSize":10
     },
     {
-      "id":454,"category":2,"name":"1930-10-17","label":"1930-10-17","symbolSize":10
+      "id":454,"category":3,"name":"1930-10-17","label":"1930-10-17","symbolSize":10
     },
     {
-      "id":455,"category":3,"name":"","label":"","symbolSize":10
+      "id":455,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":456,"category":4,"name":"530103193010171228","label":"530103193010171228","symbolSize":10
+      "id":456,"category":5,"name":"530103193010171228","label":"530103193010171228","symbolSize":10
     },
     {
-      "id":457,"category":0,"name":"鄢朝惠","label":"鄢朝惠","symbolSize":15
+      "id":457,"category":1,"name":"鄢朝惠","label":"鄢朝惠","symbolSize":15
     },
     {
-      "id":458,"category":1,"name":"102","label":"102","symbolSize":10
+      "id":458,"category":2,"name":"102","label":"102","symbolSize":10
     },
     {
-      "id":459,"category":2,"name":"1937-09-29","label":"1937-09-29","symbolSize":10
+      "id":459,"category":3,"name":"1937-09-29","label":"1937-09-29","symbolSize":10
     },
     {
-      "id":460,"category":3,"name":"15212231421","label":"15212231421","symbolSize":10
+      "id":460,"category":4,"name":"15212231421","label":"15212231421","symbolSize":10
     },
     {
-      "id":461,"category":4,"name":"532131193709290025","label":"532131193709290025","symbolSize":10
+      "id":461,"category":5,"name":"532131193709290025","label":"532131193709290025","symbolSize":10
     },
     {
-      "id":462,"category":0,"name":"金英秀","label":"金英秀","symbolSize":15
+      "id":462,"category":1,"name":"金英秀","label":"金英秀","symbolSize":15
     },
     {
-      "id":463,"category":1,"name":"103","label":"103","symbolSize":10
+      "id":463,"category":2,"name":"103","label":"103","symbolSize":10
     },
     {
-      "id":464,"category":2,"name":"1927-08-18","label":"1927-08-18","symbolSize":10
+      "id":464,"category":3,"name":"1927-08-18","label":"1927-08-18","symbolSize":10
     },
     {
-      "id":465,"category":3,"name":"","label":"","symbolSize":10
+      "id":465,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":466,"category":4,"name":"53010219270818242X","label":"53010219270818242X","symbolSize":10
+      "id":466,"category":5,"name":"53010219270818242X","label":"53010219270818242X","symbolSize":10
     },
     {
-      "id":467,"category":0,"name":"邓光奇","label":"邓光奇","symbolSize":15
+      "id":467,"category":1,"name":"邓光奇","label":"邓光奇","symbolSize":15
     },
     {
-      "id":468,"category":1,"name":"104","label":"104","symbolSize":10
+      "id":468,"category":2,"name":"104","label":"104","symbolSize":10
     },
     {
-      "id":469,"category":2,"name":"1935-11-10","label":"1935-11-10","symbolSize":10
+      "id":469,"category":3,"name":"1935-11-10","label":"1935-11-10","symbolSize":10
     },
     {
-      "id":470,"category":3,"name":"","label":"","symbolSize":10
+      "id":470,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":471,"category":4,"name":"530102193511101512","label":"530102193511101512","symbolSize":10
+      "id":471,"category":5,"name":"530102193511101512","label":"530102193511101512","symbolSize":10
     },
     {
-      "id":472,"category":0,"name":"唐秀英","label":"唐秀英","symbolSize":15
+      "id":472,"category":1,"name":"唐秀英","label":"唐秀英","symbolSize":15
     },
     {
-      "id":473,"category":1,"name":"101","label":"101","symbolSize":10
+      "id":473,"category":2,"name":"101","label":"101","symbolSize":10
     },
     {
-      "id":474,"category":2,"name":"1932-03-19","label":"1932-03-19","symbolSize":10
+      "id":474,"category":3,"name":"1932-03-19","label":"1932-03-19","symbolSize":10
     },
     {
-      "id":475,"category":3,"name":"","label":"","symbolSize":10
+      "id":475,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":476,"category":4,"name":"530102193203191122","label":"530102193203191122","symbolSize":10
+      "id":476,"category":5,"name":"530102193203191122","label":"530102193203191122","symbolSize":10
     },
     {
-      "id":477,"category":0,"name":"杨贵荣","label":"杨贵荣","symbolSize":15
+      "id":477,"category":1,"name":"杨贵荣","label":"杨贵荣","symbolSize":15
     },
     {
-      "id":478,"category":1,"name":"106","label":"106","symbolSize":10
+      "id":478,"category":2,"name":"106","label":"106","symbolSize":10
     },
     {
-      "id":479,"category":2,"name":"1937-02-26","label":"1937-02-26","symbolSize":10
+      "id":479,"category":3,"name":"1937-02-26","label":"1937-02-26","symbolSize":10
     },
     {
-      "id":480,"category":3,"name":"","label":"","symbolSize":10
+      "id":480,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":481,"category":4,"name":"530112193702260535","label":"530112193702260535","symbolSize":10
+      "id":481,"category":5,"name":"530112193702260535","label":"530112193702260535","symbolSize":10
     },
     {
-      "id":482,"category":0,"name":"廖桂珍","label":"廖桂珍","symbolSize":15
+      "id":482,"category":1,"name":"廖桂珍","label":"廖桂珍","symbolSize":15
     },
     {
-      "id":483,"category":1,"name":"105","label":"105","symbolSize":10
+      "id":483,"category":2,"name":"105","label":"105","symbolSize":10
     },
     {
-      "id":484,"category":2,"name":"1936-10-10","label":"1936-10-10","symbolSize":10
+      "id":484,"category":3,"name":"1936-10-10","label":"1936-10-10","symbolSize":10
     },
     {
-      "id":485,"category":3,"name":"","label":"","symbolSize":10
+      "id":485,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":486,"category":4,"name":"530112193610100542","label":"530112193610100542","symbolSize":10
+      "id":486,"category":5,"name":"530112193610100542","label":"530112193610100542","symbolSize":10
     },
     {
-      "id":487,"category":0,"name":"李惠兰","label":"李惠兰","symbolSize":15
+      "id":487,"category":1,"name":"李惠兰","label":"李惠兰","symbolSize":15
     },
     {
-      "id":488,"category":1,"name":"107","label":"107","symbolSize":10
+      "id":488,"category":2,"name":"107","label":"107","symbolSize":10
     },
     {
-      "id":489,"category":2,"name":"1936-12-24","label":"1936-12-24","symbolSize":10
+      "id":489,"category":3,"name":"1936-12-24","label":"1936-12-24","symbolSize":10
     },
     {
-      "id":490,"category":3,"name":"","label":"","symbolSize":10
+      "id":490,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":491,"category":4,"name":"530102193612242461","label":"530102193612242461","symbolSize":10
+      "id":491,"category":5,"name":"530102193612242461","label":"530102193612242461","symbolSize":10
     },
     {
-      "id":492,"category":0,"name":"杨丽华","label":"杨丽华","symbolSize":15
+      "id":492,"category":1,"name":"杨丽华","label":"杨丽华","symbolSize":15
     },
     {
-      "id":493,"category":1,"name":"110","label":"110","symbolSize":10
+      "id":493,"category":2,"name":"110","label":"110","symbolSize":10
     },
     {
-      "id":494,"category":2,"name":"1936-09-23","label":"1936-09-23","symbolSize":10
+      "id":494,"category":3,"name":"1936-09-23","label":"1936-09-23","symbolSize":10
     },
     {
-      "id":495,"category":3,"name":"","label":"","symbolSize":10
+      "id":495,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":496,"category":4,"name":"533001193609230022","label":"533001193609230022","symbolSize":10
+      "id":496,"category":5,"name":"533001193609230022","label":"533001193609230022","symbolSize":10
     },
     {
-      "id":497,"category":0,"name":"杨宁","label":"杨宁","symbolSize":15
+      "id":497,"category":1,"name":"杨宁","label":"杨宁","symbolSize":15
     },
     {
-      "id":498,"category":1,"name":"108","label":"108","symbolSize":10
+      "id":498,"category":2,"name":"108","label":"108","symbolSize":10
     },
     {
-      "id":499,"category":2,"name":"1940-12-25","label":"1940-12-25","symbolSize":10
+      "id":499,"category":3,"name":"1940-12-25","label":"1940-12-25","symbolSize":10
     },
     {
-      "id":500,"category":3,"name":"","label":"","symbolSize":10
+      "id":500,"category":4,"name":"","label":"","symbolSize":10
     },
     {
-      "id":501,"category":4,"name":"530102194012251123","label":"530102194012251123","symbolSize":10
+      "id":501,"category":5,"name":"530102194012251123","label":"530102194012251123","symbolSize":10
     }
   ],
   "links":  [

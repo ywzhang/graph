@@ -4,20 +4,8 @@ function getOption(graphInfo){
     links=graphInfo['links']
     categories=graphInfo['categories']
 
-    var repulsion = 20;
+    var repulsion = 100;
     var isShow = false;
-    var nodeSize = nodes.length;
-    if(nodeSize<=50){
-        repulsion = 300;
-    }else if(50<nodeSize && nodeSize<=200){
-        repulsion = 100;
-    }else if(200<nodeSize && nodeSize<=400){
-        repulsion = 50;
-    }else if(400<nodeSize && nodeSize<=800){
-        repulsion = 20;
-    }else{
-        repulsion = 10;
-    }
 
     //设置option样式
     var option = {
@@ -36,6 +24,7 @@ function getOption(graphInfo){
         },
         color : ['#EE6A50','#4F94CD','#B3EE3A','#DAA520','#f845f1', '#ad46f3','#5045f6','#4777f5','#44aff0','#45dbf7','#f6d54a','#ff4343','#fa827d','#3db18a','#ff5897','#372dc4','#c42d6d','#82c42d'],
         legend: [{
+            selectedMode:false,
             x: 'left',//图例位置
             data: categories.map(function (a) {
                 return a.name;
@@ -45,18 +34,18 @@ function getOption(graphInfo){
             {
                 name: '关系图',
                 type: 'graph',
-                layout: 'force',
+                layout: 'none',
                 draggable: false,//指示节点是否可以拖动
                 focusNodeAdjacency: true, //当鼠标移动到节点上，突出显示节点以及节点的边和邻接节点
                 roam: true,//是否开启鼠标缩放和平移漫游。默认不开启。如果只想要开启缩放或者平移，可以设置成 'scale' 或者 'move'。设置成 true 为都开启
                 symbol: 'circle',
-                force : { //力引导图基本配置
-                    repulsion : repulsion,//节点之间的斥力因子。支持数组表达斥力范围，值越大斥力越大。
-                    // gravity : 0.03,//节点受到的向
-                    // // 中心的引力因子。该值越大节点越往中心点靠拢。
-                    // edgeLength :[10,50],//边的两个节点之间的距离，这个距离也会受 repulsion。[10, 50] 。值越小则长度越长
-                    layoutAnimation : false//因为力引导布局会在多次迭代后才会稳定，这个参数决定是否显示布局的迭代动画，在浏览器端节点数据较多（>100）的时候不建议关闭，布局过程会造成浏览器假死。
-                },
+                // force : { //力引导图基本配置
+                //     repulsion : repulsion,//节点之间的斥力因子。支持数组表达斥力范围，值越大斥力越大。
+                //     // gravity : 0.03,//节点受到的向
+                //     // // 中心的引力因子。该值越大节点越往中心点靠拢。
+                //     // edgeLength :[10,50],//边的两个节点之间的距离，这个距离也会受 repulsion。[10, 50] 。值越小则长度越长
+                //     layoutAnimation : false//因为力引导布局会在多次迭代后才会稳定，这个参数决定是否显示布局的迭代动画，在浏览器端节点数据较多（>100）的时候不建议关闭，布局过程会造成浏览器假死。
+                // },
                 itemStyle: {
                     normal: {
                         label: {
@@ -86,6 +75,11 @@ function getOption(graphInfo){
                         width: 5
                     }
                 },
+                // animationDuration: function (idx) {//初始动画的时长，支持回调函数
+                //     // 越往后的数据延迟越大
+                //     return idx * 200;
+                // },
+                animationEasing:"cubicIn",//初始动画的缓动效果
                 nodes: nodes,
                 links:links,
                 categories: categories
@@ -117,9 +111,8 @@ function cevent(params) {
     var linksOption = option.series[0].links;
     var data = params.data;
     var linksNodes = [];
-    var categoryLength = option.series[0].categories.length;
 
-    if (data.category != (categoryLength - 1)) {
+    if (!data.itemStyle) {
         /**
          判断所选节点的flag
          如果为真，则表示要展开数据,
@@ -137,8 +130,28 @@ function cevent(params) {
                         nodesOption[linksNodes[p]].category = nodesOption[linksNodes[p]].category*-1;
                         nodesOption[linksNodes[p]].flag = true;
                     }
+                    //背景虚化
+                    for(var n in nodesOption){
+                        // delete nodesOption[n]["itemStyle"];
+                        if(linksNodes.indexOf(nodesOption[n].id)==-1 && nodesOption[n].id != data.id && nodesOption[n].category>=0){
+                            nodesOption[n]["itemStyle"]={opacity :0.1};
+                        }
+                    }
+                    for(var l in linksOption){
+                        delete linksOption[l]["lineStyle"];
+                        if(linksNodes.indexOf(linksOption[l].source)==-1){
+                            linksOption[l]["lineStyle"]={opacity :0.02};
+                        }
+                    }
                 }
                 nodesOption[data.id].flag = false;
+                //点击的节点到画布中心
+                nodesOption[data.id].x = nodesOption[0].x;
+                nodesOption[data.id].y = nodesOption[0].y;
+                var width = $("#container").width();
+                var height = $("#container").height();
+                nodesOption[0].x = Math.random()*width;
+                nodesOption[0].y = Math.random()*height;
                 myChart.clear();
                 myChart.setOption(option);
             }
@@ -172,9 +185,24 @@ function cevent(params) {
                         }
                         nodesOption[linksNodes[p]].flag = true;
                     }
+                    //去除背景虚化
+                    for(var n in nodesOption){
+                        delete nodesOption[n]["itemStyle"];
+                    }
+                    for(var l in linksOption){
+                        delete linksOption[l]["lineStyle"];
+                    }
                 }
                 //设置该节点的flag为true，下次点击展开子节点
                 nodesOption[data.id].flag = true;
+                //将中心节点还原
+                nodesOption[data.id].x = nodesOption[0].x;
+                nodesOption[data.id].y = nodesOption[0].y;
+                var width = $("#container").width();
+                var height = $("#container").height();
+                nodesOption[0].x = width/2;
+                nodesOption[0].y = height/2;
+
                 myChart.clear();
                 myChart.setOption(option);
             }

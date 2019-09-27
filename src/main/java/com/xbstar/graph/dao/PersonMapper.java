@@ -1,5 +1,6 @@
 package com.xbstar.graph.dao;
 
+import com.xbstar.graph.domain.Institution;
 import com.xbstar.graph.domain.Person;
 import org.apache.ibatis.annotations.Mapper;
 

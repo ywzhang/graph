@@ -15,7 +15,7 @@ function getOption(graphInfo){
             trigger: 'item',//数据触发类型
             formatter: function(params){//触发之后返回的参数，这个函数是关键
                 if(params.data!=undefined){
-                    return params.data.label;//返回标签
+                    return params.data.name;//返回标签
                 }
             },
         },
@@ -46,9 +46,9 @@ function getOption(graphInfo){
                     normal: {
                         label: {
                             show: false,
-                            textStyle: {
-                                color: '#333'
-                            },
+                            // textStyle: {
+                            //     color: '#333'
+                            // },
                             position: 'inside'
                         },
                         nodeStyle : {

@@ -9,4 +9,12 @@
         institution
     where id =  #{institution_id}
   </select>
+  
+	<select id="findAllInstitution" resultType="Institution">
+	  	select 
+	  		id, institution_name
+	  	from
+	  		institution
+	</select>
+  
 </mapper>

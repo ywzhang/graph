@@ -1,5 +1,6 @@
 package com.xbstar.graph.controller;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.xbstar.graph.dao.InstitutionMapper;
 import com.xbstar.graph.dao.PersonMapper;
@@ -11,6 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -34,59 +40,115 @@ public class GraphController {
         return "graph";
     }
 
+    /*
     @RequestMapping("/findAll")
     @ResponseBody
     public JSONObject findAll(){
-        JSONObject dataJSon = new JSONObject();
-        List categories = new ArrayList();
-        List nodes = new ArrayList();
-        List links = new ArrayList();
-        AtomicInteger i = new AtomicInteger(1);
+    	
+    }*/
+    
+    @RequestMapping("/findAll")
+    @ResponseBody
+    public JSONObject findAll() throws IOException{
+        JSONObject dataJSon = new JSONObject(true);
+		JSONArray nodes = new JSONArray();
+		JSONArray links = new JSONArray();
+		JSONArray categories = new JSONArray();
+        //List nodes = new ArrayList();
+        //List links = new ArrayList();
+        AtomicInteger i = new AtomicInteger(0);
         List<Person> persons = mapper.findAll();
-        JSONObject node1 = new JSONObject();
-        node1.put("id",i.getAndIncrement()+"");
-        node1.put("name","老人");
-        node1.put("value",null);
-        node1.put("category",0);
-        node1.put("label","老人");
-        node1.put("symbolSize",25);
-        nodes.add(node1);
+        List<Institution> institutions = institutionMapper.findAllInstitution();
+        
+        JSONObject nodePerson = new JSONObject(true);
+        JSONObject nodeInstitution = new JSONObject(true);
+        
+        nodePerson.put("id",i.getAndIncrement());
+        nodePerson.put("category", 0);
+        nodePerson.put("level", 0);
+        nodePerson.put("name", "老人");
+        nodePerson.put("value", "");
+        nodePerson.put("label", "老人");
+        nodePerson.put("flag", false);
+        
+        nodeInstitution.put("id",i.getAndIncrement());
+        nodeInstitution.put("category", 1);
+        nodeInstitution.put("level", 0);
+        nodeInstitution.put("name", "机构");
+        nodeInstitution.put("value", "");
+        nodeInstitution.put("label", "机构");
+        nodeInstitution.put("flag", false);
+        
+        nodes.add(nodePerson);
+        nodes.add(nodeInstitution);
+        
         persons.stream().forEach(item->{
-            JSONObject node2 = new JSONObject();
-            node2.put("id", i.getAndIncrement()+"");
-            node2.put("name",item.getName());
-            node2.put("value",item.getId());
-            node2.put("category",1);
-            node2.put("label",item.getName());
-            node2.put("symbolSize",20);
-            nodes.add(node2);
+            JSONObject node = new JSONObject(true);
+            node.put("id", i.getAndIncrement());
+            node.put("category", 2);
+            node.put("level", 1);
+            node.put("name", item.getName());
+            node.put("value", item.getId()+"");  
+            node.put("label", "person");
+            node.put("flag", true);
+            nodes.add(node);
 
-            JSONObject link1 = new JSONObject();
-            link1.put("source",node2.getString("id"));
-            link1.put("target",node1.getString("id"));
-            link1.put("label",node2.get("name")+"->"+node1.get("name"));
+            JSONObject link1 = new JSONObject(true);
+            link1.put("source",node.getInteger("id"));
+            link1.put("target",nodePerson.getInteger("id"));
+            //link1.put("label",node.get("name")+"->"+nodePerson.get("name"));
             links.add(link1);
+            
         });
+        
+        institutions.stream().forEach(item->{
+            JSONObject node = new JSONObject(true);
+            node.put("id", i.getAndIncrement());
+            node.put("category", 3);
+            node.put("level", 1);
+            node.put("name", item.getInstitution_name());
+            node.put("value", item.getId()+"");
+            node.put("label", "institution");
+            node.put("flag", true);
+            nodes.add(node);
 
-        List<String> list = new ArrayList<>(Arrays.asList("老人", "姓名"));
+            JSONObject link1 = new JSONObject(true);
+            link1.put("source",node.getInteger("id"));
+            link1.put("target",nodeInstitution.getInteger("id"));
+            //link1.put("label",nodeInstitution.get("name")+"->"+node.get("name"));
+            links.add(link1);
+            
+        });
+        
+        
+        List<String> list = new ArrayList<>(Arrays.asList("老人", "姓名", "机构", "机构名"));
         list.stream().forEach(item->{
             JSONObject category = new JSONObject();
             category.put("name",item);
             categories.add(category);
         });
+        
+        writeToJson("E:\\File\\Visualization\\kg_nodes.json", nodes);
+        writeToJson("E:\\File\\Visualization\\kg_links.json" ,links);
+        System.out.println("Write Finish");
+        
         dataJSon.put("categories",categories);
         dataJSon.put("nodes",nodes);
         dataJSon.put("links",links);
+        
+        //writeToJson("E:\\File\\Visualization\\dataJson.json" ,dataJson);
         return dataJSon;
     }
-
+    
+    
     @RequestMapping("/findById")
     @ResponseBody
     public JSONObject findById(long id,String category){
         JSONObject dataJSon = new JSONObject();
-        List categories = new ArrayList();
-        List nodes = new ArrayList();
-        List links = new ArrayList();
+        JSONArray categories = new JSONArray();
+        JSONArray nodes = new JSONArray();
+        JSONArray links = new JSONArray();
+        
         switch (category){
             case "姓名":
                 Person person = mapper.findById(id);
@@ -156,6 +218,7 @@ public class GraphController {
                 dataJSon.put("nodes",nodes);
                 dataJSon.put("links",links);
                 break;
+                
             case "机构":
                 Institution ins = institutionMapper.findById(id);
                 JSONObject insJson1 = new JSONObject();
@@ -205,4 +268,51 @@ public class GraphController {
         }
         return dataJSon;
     }
+    
+  //Save as JSON file
+  	public static void writeToJson(String filePath,JSONArray object) throws IOException
+  	{
+  	    File file = new File(filePath);
+  	    char [] stack = new char[1024];
+  	    int top=-1;
+  	    String string = object.toString();
+  	    StringBuffer sb = new StringBuffer();
+  	    char [] charArray = string.toCharArray();
+  	    for(int i=0;i<charArray.length;i++){
+  	        char c= charArray[i];
+  	        if ('{' == c || '[' == c) {  
+  	            stack[++top] = c; 
+  	            sb.append("\n"+charArray[i] + "\n");  
+  	            for (int j = 0; j <= top; j++) {  
+  	                sb.append("\t");  
+  	            }  
+  	            continue;  
+  	        }
+  	         if ((i + 1) <= (charArray.length - 1)) {  
+  	                char d = charArray[i+1];  
+  	                if ('}' == d || ']' == d) {  
+  	                    top--; 
+  	                    sb.append(charArray[i] + "\n");  
+  	                    for (int j = 0; j <= top; j++) {  
+  	                        sb.append("\t");  
+  	                    }  
+  	                    continue;  
+  	                }  
+  	            }  
+  	            if (',' == c) {  
+  	                sb.append(charArray[i] + "");  
+  	                for (int j = 0; j <= top; j++) {  
+  	                    sb.append("");  
+  	                }  
+  	                continue;  
+  	            }  
+  	            sb.append(c);  
+  	        }  
+  	        Writer write = new FileWriter(file);  
+  	        write.write(sb.toString());  
+  	        write.flush();  
+  	        write.close();  
+  	}
+  
+    
 }

@@ -8,28 +8,14 @@ public class Person {
 
     private long id;
     private String name;
-    private String address;
+    private String gender;
+    private String identity;
     private String telephone;
     private String birthday;
-    private String identity;
+    private String address;
+
     private long institution_id;
     private String institution_name;
-
-    public long getInstitution_id() {
-        return institution_id;
-    }
-
-    public void setInstitution_id(long institution_id) {
-        this.institution_id = institution_id;
-    }
-
-    public String getInstitution_name() {
-        return institution_name;
-    }
-
-    public void setInstitution_name(String institution_name) {
-        this.institution_name = institution_name;
-    }
 
     public long getId() {
         return id;
@@ -47,12 +33,20 @@ public class Person {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
+    public String getGender() {
+        return gender;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getIdentity() {
+        return identity;
+    }
+
+    public void setIdentity(String identity) {
+        this.identity = identity;
     }
 
     public String getTelephone() {
@@ -71,11 +65,30 @@ public class Person {
         this.birthday = birthday;
     }
 
-    public String getIdentity() {
-        return identity;
+    public String getAddress() {
+        return address;
     }
 
-    public void setIdentity(String identity) {
-        this.identity = identity;
+    public void setAddress(String address) {
+        this.address = address;
     }
+
+    public long getInstitution_id() {
+        return institution_id;
+    }
+
+    public void setInstitution_id(long institution_id) {
+        this.institution_id = institution_id;
+    }
+
+    public String getInstitution_name() {
+        return institution_name;
+    }
+
+    public void setInstitution_name(String institution_name) {
+        this.institution_name = institution_name;
+    }
+
+
+
 }

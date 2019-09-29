@@ -20,6 +20,7 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -47,6 +48,101 @@ public class GraphController {
     	
     }*/
     
+    @RequestMapping("/findAll")
+    @ResponseBody
+    public JSONObject findAll() throws IOException{
+        JSONObject dataJSon = new JSONObject(true);
+		JSONArray nodes = new JSONArray();
+		JSONArray links = new JSONArray();
+		JSONArray categories = new JSONArray();
+        //List nodes = new ArrayList();
+        //List links = new ArrayList();
+        AtomicInteger i = new AtomicInteger(0);
+        List<Person> persons = mapper.findAll();
+        List<Institution> institutions = institutionMapper.findAllInstitution();
+        
+        JSONObject nodePerson = new JSONObject(true);
+        JSONObject nodeInstitution = new JSONObject(true);
+        
+        nodePerson.put("id",i.getAndIncrement()+"");
+        nodePerson.put("category", 0);
+        nodePerson.put("level", 0);
+        nodePerson.put("name", "老人");
+        nodePerson.put("value", "");
+        nodePerson.put("label", "老人");
+        nodePerson.put("flag", false);
+        
+        nodeInstitution.put("id",i.getAndIncrement()+"");
+        nodeInstitution.put("category", 1);
+        nodeInstitution.put("level", 0);
+        nodeInstitution.put("name", "机构");
+        nodeInstitution.put("value", "");
+        nodeInstitution.put("label", "机构");
+        nodeInstitution.put("flag", false);
+        
+        nodes.add(nodePerson);
+        nodes.add(nodeInstitution);
+        
+        persons.stream().forEach(item->{
+            JSONObject node = new JSONObject(true);
+            node.put("id", "person#"+item.getId());
+            node.put("category", 2);
+            node.put("level", 1);
+            node.put("name", item.getName());
+            node.put("value", item.getId()+"");  
+            node.put("label", item.getName());
+            node.put("flag", true);
+            nodes.add(node);
+
+            JSONObject link1 = new JSONObject(true);
+            link1.put("source",node.getString("id"));
+            link1.put("target",nodePerson.getString("id"));
+            //link1.put("label",node.get("name")+"->"+nodePerson.get("name"));
+            links.add(link1);
+            
+        });
+        
+        institutions.stream().forEach(item->{
+            JSONObject node = new JSONObject(true);
+            node.put("id", "institution#"+item.getId());
+            node.put("category", 3);
+            node.put("level", 1);
+            node.put("name", item.getInstitution_name());
+            node.put("value", item.getId()+"");
+            node.put("label", item.getInstitution_name());
+            node.put("flag", true);
+            nodes.add(node);
+
+            JSONObject link1 = new JSONObject(true);
+            link1.put("source", node.getString("id"));
+            link1.put("target",nodeInstitution.getString("id"));
+            //link1.put("label",nodeInstitution.get("name")+"->"+node.get("name"));
+            links.add(link1);
+            
+        });
+        
+        
+        List<String> list = new ArrayList<>(Arrays.asList("老人", "姓名", "机构", "机构名"));
+        list.stream().forEach(item->{
+            JSONObject category = new JSONObject();
+            category.put("name",item);
+            categories.add(category);
+        });
+        
+        writeToJson("E:\\File\\Visualization\\kg_nodes.json", nodes);
+        writeToJson("E:\\File\\Visualization\\kg_links.json" ,links);
+        System.out.println("Write Finish");
+        
+        dataJSon.put("categories",categories);
+        dataJSon.put("nodes",nodes);
+        dataJSon.put("links",links);
+        
+        //writeToJson("E:\\File\\Visualization\\dataJson.json" ,dataJson);
+        return dataJSon;
+    }
+    
+    
+    /*
     @RequestMapping("/findAll")
     @ResponseBody
     public JSONObject findAll() throws IOException{
@@ -113,7 +209,7 @@ public class GraphController {
             nodes.add(node);
 
             JSONObject link1 = new JSONObject(true);
-            link1.put("source",node.getInteger("id"));
+            link1.put("source", "institution"+item.getId());
             link1.put("target",nodeInstitution.getInteger("id"));
             //link1.put("label",nodeInstitution.get("name")+"->"+node.get("name"));
             links.add(link1);
@@ -138,62 +234,79 @@ public class GraphController {
         
         //writeToJson("E:\\File\\Visualization\\dataJson.json" ,dataJson);
         return dataJSon;
-    }
+    } */
     
     
     @RequestMapping("/findById")
     @ResponseBody
-    public JSONObject findById(long id,String category){
+    public JSONObject findById(String tableId) throws IOException {
+
+        String table = tableId.split("@")[0];
+        Long id = Long.parseLong(tableId.split("@")[1]);
         JSONObject dataJSon = new JSONObject();
         JSONArray categories = new JSONArray();
         JSONArray nodes = new JSONArray();
         JSONArray links = new JSONArray();
         
-        switch (category){
-            case "姓名":
+        switch (table){
+            case "person":
                 Person person = mapper.findById(id);
-                JSONObject json1 = new JSONObject();
-                json1.put("id","1");
+                System.out.println(person.getInstitution_id());
+                JSONObject json1 = new JSONObject(true);
+                json1.put("id",UUID.randomUUID().toString().replace("-", ""));
+                json1.put("category",4);
+                json1.put("level",3);
                 json1.put("name",person.getName());
                 json1.put("value",null);
-                json1.put("category",0);
                 json1.put("label",person.getName());
-                json1.put("symbolSize",25);
-                JSONObject json2 = new JSONObject();
-                json2.put("id","2");
-                json2.put("name",person.getAddress());
+                json1.put("flag",true);
+
+                JSONObject json2 = new JSONObject(true);
+                json2.put("id",UUID.randomUUID().toString().replace("-", ""));
+                json2.put("category",5);
+                json2.put("level",3);
+                json2.put("name",person.getGender());
                 json2.put("value",null);
-                json2.put("category",1);
-                json2.put("label",person.getAddress());
-                json2.put("symbolSize",20);
-                JSONObject json3 = new JSONObject();
-                json3.put("id","3");
-                json3.put("name",person.getTelephone());
+                json2.put("label",person.getGender());
+                json2.put("flag",true);
+
+                JSONObject json3 = new JSONObject(true);
+                json3.put("id",UUID.randomUUID().toString().replace("-", ""));
+                json3.put("category",6);
+                json3.put("level",3);
+                json3.put("name",person.getIdentity());
                 json3.put("value",null);
-                json3.put("category",2);
-                json3.put("label",person.getTelephone());
-                json3.put("symbolSize",20);
-                JSONObject json4 = new JSONObject();
-                json4.put("id","4");
-                json4.put("name",person.getBirthday());
+                json3.put("label",person.getIdentity());
+                json3.put("flag",true);
+
+                JSONObject json4 = new JSONObject(true);
+                json4.put("id",UUID.randomUUID().toString().replace("-", ""));
+                json4.put("category",7);
+                json4.put("level",3);
+                json4.put("name",person.getTelephone());
                 json4.put("value",null);
-                json4.put("category",3);
-                json4.put("label",person.getBirthday());
-                json4.put("symbolSize",20);
-                JSONObject json5 = new JSONObject();
-                json5.put("id","5");
-                json5.put("name",person.getIdentity());
+                json4.put("label",person.getTelephone());
+                json4.put("flag",true);
+
+                JSONObject json5 = new JSONObject(true);
+                json5.put("id",UUID.randomUUID().toString().replace("-", ""));
+                json5.put("category",8);
+                json5.put("level",3);
+                json5.put("name",person.getBirthday());
                 json5.put("value",null);
-                json5.put("category",4);
-                json5.put("label",person.getIdentity());
-                json5.put("symbolSize",20);
-                JSONObject json6 = new JSONObject();
-                json6.put("id","6");
-                json6.put("name",person.getInstitution_name());
-                json6.put("value",person.getInstitution_id());
-                json6.put("category",5);
-                json6.put("label",person.getInstitution_name());
-                json6.put("symbolSize",20);
+                json5.put("label",person.getBirthday());
+                json5.put("flag",true);
+
+                JSONObject json6 = new JSONObject(true);
+                json6.put("id",UUID.randomUUID().toString().replace("-", ""));
+                json6.put("category",9);
+                json6.put("level",3);
+                json6.put("name",person.getAddress());
+                json6.put("value",null);
+                json6.put("label",person.getAddress());
+                json6.put("flag",true);
+
+
                 nodes.add(json1);
                 nodes.add(json2);
                 nodes.add(json3);
@@ -201,25 +314,36 @@ public class GraphController {
                 nodes.add(json5);
                 nodes.add(json6);
 
+                JSONObject person2institution = new JSONObject(true);
+                person2institution.put("source", tableId);
+                person2institution.put("target", "institution@"+person.getInstitution_id());
+                links.add(person2institution);
                 for(int i=2;i<=6;i++){
-                   JSONObject link = new JSONObject();
+                   JSONObject link = new JSONObject(true);
                    link.put("source",i+"");
-                   link.put("target","1");
+                   link.put("target", tableId);
                    links.add(link);
                 }
-                List<String> list = new ArrayList<>(Arrays.asList("姓名","地址","电话","出生日期","身份证","机构"));
+
+
+                List<String> list = new ArrayList<>(Arrays.asList("姓名","性别","身份证","电话","出生日期","地址","机构"));
                 list.stream().forEach(item->{
                     JSONObject category2 = new JSONObject();
                     category2.put("name",item);
                     categories.add(category2);
                 });
 
+                writeToJson("E:\\File\\Visualization\\person_nodes.json" ,nodes);
+                writeToJson("E:\\File\\Visualization\\person_links.json" ,links);
                 dataJSon.put("categories",categories);
                 dataJSon.put("nodes",nodes);
                 dataJSon.put("links",links);
+
+
                 break;
-                
-            case "机构":
+
+
+            case "institution":
                 Institution ins = institutionMapper.findById(id);
                 JSONObject insJson1 = new JSONObject();
                 insJson1.put("id","1");
@@ -313,6 +437,5 @@ public class GraphController {
   	        write.flush();  
   	        write.close();  
   	}
-  
-    
+
 }

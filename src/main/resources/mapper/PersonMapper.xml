@@ -5,16 +5,20 @@
 
 	
  	<select id="findAll" resultType="Person">
-		select
-			pb.id, pb.name
-		from 
-			person_base pb
-		order by
-			id asc
+		select pb.id, pb.name
+		from person_base pb
+		order by id asc
 		limit 100
-	</select>  
-	
-	
+	</select>
+
+
+    <select id="findById" resultType="Person">
+    select pb.id, pb.name, pb.gender, pb.identity, pb.telephone, pb.birthday, pb.address, inst.id as institution_id, inst.institution_name
+    from person_base pb
+    left join person p on pb.id = p.person_base_id
+    left join institution inst on p.institution_id = inst.id
+    where pb.id = #{id};
+	</select>
 <!-- 	<select id="findAll"  resultType="Person">
     SELECT
         p.id,pb.name
@@ -25,7 +29,7 @@
   </select>	 -->
   
 	
-  <select id="findById" resultType="Person">
+<!--  <select id="findById" resultType="Person">
     SELECT
 	  pb.name,
       pb.address,
@@ -39,7 +43,7 @@
   LEFT JOIN person_base pb ON p.person_base_id = pb.id
   LEFT JOIN institution i ON p.institution_id = i.id
   where p.id = #{id}
-  </select>
+  </select>-->
   
 
 	

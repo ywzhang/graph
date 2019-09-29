@@ -10,7 +10,7 @@ import java.util.List;
  */
 @Mapper
 public interface InstitutionMapper {
-    //test
+
     Institution findById(long id);
 
 	List<Institution> findAllInstitution();

@@ -42,6 +42,7 @@ public class GraphController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         return "graph";
     }
 

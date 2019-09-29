@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a82fb8c-fa35-4609-aeb0-1055d465d643" name="Default Changelist" comment="graph">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/controller/GraphController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/controller/GraphController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/dao/PersonMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/dao/PersonMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/domain/Institution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/domain/Institution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xbstar/graph/controller/GraphController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xbstar/graph/controller/GraphController.class" afterDir="false" />
-    </list>
+    <list default="true" id="2a82fb8c-fa35-4609-aeb0-1055d465d643" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +115,7 @@
     </configuration>
   </component>
   <component name="SvnConfiguration">
-    <configuration>C:\Users\Simon\AppData\Roaming\Subversion</configuration>
+    <configuration>C:\Users\zhangyw\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -140,7 +134,7 @@
       <workItem from="1569200883449" duration="16104000" />
       <workItem from="1569220571854" duration="89611000" />
       <workItem from="1569722405615" duration="7742000" />
-      <workItem from="1569733696284" duration="5259000" />
+      <workItem from="1569733696284" duration="5514000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1568278292180</created>
@@ -212,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569729808794</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="graph">
+      <created>1569738997152</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1569738997152</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

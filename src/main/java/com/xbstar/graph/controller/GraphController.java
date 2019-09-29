@@ -55,8 +55,6 @@ public class GraphController {
 		JSONArray nodes = new JSONArray();
 		JSONArray links = new JSONArray();
 		JSONArray categories = new JSONArray();
-        //List nodes = new ArrayList();
-        //List links = new ArrayList();
         AtomicInteger i = new AtomicInteger(0);
         List<Person> persons = mapper.findAll();
         List<Institution> institutions = institutionMapper.findAllInstitution();
@@ -128,16 +126,11 @@ public class GraphController {
             category.put("name",item);
             categories.add(category);
         });
-        
-        writeToJson("E:\\File\\Visualization\\kg_nodes.json", nodes);
-        writeToJson("E:\\File\\Visualization\\kg_links.json" ,links);
-        System.out.println("Write Finish");
-        
+
         dataJSon.put("categories",categories);
         dataJSon.put("nodes",nodes);
         dataJSon.put("links",links);
-        
-        //writeToJson("E:\\File\\Visualization\\dataJson.json" ,dataJson);
+
         return dataJSon;
     }
     
@@ -250,8 +243,8 @@ public class GraphController {
         
         switch (table){
             case "person":
-                Person person = mapper.findById(id);
-                System.out.println(person.getInstitution_id());
+                List<Person> persons = mapper.findById(id);
+                Person person = persons.get(0);
                 JSONObject json1 = new JSONObject(true);
                 json1.put("id",UUID.randomUUID().toString().replace("-", ""));
                 json1.put("category",4);
@@ -314,16 +307,20 @@ public class GraphController {
                 nodes.add(json5);
                 nodes.add(json6);
 
-                JSONObject person2institution = new JSONObject(true);
-                person2institution.put("source", tableId);
-                person2institution.put("target", "institution@"+person.getInstitution_id());
-                links.add(person2institution);
-                for(int i=2;i<=6;i++){
-                   JSONObject link = new JSONObject(true);
-                   link.put("source",i+"");
-                   link.put("target", tableId);
-                   links.add(link);
+                for(int i = 0;i < nodes.size();i++){
+                    JSONObject linkDataProperty = new JSONObject();
+                    JSONObject node = (JSONObject) nodes.get(i);
+                    linkDataProperty.put("source", node.getString("id"));
+                    linkDataProperty.put("target", tableId);
+                    links.add(linkDataProperty);
                 }
+
+                persons.stream().forEach(item->{
+                    JSONObject linkInstitution = new JSONObject(true);
+                    linkInstitution.put("source","person@"+item.getId());
+                    linkInstitution.put("target","institution@"+item.getInstitution_id());
+                    links.add(linkInstitution);
+                });
 
 
                 List<String> list = new ArrayList<>(Arrays.asList("姓名","性别","身份证","电话","出生日期","地址","机构"));
@@ -333,50 +330,67 @@ public class GraphController {
                     categories.add(category2);
                 });
 
-                writeToJson("E:\\File\\Visualization\\person_nodes.json" ,nodes);
-                writeToJson("E:\\File\\Visualization\\person_links.json" ,links);
                 dataJSon.put("categories",categories);
                 dataJSon.put("nodes",nodes);
                 dataJSon.put("links",links);
 
-
                 break;
+
+
 
 
             case "institution":
                 Institution ins = institutionMapper.findById(id);
                 JSONObject insJson1 = new JSONObject();
-                insJson1.put("id","1");
+                insJson1.put("id",UUID.randomUUID().toString().replace("-", ""));
+                insJson1.put("category",10);
+                insJson1.put("level",3);
                 insJson1.put("name",ins.getInstitution_name());
                 insJson1.put("value",null);
-                insJson1.put("category",0);
                 insJson1.put("label",ins.getInstitution_name());
-                insJson1.put("symbolSize",25);
+                insJson1.put("flag",true);
+
                 JSONObject insJson2 = new JSONObject();
-                insJson2.put("id","2");
+                insJson2.put("id",UUID.randomUUID().toString().replace("-", ""));
+                insJson2.put("category",10);
+                insJson2.put("level",3);
                 insJson2.put("name",ins.getPrincipal());
                 insJson2.put("value",null);
-                insJson2.put("category",1);
                 insJson2.put("label",ins.getPrincipal());
-                insJson2.put("symbolSize",20);
+                insJson2.put("flag",true);
+
                 JSONObject insJson3 = new JSONObject();
-                insJson3.put("id","3");
-                insJson3.put("name",ins.getAddress());
+                insJson3.put("id",UUID.randomUUID().toString().replace("-", ""));
+                insJson3.put("category",10);
+                insJson3.put("level",3);
+                insJson3.put("name",ins.getPrincipal_phone());
                 insJson3.put("value",null);
-                insJson3.put("category",2);
-                insJson3.put("label",ins.getAddress());
-                insJson3.put("symbolSize",20);
+                insJson3.put("label",ins.getPrincipal_phone());
+                insJson3.put("flag",true);
+
+                JSONObject insJson4 = new JSONObject();
+                insJson4.put("id",UUID.randomUUID().toString().replace("-", ""));
+                insJson4.put("category",10);
+                insJson4.put("level",3);
+                insJson4.put("name",ins.getAddress());
+                insJson4.put("value",null);
+                insJson4.put("label",ins.getAddress());
+                insJson4.put("flag",true);
+
                 nodes.add(insJson1);
                 nodes.add(insJson2);
                 nodes.add(insJson3);
+                nodes.add(insJson4);
 
-                for(int i=2;i<=3;i++){
-                    JSONObject link = new JSONObject();
-                    link.put("source",i+"");
-                    link.put("target","1");
-                    links.add(link);
+                for(int i = 0;i < nodes.size();i++){
+                    JSONObject linkDataProperty = new JSONObject();
+                    JSONObject node = (JSONObject) nodes.get(i);
+                    linkDataProperty.put("source", node.getString("id"));
+                    linkDataProperty.put("target", tableId);
+                    links.add(linkDataProperty);
                 }
-                List<String> list2 = new ArrayList<>(Arrays.asList("机构名","负责人","地址"));
+
+                List<String> list2 = new ArrayList<>(Arrays.asList("机构名","负责人","负责人电话","地址"));
                 list2.stream().forEach(item->{
                     JSONObject category2 = new JSONObject();
                     category2.put("name",item);

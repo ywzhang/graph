@@ -14,6 +14,6 @@ import java.util.Map;
 public interface PersonMapper {
     List<Person> findAll ();
 
-    Person findById(long id);
+    List<Person> findById(long id);
 
 }

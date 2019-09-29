@@ -7,15 +7,8 @@ public class Institution {
     private long id;
     private String institution_name;
     private String principal;
+    private String principal_phone;
     private String address;
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
 
     public long getId() {
         return id;
@@ -40,4 +33,21 @@ public class Institution {
     public void setPrincipal(String principal) {
         this.principal = principal;
     }
+
+    public String getPrincipal_phone() {
+        return principal_phone;
+    }
+
+    public void setPrincipal_phone(String principal_phone) {
+        this.principal_phone = principal_phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
 }

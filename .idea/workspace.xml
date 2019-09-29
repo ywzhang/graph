@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a82fb8c-fa35-4609-aeb0-1055d465d643" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/drawl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/drawl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/graph.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/graph.ftl" afterDir="false" />
+    <list default="true" id="2a82fb8c-fa35-4609-aeb0-1055d465d643" name="Default Changelist" comment="graph">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/controller/GraphController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/controller/GraphController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/dao/PersonMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/dao/PersonMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/domain/Institution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/domain/Institution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xbstar/graph/controller/GraphController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xbstar/graph/controller/GraphController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +43,12 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -65,7 +74,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="D:/Program Files/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -130,7 +139,8 @@
       <workItem from="1568886067753" duration="18099000" />
       <workItem from="1569200883449" duration="16104000" />
       <workItem from="1569220571854" duration="89611000" />
-      <workItem from="1569722405615" duration="7155000" />
+      <workItem from="1569722405615" duration="7742000" />
+      <workItem from="1569733696284" duration="5259000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1568278292180</created>
@@ -195,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569728809382</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="graph">
+      <created>1569729808794</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1569729808794</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +233,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

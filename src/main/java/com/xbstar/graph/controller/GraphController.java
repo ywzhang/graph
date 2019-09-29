@@ -252,46 +252,46 @@ public class GraphController {
 
             case "institution":
                 Institution ins = institutionMapper.findById(id);
-                JSONObject insJson1 = new JSONObject();
+
+/*                JSONObject insJson1 = new JSONObject();
                 insJson1.put("id",UUID.randomUUID().toString().replace("-", ""));
                 insJson1.put("category",10);
                 insJson1.put("level",3);
                 insJson1.put("name",ins.getInstitution_name());
                 insJson1.put("value",null);
                 insJson1.put("label",ins.getInstitution_name());
+                insJson1.put("flag",true);*/
+
+                JSONObject insJson1 = new JSONObject();
+                insJson1.put("id",UUID.randomUUID().toString().replace("-", ""));
+                insJson1.put("category",10);
+                insJson1.put("level",3);
+                insJson1.put("name",ins.getPrincipal());
+                insJson1.put("value",null);
+                insJson1.put("label",ins.getPrincipal());
                 insJson1.put("flag",true);
 
                 JSONObject insJson2 = new JSONObject();
                 insJson2.put("id",UUID.randomUUID().toString().replace("-", ""));
                 insJson2.put("category",10);
                 insJson2.put("level",3);
-                insJson2.put("name",ins.getPrincipal());
+                insJson2.put("name",ins.getPrincipal_phone());
                 insJson2.put("value",null);
-                insJson2.put("label",ins.getPrincipal());
+                insJson2.put("label",ins.getPrincipal_phone());
                 insJson2.put("flag",true);
 
                 JSONObject insJson3 = new JSONObject();
                 insJson3.put("id",UUID.randomUUID().toString().replace("-", ""));
                 insJson3.put("category",10);
                 insJson3.put("level",3);
-                insJson3.put("name",ins.getPrincipal_phone());
+                insJson3.put("name",ins.getAddress());
                 insJson3.put("value",null);
-                insJson3.put("label",ins.getPrincipal_phone());
+                insJson3.put("label",ins.getAddress());
                 insJson3.put("flag",true);
-
-                JSONObject insJson4 = new JSONObject();
-                insJson4.put("id",UUID.randomUUID().toString().replace("-", ""));
-                insJson4.put("category",10);
-                insJson4.put("level",3);
-                insJson4.put("name",ins.getAddress());
-                insJson4.put("value",null);
-                insJson4.put("label",ins.getAddress());
-                insJson4.put("flag",true);
 
                 nodes.add(insJson1);
                 nodes.add(insJson2);
                 nodes.add(insJson3);
-                nodes.add(insJson4);
 
                 for(int i = 0;i < nodes.size();i++){
                     JSONObject linkDataProperty = new JSONObject();

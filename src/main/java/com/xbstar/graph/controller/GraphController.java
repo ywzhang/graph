@@ -14,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.PostConstruct;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -33,21 +34,7 @@ public class GraphController {
     public static String nodesPath = "Json\\Nodes.json";
     public static String linksPath = "Json\\Links.json";
     public static String owlPath = "pension.ttl";
-
-    public static JSONArray NODE = new JSONArray();
-    public static JSONArray LINK = new JSONArray();
-
     public static OntModel m = ModelFactory.createOntologyModel();
-
-//    public static void main(String[] args) throws IOException {
-//        //SpringApplication.run(GraphApplication.class, args);
-//        m.read(owlPath);
-//        //listClass();
-//        //getInstanceByClass("City");
-//        getInstanceDetailByID("无锡市@3202");
-//        //getInstanceDetailByID("张三");
-//        System.out.println("Finish......");
-//    }
 
 
     @RequestMapping("/index")
@@ -65,6 +52,8 @@ public class GraphController {
     @RequestMapping("/listClass")
     @ResponseBody
     public static JSONObject listClass() throws IOException {
+        JSONArray NODE = new JSONArray();
+        JSONArray LINK = new JSONArray();
         m.read(owlPath);
         JSONObject dataJSon = new JSONObject(true);
         JSONArray categories = new JSONArray();
@@ -135,6 +124,8 @@ public class GraphController {
     @RequestMapping("/getInstanceByClass")
     @ResponseBody
     public static JSONObject getInstanceByClass(String className) throws IOException {
+        JSONArray NODE = new JSONArray();
+        JSONArray LINK = new JSONArray();
         m.read(owlPath);
         listClass();
         JSONObject dataJSon = new JSONObject(true);
@@ -190,6 +181,8 @@ public class GraphController {
     @RequestMapping("/getInstanceDetailByID")
     @ResponseBody
     public static JSONObject getInstanceDetailByID (String id) throws IOException {
+        JSONArray NODE = new JSONArray();
+        JSONArray LINK = new JSONArray();
         m.read(owlPath);
         listClass();
         Individual individual = m.getIndividual(NS + id);

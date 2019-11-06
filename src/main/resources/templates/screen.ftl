@@ -29,13 +29,8 @@
     }
 
     function relation() {
-        $.get('/data/mongo.json', function (webkitDep) {
-            var nodes = webkitDep.nodes;
-            for(var i in nodes){
-                nodes[i].itemStyle.color = "red";
-            }
-            jsondata={"categories":webkitDep.categories,"nodes":webkitDep.nodes,"links":webkitDep.links}
-            createGraph(myChart,jsondata);
+        layer.prompt({title: '输入详情名称，并确认', formType: 0}, function(pass, index){
+            layer.close(index);
         });
     }
 

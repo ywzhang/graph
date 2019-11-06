@@ -100,7 +100,6 @@
                         }
                     });
                 }else{
-                    console.log(name)
                     $.ajax({
                         url:"/graph/getInstanceDetailByID",
                         data:{"id":name},

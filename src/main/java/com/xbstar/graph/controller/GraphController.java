@@ -134,11 +134,8 @@ public class GraphController {
         listClass.getJSONArray("nodes").stream().forEach(item->{
             NODE.add(item);
         });
-        listClass.getJSONArray("links").stream().forEach(item->{
-            LINK.add(item);
-        });
+        LINK.addAll(listClass.getJSONArray("links"));
         m.read(owlPath);
-//        listClass();
 
         JSONObject dataJSon = new JSONObject(true);
         JSONArray nodes = new JSONArray();
@@ -199,12 +196,9 @@ public class GraphController {
         listClass.getJSONArray("nodes").stream().forEach(item->{
             NODE.add(item);
         });
-        listClass.getJSONArray("links").stream().forEach(item->{
-            LINK.add(item);
-        });
+        LINK.addAll(listClass.getJSONArray("links"));
 
         m.read(owlPath);
-//        listClass();
         Individual individual = m.getIndividual(NS + id);
         JSONObject dataJSon = new JSONObject(true);
         JSONArray categories = new JSONArray();
@@ -268,7 +262,7 @@ public class GraphController {
                     // why get NamedIndividual instead of Province
                     String n = statement.getObject().asResource().toString().split("#")[1];
                     Individual ind = m.getIndividual(NS + n);
-                    System.out.println(ind.getOntClass().toString().split("#")[1]);
+//                    System.out.println(ind.getOntClass().toString().split("#")[1]);
 
                     /**
                      *  Link to Class
@@ -302,8 +296,8 @@ public class GraphController {
         });
 
         dataJSon.put("categories",categories);
-        dataJSon.put("nodes",NODE);
-        dataJSon.put("links",LINK);
+        dataJSon.put("nodes",nodes);
+        dataJSon.put("links",links);
 
         writeToJson(nodesPath, nodes);
         writeToJson(linksPath, links);

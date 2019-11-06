@@ -130,30 +130,10 @@ public class GraphController {
     public static JSONObject getInstanceByClass(String className) throws IOException {
         JSONArray NODE = new JSONArray();
         JSONArray LINK = new JSONArray();
-        OntClass ontClass = m.getOntClass(NS + className);
 
         listClass.getJSONArray("nodes").stream().forEach(item->{
-            //System.out.println(item.getClass());
-            JSONObject json = JSONObject.parseObject(item.toString());
-            //JSONObject js = (JSONObject) item;
-            //System.out.println(ontClass.getLocalName());
-            if(json.getString("id").equals(ontClass.getLocalName())) {
-                JSONObject concept = new JSONObject();
-                concept.put("id", ontClass.getLocalName());
-                concept.put("category", 0);
-                concept.put("name", ontClass.getLocalName());
-                concept.put("label", ontClass.getLocalName());
-                concept.put("symbolSize", 37);
-                System.out.printf(ontClass.getLocalName());
-                NODE.add(concept);
-            } else {
-                JSONObject j = new JSONObject();
-                j.put("opacity", 0.3);
-                json.put("itemStyle",j);
-                NODE.add(json);
-            }
+            NODE.add(item);
         });
-
         listClass.getJSONArray("links").stream().forEach(item->{
             LINK.add(item);
         });
@@ -165,10 +145,11 @@ public class GraphController {
         JSONArray links = new JSONArray();
         JSONArray categories = new JSONArray();
 
-        //OntClass ontClass = m.getOntClass(NS + className);
+        OntClass ontClass = m.getOntClass(NS + className);
         //System.out.printf(ontClass.getLocalName().toString());
         for(Iterator instances = ontClass.listInstances(); instances.hasNext(); ) {
             Individual individual = (Individual) instances.next();
+            //System.out.println(individual.toString().split("#")[1]);
 
             JSONObject node = new JSONObject(true);
             JSONObject link = new JSONObject(true);
@@ -177,7 +158,7 @@ public class GraphController {
             node.put("category", 1);
             node.put("name", individual.toString().split("#")[1]);
             node.put("label", individual.toString().split("#")[1].split("@")[0]);
-            node.put("symbolSize", 31);
+            node.put("symbolSize", 20);
 
             link.put("source", ontClass.getLocalName().toString());
             link.put("target", individual.toString().split("#")[1]);
@@ -214,32 +195,17 @@ public class GraphController {
     public static JSONObject getInstanceDetailByID (String id) throws IOException {
         JSONArray NODE = new JSONArray();
         JSONArray LINK = new JSONArray();
-        m.read(owlPath);
-//        listClass();
-        Individual individual = m.getIndividual(NS + id);
 
         listClass.getJSONArray("nodes").stream().forEach(item->{
-            JSONObject json = (JSONObject) item;
-            if(json.getString("id") == individual.getOntClass().toString().split("#")[1]) {
-                JSONObject concept = new JSONObject();
-                concept.put("id", individual.toString().split("#")[1]);
-                concept.put("category", 1);
-                concept.put("name", individual.toString().split("#")[1]);
-                concept.put("label", individual.toString().split("#")[1].split("@")[0]);
-                concept.put("symbolSize", 37);
-                NODE.add(concept);
-            } else {
-                JSONObject j = new JSONObject();
-                j.put("opacity", 0.3);
-                json.put("itemStyle",j);
-                NODE.add(json);
-            }
+            NODE.add(item);
         });
         listClass.getJSONArray("links").stream().forEach(item->{
             LINK.add(item);
         });
 
-
+        m.read(owlPath);
+//        listClass();
+        Individual individual = m.getIndividual(NS + id);
         JSONObject dataJSon = new JSONObject(true);
         JSONArray categories = new JSONArray();
         JSONArray nodes = new JSONArray();
@@ -254,7 +220,7 @@ public class GraphController {
         instanceNode.put("category", 1);
         instanceNode.put("name", individual.toString().split("#")[1]);
         instanceNode.put("label", individual.toString().split("#")[1].split("@")[0]);
-        instanceNode.put("symbolSize", 38);
+        instanceNode.put("symbolSize", 20);
 
         instanceLink.put("source", individual.getOntClass().toString().split("#")[1]);
         instanceLink.put("target", instanceNode.getString("id"));
@@ -262,31 +228,21 @@ public class GraphController {
 
         nodes.add(instanceNode);
         links.add(instanceLink);
-        String filterDP = null;
-        String filterOP = null;
-        if(instanceLink.getString("source").equals("City") || instanceLink.getString("source").equals("Province") || instanceLink.getString("source").equals("Country") || instanceLink.getString("source").equals("District")){
-            System.out.printf(instanceLink.getString("source"));
-            filterOP = "AddressOP";
-            filterDP = "AddressDP";
-        } else {
-            filterOP = "HumanOP";
-            filterDP = "HumanDP";
-        }
+
         while (stmtIterator.hasNext()){
             JSONObject node = new JSONObject(true);
             JSONObject link = new JSONObject(true);
             Statement statement = stmtIterator.nextStatement();
 
             // why get the AddressOP, HumanDP
-            if(!statement.getPredicate().getLocalName().equals(filterOP.toString()) && !statement.getPredicate().getLocalName().equals(filterDP.toString()
-            )) {
+            if(!statement.getPredicate().getLocalName().equals("AddressOP") && !statement.getPredicate().getLocalName().equals("AddressDP")) {
                 //System.out.println(statement);
                 if(statement.getObject().isLiteral()) {
                     node.put("id", UUID.randomUUID().toString().replace("-", ""));
                     node.put("category", 2);
                     node.put("name", statement.getObject().asLiteral().getValue().toString());
                     node.put("label", statement.getObject().asLiteral().getValue().toString());
-                    node.put("symbolSize", 30);
+                    node.put("symbolSize", 15);
 
                     link.put("source", individual.toString().split("#")[1]);
                     link.put("target", node.getString("id"));
@@ -302,7 +258,7 @@ public class GraphController {
                     node.put("category", 1);
                     node.put("name", statement.getObject().asResource().toString().split("#")[1]);
                     node.put("label", statement.getObject().asResource().toString().split("#")[1]);
-                    node.put("symbolSize", 33);
+                    node.put("symbolSize", 20);
 
                     link.put("source", individual.toString().split("#")[1]);
                     link.put("target", node.getString("id"));
@@ -346,8 +302,8 @@ public class GraphController {
         });
 
         dataJSon.put("categories",categories);
-        dataJSon.put("nodes",nodes);
-        dataJSon.put("links",links);
+        dataJSon.put("nodes",NODE);
+        dataJSon.put("links",LINK);
 
         writeToJson(nodesPath, nodes);
         writeToJson(linksPath, links);

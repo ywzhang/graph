@@ -1,0 +1,565 @@
+{
+  "type": "force",
+  "categories": [{"name":"概念"},{"name":"实例"},{"name":"数据属性"}],
+  "nodes":
+
+
+  [
+
+    {
+      "id":"张三","category":1,"name":"张三","label":"张三","symbolSize":15
+    },
+    {
+      "id":"d86be01a6711407892ec1100aa695ecc","category":1,"name":"养老金","label":"养老金","symbolSize":10
+    },
+    {
+      "id":"485a7b3f281f4186969a551c314f9bb8","category":2,"name":"1955-03-21T22:20:12","label":"1955-03-21T22:20:12","symbolSize":10
+    },
+    {
+      "id":"1831237fe3984eb5b53e78c8e80d2f44","category":1,"name":"三无老人","label":"三无老人","symbolSize":10
+    },
+    {
+      "id":"d07a3cfc32b2454c9178cfa777069794","category":2,"name":"测试老人，数据虚构","label":"测试老人，数据虚构","symbolSize":10
+    },
+    {
+      "id":"fa8186a125d045d982674000815fb44b","category":1,"name":"张三地址","label":"张三地址","symbolSize":10
+    },
+    {
+      "id":"807aa3afef1345f99e44712c0b8db8c9","category":2,"name":"新吴区自行车厂","label":"新吴区自行车厂","symbolSize":10
+    },
+    {
+      "id":"46b85df8a7ac457a8f6d52212ffe3878","category":2,"name":"抽烟，乒乓球","label":"抽烟，乒乓球","symbolSize":10
+    },
+    {
+      "id":"c7d55480bf634d0d97d7099b7bed828a","category":1,"name":"自理","label":"自理","symbolSize":10
+    },
+    {
+      "id":"a791b7689c994e2bbbeccbdd78429780","category":1,"name":"佛教","label":"佛教","symbolSize":10
+    },
+    {
+      "id":"e34d8b0d8eb94c2b8a78fe49852b3f9c","category":1,"name":"AB","label":"AB","symbolSize":10
+    },
+    {
+      "id":"462db446d56f4cdaa93f384b2ac0bba4","category":1,"name":"抽烟","label":"抽烟","symbolSize":10
+    },
+    {
+      "id":"b17cd93066444efdb95905cb67e61ab7","category":1,"name":"汉族","label":"汉族","symbolSize":10
+    },
+    {
+      "id":"fe7107bef3fd4489b3c0a31433e10875","category":2,"name":"13768914562","label":"13768914562","symbolSize":10
+    },
+    {
+      "id":"566265e9d4f14bc390fb5ed76710a008","category":1,"name":"本科","label":"本科","symbolSize":10
+    },
+    {
+      "id":"3305574c0b394a9292042bf6926e407f","category":2,"name":"张三","label":"张三","symbolSize":10
+    },
+    {
+      "id":"43933bd72acd440b80af5987e3f5bc20","category":2,"name":"小张","label":"小张","symbolSize":10
+    },
+    {
+      "id":"9e98e553acc44df4bc98cea8e5397114","category":1,"name":"已婚","label":"已婚","symbolSize":10
+    },
+    {
+      "id":"f7c93e4d3268496385fd27e3330226fc","category":1,"name":"张三在旺庄养老院","label":"张三在旺庄养老院","symbolSize":10
+    },
+    {
+      "id":"2de51148d4f440cda080b47a058f6b50","category":1,"name":"党员","label":"党员","symbolSize":10
+    },
+    {
+      "id":"2e421b4793b34f9183bc9eab3c7e53ed","category":2,"name":"医保卡","label":"医保卡","symbolSize":10
+    },
+    {
+      "id":"ResidentBook","category":0,"name":"ResidentBook","label":"ResidentBook","symbolSize":20
+    },
+    {
+      "id":"Elder","category":0,"name":"Elder","label":"Elder","symbolSize":20
+    },
+    {
+      "id":"City","category":0,"name":"City","label":"City","symbolSize":20
+    },
+    {
+      "id":"Community","category":0,"name":"Community","label":"Community","symbolSize":20
+    },
+    {
+      "id":"Enum","category":0,"name":"Enum","label":"Enum","symbolSize":20
+    },
+    {
+      "id":"PensionInstitutionState","category":0,"name":"PensionInstitutionState","label":"PensionInstitutionState","symbolSize":20
+    },
+    {
+      "id":"CareLevel","category":0,"name":"CareLevel","label":"CareLevel","symbolSize":20
+    },
+    {
+      "id":"Dead","category":0,"name":"Dead","label":"Dead","symbolSize":20
+    },
+    {
+      "id":"OutdoorState","category":0,"name":"OutdoorState","label":"OutdoorState","symbolSize":20
+    },
+    {
+      "id":"Person","category":0,"name":"Person","label":"Person","symbolSize":20
+    },
+    {
+      "id":"OfferType","category":0,"name":"OfferType","label":"OfferType","symbolSize":20
+    },
+    {
+      "id":"Address","category":0,"name":"Address","label":"Address","symbolSize":20
+    },
+    {
+      "id":"Institution","category":0,"name":"Institution","label":"Institution","symbolSize":20
+    },
+    {
+      "id":"FoodLevel","category":0,"name":"FoodLevel","label":"FoodLevel","symbolSize":20
+    },
+    {
+      "id":"Room","category":0,"name":"Room","label":"Room","symbolSize":20
+    },
+    {
+      "id":"Province","category":0,"name":"Province","label":"Province","symbolSize":20
+    },
+    {
+      "id":"Habits","category":0,"name":"Habits","label":"Habits","symbolSize":20
+    },
+    {
+      "id":"PersonCard","category":0,"name":"PersonCard","label":"PersonCard","symbolSize":20
+    },
+    {
+      "id":"MarriageState","category":0,"name":"MarriageState","label":"MarriageState","symbolSize":20
+    },
+    {
+      "id":"PoliticalOutlook","category":0,"name":"PoliticalOutlook","label":"PoliticalOutlook","symbolSize":20
+    },
+    {
+      "id":"Ethnic","category":0,"name":"Ethnic","label":"Ethnic","symbolSize":20
+    },
+    {
+      "id":"PensionInstitution","category":0,"name":"PensionInstitution","label":"PensionInstitution","symbolSize":20
+    },
+    {
+      "id":"Street","category":0,"name":"Street","label":"Street","symbolSize":20
+    },
+    {
+      "id":"Employee","category":0,"name":"Employee","label":"Employee","symbolSize":20
+    },
+    {
+      "id":"NursTeam","category":0,"name":"NursTeam","label":"NursTeam","symbolSize":20
+    },
+    {
+      "id":"Building","category":0,"name":"Building","label":"Building","symbolSize":20
+    },
+    {
+      "id":"AddressEnum","category":0,"name":"AddressEnum","label":"AddressEnum","symbolSize":20
+    },
+    {
+      "id":"Country","category":0,"name":"Country","label":"Country","symbolSize":20
+    },
+    {
+      "id":"Man","category":0,"name":"Man","label":"Man","symbolSize":20
+    },
+    {
+      "id":"Area","category":0,"name":"Area","label":"Area","symbolSize":20
+    },
+    {
+      "id":"PensionInstitutionStatus","category":0,"name":"PensionInstitutionStatus","label":"PensionInstitutionStatus","symbolSize":20
+    },
+    {
+      "id":"District","category":0,"name":"District","label":"District","symbolSize":20
+    },
+    {
+      "id":"BloodType","category":0,"name":"BloodType","label":"BloodType","symbolSize":20
+    },
+    {
+      "id":"IncomeType","category":0,"name":"IncomeType","label":"IncomeType","symbolSize":20
+    },
+    {
+      "id":"SelfcareType","category":0,"name":"SelfcareType","label":"SelfcareType","symbolSize":20
+    },
+    {
+      "id":"Woman","category":0,"name":"Woman","label":"Woman","symbolSize":20
+    },
+    {
+      "id":"Human","category":0,"name":"Human","label":"Human","symbolSize":20
+    },
+    {
+      "id":"Bed","category":0,"name":"Bed","label":"Bed","symbolSize":20
+    },
+    {
+      "id":"Space","category":0,"name":"Space","label":"Space","symbolSize":20
+    },
+    {
+      "id":"Status","category":0,"name":"Status","label":"Status","symbolSize":20
+    },
+    {
+      "id":"Education","category":0,"name":"Education","label":"Education","symbolSize":20
+    },
+    {
+      "id":"Certificates","category":0,"name":"Certificates","label":"Certificates","symbolSize":20
+    },
+    {
+      "id":"IdentityCard","category":0,"name":"IdentityCard","label":"IdentityCard","symbolSize":20
+    },
+    {
+      "id":"Passport","category":0,"name":"Passport","label":"Passport","symbolSize":20
+    },
+    {
+      "id":"Religion","category":0,"name":"Religion","label":"Religion","symbolSize":20
+    },
+    {
+      "id":"BadHabits","category":0,"name":"BadHabits","label":"BadHabits","symbolSize":20
+    },
+    {
+      "id":"Face","category":0,"name":"Face","label":"Face","symbolSize":20
+    },
+    {
+      "id":"SocialEnsuranceCard","category":0,"name":"SocialEnsuranceCard","label":"SocialEnsuranceCard","symbolSize":20
+    },
+    {
+      "id":"FiveGuaranteeCertificate","category":0,"name":"FiveGuaranteeCertificate","label":"FiveGuaranteeCertificate","symbolSize":20
+    }
+  ]
+,
+
+  "links":
+
+
+  [
+
+    {
+      "source":"Person","target":"张三","label":"Instance Of"
+    },
+    {
+      "source":"IncomeType","target":"d86be01a6711407892ec1100aa695ecc","label":"Instance Of"
+    },
+    {
+      "source":"张三","target":"d86be01a6711407892ec1100aa695ecc","label":"belongIncomeType"
+    },
+    {
+      "source":"张三","target":"485a7b3f281f4186969a551c314f9bb8","label":"hasBirthday"
+    },
+    {
+      "source":"OfferType","target":"1831237fe3984eb5b53e78c8e80d2f44","label":"Instance Of"
+    },
+    {
+      "source":"张三","target":"1831237fe3984eb5b53e78c8e80d2f44","label":"belongOfferType"
+    },
+    {
+      "source":"张三","target":"d07a3cfc32b2454c9178cfa777069794","label":"hasRemark"
+    },
+    {
+      "source":"Address","target":"fa8186a125d045d982674000815fb44b","label":"Instance Of"
+    },
+    {
+      "source":"张三","target":"fa8186a125d045d982674000815fb44b","label":"belongLiveAddress"
+    },
+    {
+      "source":"张三","target":"807aa3afef1345f99e44712c0b8db8c9","label":"hasOriginalCompany"
+    },
+    {
+      "source":"张三","target":"46b85df8a7ac457a8f6d52212ffe3878","label":"hasHobby"
+    },
+    {
+      "source":"SelfcareType","target":"c7d55480bf634d0d97d7099b7bed828a","label":"Instance Of"
+    },
+    {
+      "source":"张三","target":"c7d55480bf634d0d97d7099b7bed828a","label":"belongSelfcareType"
+    },
+    {
+      "source":"Religion","target":"a791b7689c994e2bbbeccbdd78429780","label":"Instance Of"
+    },
+    {
+      "source":"张三","target":"a791b7689c994e2bbbeccbdd78429780","label":"belongReligion"
+    },
+    {
+      "source":"BloodType","target":"e34d8b0d8eb94c2b8a78fe49852b3f9c","label":"Instance Of"
+    },
+    {
+      "source":"张三","target":"e34d8b0d8eb94c2b8a78fe49852b3f9c","label":"belongBloodType"
+    },
+    {
+      "source":"BadHabits","target":"462db446d56f4cdaa93f384b2ac0bba4","label":"Instance Of"
+    },
+    {
+      "source":"张三","target":"462db446d56f4cdaa93f384b2ac0bba4","label":"belongHabit"
+    },
+    {
+      "source":"Ethnic","target":"b17cd93066444efdb95905cb67e61ab7","label":"Instance Of"
+    },
+    {
+      "source":"张三","target":"b17cd93066444efdb95905cb67e61ab7","label":"belongEthnic"
+    },
+    {
+      "source":"张三","target":"fe7107bef3fd4489b3c0a31433e10875","label":"hasTelephone"
+    },
+    {
+      "source":"Education","target":"566265e9d4f14bc390fb5ed76710a008","label":"Instance Of"
+    },
+    {
+      "source":"张三","target":"566265e9d4f14bc390fb5ed76710a008","label":"belongEducation"
+    },
+    {
+      "source":"张三","target":"3305574c0b394a9292042bf6926e407f","label":"hasName"
+    },
+    {
+      "source":"张三","target":"43933bd72acd440b80af5987e3f5bc20","label":"hasAlias"
+    },
+    {
+      "source":"MarriageState","target":"9e98e553acc44df4bc98cea8e5397114","label":"Instance Of"
+    },
+    {
+      "source":"张三","target":"9e98e553acc44df4bc98cea8e5397114","label":"belongMarriageState"
+    },
+    {
+      "source":"PensionInstitutionStatus","target":"f7c93e4d3268496385fd27e3330226fc","label":"Instance Of"
+    },
+    {
+      "source":"张三","target":"f7c93e4d3268496385fd27e3330226fc","label":"belongPensionInstitutionStatus"
+    },
+    {
+      "source":"PoliticalOutlook","target":"2de51148d4f440cda080b47a058f6b50","label":"Instance Of"
+    },
+    {
+      "source":"张三","target":"2de51148d4f440cda080b47a058f6b50","label":"belongPoliticalOutlook"
+    },
+    {
+      "source":"张三","target":"2e421b4793b34f9183bc9eab3c7e53ed","label":"hasMedicalPayMethod"
+    },
+    {
+      "source":"Enum","target":"AddressEnum","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"IncomeType","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"Ethnic","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"SelfcareType","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"Habits","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"MarriageState","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"PoliticalOutlook","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"OfferType","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"Religion","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"PensionInstitutionState","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"Education","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"BloodType","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"OutdoorState","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"BadHabits","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"Street","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"Province","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"Area","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"Country","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"District","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"Community","label":"SubClass Of"
+    },
+    {
+      "source":"Enum","target":"City","label":"SubClass Of"
+    },
+    {
+      "source":"Institution","target":"PensionInstitution","label":"SubClass Of"
+    },
+    {
+      "source":"Habits","target":"BadHabits","label":"SubClass Of"
+    },
+    {
+      "source":"AddressEnum","target":"Street","label":"SubClass Of"
+    },
+    {
+      "source":"AddressEnum","target":"Province","label":"SubClass Of"
+    },
+    {
+      "source":"AddressEnum","target":"Community","label":"SubClass Of"
+    },
+    {
+      "source":"AddressEnum","target":"City","label":"SubClass Of"
+    },
+    {
+      "source":"AddressEnum","target":"Area","label":"SubClass Of"
+    },
+    {
+      "source":"AddressEnum","target":"Country","label":"SubClass Of"
+    },
+    {
+      "source":"AddressEnum","target":"District","label":"SubClass Of"
+    },
+    {
+      "source":"Area","target":"District","label":"SubClass Of"
+    },
+    {
+      "source":"Area","target":"Country","label":"SubClass Of"
+    },
+    {
+      "source":"Human","target":"Employee","label":"SubClass Of"
+    },
+    {
+      "source":"Human","target":"Man","label":"SubClass Of"
+    },
+    {
+      "source":"Human","target":"Woman","label":"SubClass Of"
+    },
+    {
+      "source":"Human","target":"Person","label":"SubClass Of"
+    },
+    {
+      "source":"Human","target":"Dead","label":"SubClass Of"
+    },
+    {
+      "source":"Human","target":"Elder","label":"SubClass Of"
+    },
+    {
+      "source":"Space","target":"Room","label":"SubClass Of"
+    },
+    {
+      "source":"Space","target":"Building","label":"SubClass Of"
+    },
+    {
+      "source":"Space","target":"Bed","label":"SubClass Of"
+    },
+    {
+      "source":"Status","target":"PensionInstitutionStatus","label":"SubClass Of"
+    },
+    {
+      "source":"Certificates","target":"SocialEnsuranceCard","label":"SubClass Of"
+    },
+    {
+      "source":"Certificates","target":"ResidentBook","label":"SubClass Of"
+    },
+    {
+      "source":"Certificates","target":"PersonCard","label":"SubClass Of"
+    },
+    {
+      "source":"Certificates","target":"Passport","label":"SubClass Of"
+    },
+    {
+      "source":"Certificates","target":"IdentityCard","label":"SubClass Of"
+    },
+    {
+      "source":"Certificates","target":"FiveGuaranteeCertificate","label":"SubClass Of"
+    },
+    {
+      "source":"PensionInstitutionStatus","target":"OutdoorState","label":"belongOutdoorState"
+    },
+    {
+      "source":"Human","target":"PoliticalOutlook","label":"belongPoliticalOutlook"
+    },
+    {
+      "source":"PensionInstitutionStatus","target":"Bed","label":"belongBed"
+    },
+    {
+      "source":"Human","target":"PensionInstitutionStatus","label":"belongPensionInstitutionStatus"
+    },
+    {
+      "source":"Human","target":"SelfcareType","label":"belongSelfcareType"
+    },
+    {
+      "source":"Address","target":"City","label":"belongCity"
+    },
+    {
+      "source":"PensionInstitutionStatus","target":"PersonCard","label":"belongPersonCard"
+    },
+    {
+      "source":"PensionInstitutionStatus","target":"FoodLevel","label":"belongFoodLevel"
+    },
+    {
+      "source":"Human","target":"Ethnic","label":"belongEthnic"
+    },
+    {
+      "source":"PensionInstitutionStatus","target":"Employee","label":"PensionInstitutionStatusOP"
+    },
+    {
+      "source":"Human","target":"Face","label":"belongFace"
+    },
+    {
+      "source":"Human","target":"IncomeType","label":"belongIncomeType"
+    },
+    {
+      "source":"PensionInstitutionStatus","target":"CareLevel","label":"belongCareLevel"
+    },
+    {
+      "source":"Address","target":"Area","label":"belongArea"
+    },
+    {
+      "source":"Address","target":"Province","label":"belongProvince"
+    },
+    {
+      "source":"Human","target":"OfferType","label":"belongOfferType"
+    },
+    {
+      "source":"PensionInstitutionStatus","target":"PensionInstitutionState","label":"belongPensionInstitutionState"
+    },
+    {
+      "source":"Human","target":"BloodType","label":"belongBloodType"
+    },
+    {
+      "source":"Human","target":"Address","label":"belongCensusAddress"
+    },
+    {
+      "source":"PensionInstitutionStatus","target":"Human","label":"belongIntroducer"
+    },
+    {
+      "source":"PensionInstitutionStatus","target":"Room","label":"belongRoom"
+    },
+    {
+      "source":"Human","target":"Education","label":"belongEducation"
+    },
+    {
+      "source":"Human","target":"Habits","label":"belongHabit"
+    },
+    {
+      "source":"Human","target":"Certificates","label":"belongCertificate"
+    },
+    {
+      "source":"Address","target":"Community","label":"belongCommunity"
+    },
+    {
+      "source":"PensionInstitutionStatus","target":"NursTeam","label":"belongNursTeam"
+    },
+    {
+      "source":"PensionInstitutionStatus","target":"Employee","label":"belongLeaveRegister"
+    },
+    {
+      "source":"Human","target":"Religion","label":"belongReligion"
+    },
+    {
+      "source":"Address","target":"Street","label":"belongStreet"
+    },
+    {
+      "source":"Human","target":"MarriageState","label":"belongMarriageState"
+    },
+    {
+      "source":"Human","target":"Address","label":"belongLiveAddress"
+    }
+  ]
+
+  }

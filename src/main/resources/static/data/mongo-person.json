@@ -3,162 +3,186 @@
   "categories": [{"name":"概念"},{"name":"实例"},{"name":"数据属性"}],
   "nodes":
 
+
   [
 
     {
-      "id":"ResidentBook","category":0,"name":"ResidentBook","label":"ResidentBook","symbolSize":25
+      "id":"李四","category":1,"name":"李四","label":"李四","symbolSize":15
     },
     {
-      "id":"Elder","category":0,"name":"Elder","label":"Elder","symbolSize":25
+      "id":"赵六","category":1,"name":"赵六","label":"赵六","symbolSize":15
     },
     {
-      "id":"City","category":0,"name":"City","label":"City","symbolSize":25
+      "id":"张三","category":1,"name":"张三","label":"张三","symbolSize":15
     },
     {
-      "id":"Community","category":0,"name":"Community","label":"Community","symbolSize":25
+      "id":"王五","category":1,"name":"王五","label":"王五","symbolSize":15
     },
     {
-      "id":"Enum","category":0,"name":"Enum","label":"Enum","symbolSize":25
+      "id":"ResidentBook","category":0,"name":"ResidentBook","label":"ResidentBook","symbolSize":20
     },
     {
-      "id":"PensionInstitutionState","category":0,"name":"PensionInstitutionState","label":"PensionInstitutionState","symbolSize":25
+      "id":"Elder","category":0,"name":"Elder","label":"Elder","symbolSize":20
     },
     {
-      "id":"CareLevel","category":0,"name":"CareLevel","label":"CareLevel","symbolSize":25
+      "id":"City","category":0,"name":"City","label":"City","symbolSize":20
     },
     {
-      "id":"Dead","category":0,"name":"Dead","label":"Dead","symbolSize":25
+      "id":"Community","category":0,"name":"Community","label":"Community","symbolSize":20
     },
     {
-      "id":"OutdoorState","category":0,"name":"OutdoorState","label":"OutdoorState","symbolSize":25
+      "id":"Enum","category":0,"name":"Enum","label":"Enum","symbolSize":20
     },
     {
-      "id":"Person","category":0,"name":"Person","label":"Person","symbolSize":25
+      "id":"PensionInstitutionState","category":0,"name":"PensionInstitutionState","label":"PensionInstitutionState","symbolSize":20
     },
     {
-      "id":"OfferType","category":0,"name":"OfferType","label":"OfferType","symbolSize":25
+      "id":"CareLevel","category":0,"name":"CareLevel","label":"CareLevel","symbolSize":20
     },
     {
-      "id":"Address","category":0,"name":"Address","label":"Address","symbolSize":25
+      "id":"Dead","category":0,"name":"Dead","label":"Dead","symbolSize":20
     },
     {
-      "id":"Institution","category":0,"name":"Institution","label":"Institution","symbolSize":25
+      "id":"OutdoorState","category":0,"name":"OutdoorState","label":"OutdoorState","symbolSize":20
     },
     {
-      "id":"FoodLevel","category":0,"name":"FoodLevel","label":"FoodLevel","symbolSize":25
+      "id":"Person","category":0,"name":"Person","label":"Person","symbolSize":20
     },
     {
-      "id":"Room","category":0,"name":"Room","label":"Room","symbolSize":25
+      "id":"OfferType","category":0,"name":"OfferType","label":"OfferType","symbolSize":20
     },
     {
-      "id":"Province","category":0,"name":"Province","label":"Province","symbolSize":25
+      "id":"Address","category":0,"name":"Address","label":"Address","symbolSize":20
     },
     {
-      "id":"Habits","category":0,"name":"Habits","label":"Habits","symbolSize":25
+      "id":"Institution","category":0,"name":"Institution","label":"Institution","symbolSize":20
     },
     {
-      "id":"PersonCard","category":0,"name":"PersonCard","label":"PersonCard","symbolSize":25
+      "id":"FoodLevel","category":0,"name":"FoodLevel","label":"FoodLevel","symbolSize":20
     },
     {
-      "id":"MarriageState","category":0,"name":"MarriageState","label":"MarriageState","symbolSize":25
+      "id":"Room","category":0,"name":"Room","label":"Room","symbolSize":20
     },
     {
-      "id":"PoliticalOutlook","category":0,"name":"PoliticalOutlook","label":"PoliticalOutlook","symbolSize":25
+      "id":"Province","category":0,"name":"Province","label":"Province","symbolSize":20
     },
     {
-      "id":"Ethnic","category":0,"name":"Ethnic","label":"Ethnic","symbolSize":25
+      "id":"Habits","category":0,"name":"Habits","label":"Habits","symbolSize":20
     },
     {
-      "id":"PensionInstitution","category":0,"name":"PensionInstitution","label":"PensionInstitution","symbolSize":25
+      "id":"PersonCard","category":0,"name":"PersonCard","label":"PersonCard","symbolSize":20
     },
     {
-      "id":"Street","category":0,"name":"Street","label":"Street","symbolSize":25
+      "id":"MarriageState","category":0,"name":"MarriageState","label":"MarriageState","symbolSize":20
     },
     {
-      "id":"Employee","category":0,"name":"Employee","label":"Employee","symbolSize":25
+      "id":"PoliticalOutlook","category":0,"name":"PoliticalOutlook","label":"PoliticalOutlook","symbolSize":20
     },
     {
-      "id":"NursTeam","category":0,"name":"NursTeam","label":"NursTeam","symbolSize":25
+      "id":"Ethnic","category":0,"name":"Ethnic","label":"Ethnic","symbolSize":20
     },
     {
-      "id":"Building","category":0,"name":"Building","label":"Building","symbolSize":25
+      "id":"PensionInstitution","category":0,"name":"PensionInstitution","label":"PensionInstitution","symbolSize":20
     },
     {
-      "id":"AddressEnum","category":0,"name":"AddressEnum","label":"AddressEnum","symbolSize":25
+      "id":"Street","category":0,"name":"Street","label":"Street","symbolSize":20
     },
     {
-      "id":"Country","category":0,"name":"Country","label":"Country","symbolSize":25
+      "id":"Employee","category":0,"name":"Employee","label":"Employee","symbolSize":20
     },
     {
-      "id":"Man","category":0,"name":"Man","label":"Man","symbolSize":25
+      "id":"NursTeam","category":0,"name":"NursTeam","label":"NursTeam","symbolSize":20
     },
     {
-      "id":"Area","category":0,"name":"Area","label":"Area","symbolSize":25
+      "id":"Building","category":0,"name":"Building","label":"Building","symbolSize":20
     },
     {
-      "id":"PensionInstitutionStatus","category":0,"name":"PensionInstitutionStatus","label":"PensionInstitutionStatus","symbolSize":25
+      "id":"AddressEnum","category":0,"name":"AddressEnum","label":"AddressEnum","symbolSize":20
     },
     {
-      "id":"District","category":0,"name":"District","label":"District","symbolSize":25
+      "id":"Country","category":0,"name":"Country","label":"Country","symbolSize":20
     },
     {
-      "id":"BloodType","category":0,"name":"BloodType","label":"BloodType","symbolSize":25
+      "id":"Man","category":0,"name":"Man","label":"Man","symbolSize":20
     },
     {
-      "id":"IncomeType","category":0,"name":"IncomeType","label":"IncomeType","symbolSize":25
+      "id":"Area","category":0,"name":"Area","label":"Area","symbolSize":20
     },
     {
-      "id":"SelfcareType","category":0,"name":"SelfcareType","label":"SelfcareType","symbolSize":25
+      "id":"PensionInstitutionStatus","category":0,"name":"PensionInstitutionStatus","label":"PensionInstitutionStatus","symbolSize":20
     },
     {
-      "id":"Woman","category":0,"name":"Woman","label":"Woman","symbolSize":25
+      "id":"District","category":0,"name":"District","label":"District","symbolSize":20
     },
     {
-      "id":"Human","category":0,"name":"Human","label":"Human","symbolSize":25
+      "id":"BloodType","category":0,"name":"BloodType","label":"BloodType","symbolSize":20
     },
     {
-      "id":"Bed","category":0,"name":"Bed","label":"Bed","symbolSize":25
+      "id":"IncomeType","category":0,"name":"IncomeType","label":"IncomeType","symbolSize":20
     },
     {
-      "id":"Space","category":0,"name":"Space","label":"Space","symbolSize":25
+      "id":"SelfcareType","category":0,"name":"SelfcareType","label":"SelfcareType","symbolSize":20
     },
     {
-      "id":"Status","category":0,"name":"Status","label":"Status","symbolSize":25
+      "id":"Woman","category":0,"name":"Woman","label":"Woman","symbolSize":20
     },
     {
-      "id":"Education","category":0,"name":"Education","label":"Education","symbolSize":25
+      "id":"Human","category":0,"name":"Human","label":"Human","symbolSize":20
     },
     {
-      "id":"Certificates","category":0,"name":"Certificates","label":"Certificates","symbolSize":25
+      "id":"Bed","category":0,"name":"Bed","label":"Bed","symbolSize":20
     },
     {
-      "id":"IdentityCard","category":0,"name":"IdentityCard","label":"IdentityCard","symbolSize":25
+      "id":"Space","category":0,"name":"Space","label":"Space","symbolSize":20
     },
     {
-      "id":"Passport","category":0,"name":"Passport","label":"Passport","symbolSize":25
+      "id":"Status","category":0,"name":"Status","label":"Status","symbolSize":20
     },
     {
-      "id":"Religion","category":0,"name":"Religion","label":"Religion","symbolSize":25
+      "id":"Education","category":0,"name":"Education","label":"Education","symbolSize":20
     },
     {
-      "id":"BadHabits","category":0,"name":"BadHabits","label":"BadHabits","symbolSize":25
+      "id":"Certificates","category":0,"name":"Certificates","label":"Certificates","symbolSize":20
     },
     {
-      "id":"Face","category":0,"name":"Face","label":"Face","symbolSize":25
+      "id":"IdentityCard","category":0,"name":"IdentityCard","label":"IdentityCard","symbolSize":20
     },
     {
-      "id":"SocialEnsuranceCard","category":0,"name":"SocialEnsuranceCard","label":"SocialEnsuranceCard","symbolSize":25
+      "id":"Passport","category":0,"name":"Passport","label":"Passport","symbolSize":20
     },
     {
-      "id":"FiveGuaranteeCertificate","category":0,"name":"FiveGuaranteeCertificate","label":"FiveGuaranteeCertificate","symbolSize":25
+      "id":"Religion","category":0,"name":"Religion","label":"Religion","symbolSize":20
+    },
+    {
+      "id":"BadHabits","category":0,"name":"BadHabits","label":"BadHabits","symbolSize":20
+    },
+    {
+      "id":"Face","category":0,"name":"Face","label":"Face","symbolSize":20
+    },
+    {
+      "id":"SocialEnsuranceCard","category":0,"name":"SocialEnsuranceCard","label":"SocialEnsuranceCard","symbolSize":20
+    },
+    {
+      "id":"FiveGuaranteeCertificate","category":0,"name":"FiveGuaranteeCertificate","label":"FiveGuaranteeCertificate","symbolSize":20
     }
   ],
 
   "links":
 
-
   [
 
+    {
+      "source":"Person","target":"李四","label":""
+    },
+    {
+      "source":"Person","target":"赵六","label":""
+    },
+    {
+      "source":"Person","target":"张三","label":""
+    },
+    {
+      "source":"Person","target":"王五","label":""
+    },
     {
       "source":"Enum","target":"AddressEnum","label":"SubClass Of"
     },

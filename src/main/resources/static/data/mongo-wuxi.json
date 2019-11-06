@@ -3,162 +3,239 @@
   "categories": [{"name":"概念"},{"name":"实例"},{"name":"数据属性"}],
   "nodes":
 
+
   [
 
     {
-      "id":"ResidentBook","category":0,"name":"ResidentBook","label":"ResidentBook","symbolSize":25
+      "id":"无锡市@3202","category":1,"name":"无锡市@3202","label":"无锡市","symbolSize":15
     },
     {
-      "id":"Elder","category":0,"name":"Elder","label":"Elder","symbolSize":25
+      "id":"96cdcf27cc1246d4befc1ff737ee2f97","category":2,"name":"江苏省-无锡市","label":"江苏省-无锡市","symbolSize":10
     },
     {
-      "id":"City","category":0,"name":"City","label":"City","symbolSize":25
+      "id":"2526eae840714e34996b335b04f6244a","category":1,"name":"江苏省@32","label":"江苏省@32","symbolSize":15
     },
     {
-      "id":"Community","category":0,"name":"Community","label":"Community","symbolSize":25
+      "id":"66d4c4ac8624442d989ce554aca39f00","category":2,"name":"无锡市","label":"无锡市","symbolSize":10
     },
     {
-      "id":"Enum","category":0,"name":"Enum","label":"Enum","symbolSize":25
+      "id":"a921e6aaa4734692a464bc020547df40","category":2,"name":"1","label":"1","symbolSize":10
     },
     {
-      "id":"PensionInstitutionState","category":0,"name":"PensionInstitutionState","label":"PensionInstitutionState","symbolSize":25
+      "id":"9935adce56ee49f0a0f2b87d27802f1b","category":2,"name":"0","label":"0","symbolSize":10
     },
     {
-      "id":"CareLevel","category":0,"name":"CareLevel","label":"CareLevel","symbolSize":25
+      "id":"f75313f98486449089e539ab42df4aa7","category":2,"name":"32","label":"32","symbolSize":10
     },
     {
-      "id":"Dead","category":0,"name":"Dead","label":"Dead","symbolSize":25
+      "id":"e4354ff6d3a44c0cae81960cb03ed91e","category":2,"name":"市","label":"市","symbolSize":10
     },
     {
-      "id":"OutdoorState","category":0,"name":"OutdoorState","label":"OutdoorState","symbolSize":25
+      "id":"c52d454be7ba4c3580b50e1fe1d29a05","category":2,"name":"2","label":"2","symbolSize":10
     },
     {
-      "id":"Person","category":0,"name":"Person","label":"Person","symbolSize":25
+      "id":"c4e57d40de8d489292e7ae560ec99536","category":2,"name":"120.305456","label":"120.305456","symbolSize":10
     },
     {
-      "id":"OfferType","category":0,"name":"OfferType","label":"OfferType","symbolSize":25
+      "id":"83ee8cfaa2234dd6ac3743d401a15f91","category":2,"name":"31.570037","label":"31.570037","symbolSize":10
     },
     {
-      "id":"Address","category":0,"name":"Address","label":"Address","symbolSize":25
+      "id":"4e0ba8d170d641d1bdf5340ce503d46e","category":2,"name":"3202","label":"3202","symbolSize":10
     },
     {
-      "id":"Institution","category":0,"name":"Institution","label":"Institution","symbolSize":25
+      "id":"ResidentBook","category":0,"name":"ResidentBook","label":"ResidentBook","symbolSize":20
     },
     {
-      "id":"FoodLevel","category":0,"name":"FoodLevel","label":"FoodLevel","symbolSize":25
+      "id":"Elder","category":0,"name":"Elder","label":"Elder","symbolSize":20
     },
     {
-      "id":"Room","category":0,"name":"Room","label":"Room","symbolSize":25
+      "id":"City","category":0,"name":"City","label":"City","symbolSize":20
     },
     {
-      "id":"Province","category":0,"name":"Province","label":"Province","symbolSize":25
+      "id":"Community","category":0,"name":"Community","label":"Community","symbolSize":20
     },
     {
-      "id":"Habits","category":0,"name":"Habits","label":"Habits","symbolSize":25
+      "id":"Enum","category":0,"name":"Enum","label":"Enum","symbolSize":20
     },
     {
-      "id":"PersonCard","category":0,"name":"PersonCard","label":"PersonCard","symbolSize":25
+      "id":"PensionInstitutionState","category":0,"name":"PensionInstitutionState","label":"PensionInstitutionState","symbolSize":20
     },
     {
-      "id":"MarriageState","category":0,"name":"MarriageState","label":"MarriageState","symbolSize":25
+      "id":"CareLevel","category":0,"name":"CareLevel","label":"CareLevel","symbolSize":20
     },
     {
-      "id":"PoliticalOutlook","category":0,"name":"PoliticalOutlook","label":"PoliticalOutlook","symbolSize":25
+      "id":"Dead","category":0,"name":"Dead","label":"Dead","symbolSize":20
     },
     {
-      "id":"Ethnic","category":0,"name":"Ethnic","label":"Ethnic","symbolSize":25
+      "id":"OutdoorState","category":0,"name":"OutdoorState","label":"OutdoorState","symbolSize":20
     },
     {
-      "id":"PensionInstitution","category":0,"name":"PensionInstitution","label":"PensionInstitution","symbolSize":25
+      "id":"Person","category":0,"name":"Person","label":"Person","symbolSize":20
     },
     {
-      "id":"Street","category":0,"name":"Street","label":"Street","symbolSize":25
+      "id":"OfferType","category":0,"name":"OfferType","label":"OfferType","symbolSize":20
     },
     {
-      "id":"Employee","category":0,"name":"Employee","label":"Employee","symbolSize":25
+      "id":"Address","category":0,"name":"Address","label":"Address","symbolSize":20
     },
     {
-      "id":"NursTeam","category":0,"name":"NursTeam","label":"NursTeam","symbolSize":25
+      "id":"Institution","category":0,"name":"Institution","label":"Institution","symbolSize":20
     },
     {
-      "id":"Building","category":0,"name":"Building","label":"Building","symbolSize":25
+      "id":"FoodLevel","category":0,"name":"FoodLevel","label":"FoodLevel","symbolSize":20
     },
     {
-      "id":"AddressEnum","category":0,"name":"AddressEnum","label":"AddressEnum","symbolSize":25
+      "id":"Room","category":0,"name":"Room","label":"Room","symbolSize":20
     },
     {
-      "id":"Country","category":0,"name":"Country","label":"Country","symbolSize":25
+      "id":"Province","category":0,"name":"Province","label":"Province","symbolSize":20
     },
     {
-      "id":"Man","category":0,"name":"Man","label":"Man","symbolSize":25
+      "id":"Habits","category":0,"name":"Habits","label":"Habits","symbolSize":20
     },
     {
-      "id":"Area","category":0,"name":"Area","label":"Area","symbolSize":25
+      "id":"PersonCard","category":0,"name":"PersonCard","label":"PersonCard","symbolSize":20
     },
     {
-      "id":"PensionInstitutionStatus","category":0,"name":"PensionInstitutionStatus","label":"PensionInstitutionStatus","symbolSize":25
+      "id":"MarriageState","category":0,"name":"MarriageState","label":"MarriageState","symbolSize":20
     },
     {
-      "id":"District","category":0,"name":"District","label":"District","symbolSize":25
+      "id":"PoliticalOutlook","category":0,"name":"PoliticalOutlook","label":"PoliticalOutlook","symbolSize":20
     },
     {
-      "id":"BloodType","category":0,"name":"BloodType","label":"BloodType","symbolSize":25
+      "id":"Ethnic","category":0,"name":"Ethnic","label":"Ethnic","symbolSize":20
     },
     {
-      "id":"IncomeType","category":0,"name":"IncomeType","label":"IncomeType","symbolSize":25
+      "id":"PensionInstitution","category":0,"name":"PensionInstitution","label":"PensionInstitution","symbolSize":20
     },
     {
-      "id":"SelfcareType","category":0,"name":"SelfcareType","label":"SelfcareType","symbolSize":25
+      "id":"Street","category":0,"name":"Street","label":"Street","symbolSize":20
     },
     {
-      "id":"Woman","category":0,"name":"Woman","label":"Woman","symbolSize":25
+      "id":"Employee","category":0,"name":"Employee","label":"Employee","symbolSize":20
     },
     {
-      "id":"Human","category":0,"name":"Human","label":"Human","symbolSize":25
+      "id":"NursTeam","category":0,"name":"NursTeam","label":"NursTeam","symbolSize":20
     },
     {
-      "id":"Bed","category":0,"name":"Bed","label":"Bed","symbolSize":25
+      "id":"Building","category":0,"name":"Building","label":"Building","symbolSize":20
     },
     {
-      "id":"Space","category":0,"name":"Space","label":"Space","symbolSize":25
+      "id":"AddressEnum","category":0,"name":"AddressEnum","label":"AddressEnum","symbolSize":20
     },
     {
-      "id":"Status","category":0,"name":"Status","label":"Status","symbolSize":25
+      "id":"Country","category":0,"name":"Country","label":"Country","symbolSize":20
     },
     {
-      "id":"Education","category":0,"name":"Education","label":"Education","symbolSize":25
+      "id":"Man","category":0,"name":"Man","label":"Man","symbolSize":20
     },
     {
-      "id":"Certificates","category":0,"name":"Certificates","label":"Certificates","symbolSize":25
+      "id":"Area","category":0,"name":"Area","label":"Area","symbolSize":20
     },
     {
-      "id":"IdentityCard","category":0,"name":"IdentityCard","label":"IdentityCard","symbolSize":25
+      "id":"PensionInstitutionStatus","category":0,"name":"PensionInstitutionStatus","label":"PensionInstitutionStatus","symbolSize":20
     },
     {
-      "id":"Passport","category":0,"name":"Passport","label":"Passport","symbolSize":25
+      "id":"District","category":0,"name":"District","label":"District","symbolSize":20
     },
     {
-      "id":"Religion","category":0,"name":"Religion","label":"Religion","symbolSize":25
+      "id":"BloodType","category":0,"name":"BloodType","label":"BloodType","symbolSize":20
     },
     {
-      "id":"BadHabits","category":0,"name":"BadHabits","label":"BadHabits","symbolSize":25
+      "id":"IncomeType","category":0,"name":"IncomeType","label":"IncomeType","symbolSize":20
     },
     {
-      "id":"Face","category":0,"name":"Face","label":"Face","symbolSize":25
+      "id":"SelfcareType","category":0,"name":"SelfcareType","label":"SelfcareType","symbolSize":20
     },
     {
-      "id":"SocialEnsuranceCard","category":0,"name":"SocialEnsuranceCard","label":"SocialEnsuranceCard","symbolSize":25
+      "id":"Woman","category":0,"name":"Woman","label":"Woman","symbolSize":20
     },
     {
-      "id":"FiveGuaranteeCertificate","category":0,"name":"FiveGuaranteeCertificate","label":"FiveGuaranteeCertificate","symbolSize":25
+      "id":"Human","category":0,"name":"Human","label":"Human","symbolSize":20
+    },
+    {
+      "id":"Bed","category":0,"name":"Bed","label":"Bed","symbolSize":20
+    },
+    {
+      "id":"Space","category":0,"name":"Space","label":"Space","symbolSize":20
+    },
+    {
+      "id":"Status","category":0,"name":"Status","label":"Status","symbolSize":20
+    },
+    {
+      "id":"Education","category":0,"name":"Education","label":"Education","symbolSize":20
+    },
+    {
+      "id":"Certificates","category":0,"name":"Certificates","label":"Certificates","symbolSize":20
+    },
+    {
+      "id":"IdentityCard","category":0,"name":"IdentityCard","label":"IdentityCard","symbolSize":20
+    },
+    {
+      "id":"Passport","category":0,"name":"Passport","label":"Passport","symbolSize":20
+    },
+    {
+      "id":"Religion","category":0,"name":"Religion","label":"Religion","symbolSize":20
+    },
+    {
+      "id":"BadHabits","category":0,"name":"BadHabits","label":"BadHabits","symbolSize":20
+    },
+    {
+      "id":"Face","category":0,"name":"Face","label":"Face","symbolSize":20
+    },
+    {
+      "id":"SocialEnsuranceCard","category":0,"name":"SocialEnsuranceCard","label":"SocialEnsuranceCard","symbolSize":20
+    },
+    {
+      "id":"FiveGuaranteeCertificate","category":0,"name":"FiveGuaranteeCertificate","label":"FiveGuaranteeCertificate","symbolSize":20
     }
-  ],
+  ]
+,
 
   "links":
 
 
   [
 
+    {
+      "source":"City","target":"无锡市@3202","label":"Instance Of"
+    },
+    {
+      "source":"无锡市@3202","target":"96cdcf27cc1246d4befc1ff737ee2f97","label":"regionFullName"
+    },
+    {
+      "source":"Province","target":"2526eae840714e34996b335b04f6244a","label":"Instance Of"
+    },
+    {
+      "source":"无锡市@3202","target":"2526eae840714e34996b335b04f6244a","label":"belongProvince"
+    },
+    {
+      "source":"无锡市@3202","target":"66d4c4ac8624442d989ce554aca39f00","label":"regionName"
+    },
+    {
+      "source":"无锡市@3202","target":"a921e6aaa4734692a464bc020547df40","label":"isValidate"
+    },
+    {
+      "source":"无锡市@3202","target":"9935adce56ee49f0a0f2b87d27802f1b","label":"regionLevel"
+    },
+    {
+      "source":"无锡市@3202","target":"f75313f98486449089e539ab42df4aa7","label":"parentCode"
+    },
+    {
+      "source":"无锡市@3202","target":"e4354ff6d3a44c0cae81960cb03ed91e","label":"regionType"
+    },
+    {
+      "source":"无锡市@3202","target":"c52d454be7ba4c3580b50e1fe1d29a05","label":"regionTypeNum"
+    },
+    {
+      "source":"无锡市@3202","target":"c4e57d40de8d489292e7ae560ec99536","label":"posLon"
+    },
+    {
+      "source":"无锡市@3202","target":"83ee8cfaa2234dd6ac3743d401a15f91","label":"posLat"
+    },
+    {
+      "source":"无锡市@3202","target":"4e0ba8d170d641d1bdf5340ce503d46e","label":"regionCode"
+    },
     {
       "source":"Enum","target":"AddressEnum","label":"SubClass Of"
     },
@@ -398,4 +475,4 @@
     }
   ]
 
-}
+  }

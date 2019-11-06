@@ -135,10 +135,12 @@
     myChart.showLoading();
 
     //创建数据
-    $.get('/data/mongo.json', function (webkitDep) {
-        jsondata={"categories":webkitDep.categories,"nodes":webkitDep.nodes,"links":webkitDep.links}
-        createGraph(myChart,jsondata);
-    });
+    jsondata = ${dataJson};
+    createGraph(myChart,jsondata);
+    // $.get('/data/mongo.json', function (webkitDep) {
+    //     jsondata={"categories":webkitDep.categories,"nodes":webkitDep.nodes,"links":webkitDep.links}
+    //     createGraph(myChart,jsondata);
+    // });
 </script>
 </body>
 </html>

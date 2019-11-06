@@ -2,35 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a82fb8c-fa35-4609-aeb0-1055d465d643" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pension.ttl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_9_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_9_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph.iml" beforeDir="false" afterPath="$PROJECT_DIR$/graph.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/GraphApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/GraphApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/config/DruidConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/config/DruidConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/controller/GraphController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/controller/GraphController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/dao/InstitutionMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/dao/PersonMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/domain/Institution.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/domain/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xbstar/graph/GraphApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xbstar/graph/GraphApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xbstar/graph/config/DruidConfiguration$IDataSourceProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xbstar/graph/config/DruidConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xbstar/graph/controller/GraphController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xbstar/graph/dao/InstitutionMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xbstar/graph/dao/PersonMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xbstar/graph/domain/Institution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xbstar/graph/domain/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/InstitutionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/PersonMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vis-network.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/data/internet.graph.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/data/mongo.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/data/mongo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/data/npmdep.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/data/webkit-dep.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/dataTool.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/drawl.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/drawl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/echarts-gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/graph-modularity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vis-network.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/graph.ftl" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,22 +38,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>edd</find>
-      <find>ed</find>
-      <find>[[</find>
-      <find>]]</find>
-      <find>e</find>
-      <find>edges</find>
-      <find>currentGraph</find>
-      <find>-webkit-animation-duration:</find>
-      <find>init</find>
-      <find>.init</find>
-      <find>conso</find>
-      <find>console</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -176,7 +149,7 @@
       <workItem from="1570710946098" duration="163000" />
       <workItem from="1570755072786" duration="2336000" />
       <workItem from="1570846713742" duration="3065000" />
-      <workItem from="1573009533114" duration="3221000" />
+      <workItem from="1573009533114" duration="14476000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1568278292180</created>

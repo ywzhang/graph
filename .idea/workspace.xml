@@ -4,22 +4,6 @@
     <list default="true" id="2a82fb8c-fa35-4609-aeb0-1055d465d643" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/controller/GraphController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/controller/GraphController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/InstitutionMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/PersonMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vis-network.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/data/internet.graph.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/data/mongo.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/data/mongo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/data/npmdep.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/data/webkit-dep.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/dataTool.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/drawl.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/drawl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/echarts-gl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/graph-modularity.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/slider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vis-network.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/graph.ftl" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +133,7 @@
       <workItem from="1570710946098" duration="163000" />
       <workItem from="1570755072786" duration="2336000" />
       <workItem from="1570846713742" duration="3065000" />
-      <workItem from="1573009533114" duration="14476000" />
+      <workItem from="1573009533114" duration="18568000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1568278292180</created>
@@ -284,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573009802153</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="graph">
+      <created>1573026093791</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1573026093791</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

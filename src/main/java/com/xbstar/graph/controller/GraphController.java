@@ -36,6 +36,8 @@ public class GraphController {
     public static String owlPath = "pension.ttl";
     public static OntModel m = ModelFactory.createOntologyModel();
 
+    public static JSONObject listClass = new JSONObject();
+
 
     @RequestMapping("/index")
     public String index(Model model){
@@ -118,6 +120,8 @@ public class GraphController {
         writeToJson(nodesPath, NODE);
         writeToJson(linksPath, LINK);
 
+        listClass = dataJSon;
+
         return dataJSon;
     }
 
@@ -126,8 +130,16 @@ public class GraphController {
     public static JSONObject getInstanceByClass(String className) throws IOException {
         JSONArray NODE = new JSONArray();
         JSONArray LINK = new JSONArray();
+
+        listClass.getJSONArray("nodes").stream().forEach(item->{
+            NODE.add(item);
+        });
+        listClass.getJSONArray("links").stream().forEach(item->{
+            LINK.add(item);
+        });
         m.read(owlPath);
-        listClass();
+//        listClass();
+
         JSONObject dataJSon = new JSONObject(true);
         JSONArray nodes = new JSONArray();
         JSONArray links = new JSONArray();
@@ -183,8 +195,16 @@ public class GraphController {
     public static JSONObject getInstanceDetailByID (String id) throws IOException {
         JSONArray NODE = new JSONArray();
         JSONArray LINK = new JSONArray();
+
+        listClass.getJSONArray("nodes").stream().forEach(item->{
+            NODE.add(item);
+        });
+        listClass.getJSONArray("links").stream().forEach(item->{
+            LINK.add(item);
+        });
+
         m.read(owlPath);
-        listClass();
+//        listClass();
         Individual individual = m.getIndividual(NS + id);
         JSONObject dataJSon = new JSONObject(true);
         JSONArray categories = new JSONArray();

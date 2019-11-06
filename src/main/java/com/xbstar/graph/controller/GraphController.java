@@ -20,7 +20,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.*;
-import java.util.regex.Pattern;
 
 /**
  * Created by Simon on 2019/9/12 15:09
@@ -118,8 +117,8 @@ public class GraphController {
         dataJSon.put("nodes",NODE);
         dataJSon.put("links",LINK);
 
-        //writeToJson(nodesPath, NODE);
-        //writeToJson(linksPath, LINK);
+        writeToJson(nodesPath, NODE);
+        writeToJson(linksPath, LINK);
 
         listClass = dataJSon;
 
@@ -136,7 +135,8 @@ public class GraphController {
         listClass.getJSONArray("nodes").stream().forEach(item->{
             //System.out.println(item.getClass());
             JSONObject json = JSONObject.parseObject(item.toString());
-
+            //JSONObject js = (JSONObject) item;
+            //System.out.println(ontClass.getLocalName());
             if(json.getString("id").equals(ontClass.getLocalName())) {
                 JSONObject concept = new JSONObject();
                 concept.put("id", ontClass.getLocalName());
@@ -166,7 +166,8 @@ public class GraphController {
         JSONArray links = new JSONArray();
         JSONArray categories = new JSONArray();
 
-
+        //OntClass ontClass = m.getOntClass(NS + className);
+        //System.out.printf(ontClass.getLocalName().toString());
         for(Iterator instances = ontClass.listInstances(); instances.hasNext(); ) {
             Individual individual = (Individual) instances.next();
 
@@ -202,8 +203,8 @@ public class GraphController {
         dataJSon.put("nodes",nodes);
         dataJSon.put("links",links);
 
-        //writeToJson(nodesPath, nodes);
-        //writeToJson(linksPath, links);
+        writeToJson(nodesPath, nodes);
+        writeToJson(linksPath, links);
 
         return dataJSon;
     }
@@ -218,9 +219,9 @@ public class GraphController {
 //        listClass();
         Individual individual = m.getIndividual(NS + id);
 
-        listClass.getJSONArray("nodes").stream().forEach(item -> {
+        listClass.getJSONArray("nodes").stream().forEach(item->{
             JSONObject json = (JSONObject) item;
-            if (json.getString("id") == individual.getOntClass().toString().split("#")[1]) {
+            if(json.getString("id") == individual.getOntClass().toString().split("#")[1]) {
                 JSONObject concept = new JSONObject();
                 concept.put("id", individual.toString().split("#")[1]);
                 concept.put("category", 1);
@@ -231,7 +232,7 @@ public class GraphController {
             } else {
                 JSONObject j = new JSONObject();
                 j.put("opacity", 0.5);
-                json.put("itemStyle", j);
+                json.put("itemStyle",j);
                 NODE.add(json);
             }
         });
@@ -245,7 +246,7 @@ public class GraphController {
 
         StmtIterator stmtIterator = individual.listProperties();
         JSONObject instanceNode = new JSONObject(true);
-        //JSONObject instanceLink = new JSONObject(true);
+        JSONObject instanceLink = new JSONObject(true);
 
         // Why use individual.getLocalName is null
         instanceNode.put("id", individual.toString().split("#")[1]);
@@ -254,156 +255,148 @@ public class GraphController {
         instanceNode.put("label", individual.toString().split("#")[1].split("@")[0]);
         instanceNode.put("symbolSize", 38);
 
-        for (Iterator allClass = individual.listOntClasses(false); allClass.hasNext(); ) {
-            OntClass ontClass = (OntClass) allClass.next();
-            JSONObject instanceLink = new JSONObject(true);
+        instanceLink.put("source", individual.getOntClass().toString().split("#")[1]);
+        instanceLink.put("target", instanceNode.getString("id"));
+        instanceLink.put("label", "Instance Of");
 
-            if (!ontClass.isHierarchyRoot()) {
-                instanceLink.put("source", ontClass.getLocalName());
-                instanceLink.put("target", instanceNode.getString("id"));
-                instanceLink.put("label", "Instance Of");
-
-                links.add(instanceLink);
-            }
+        nodes.add(instanceNode);
+        links.add(instanceLink);
+        String filterDP = null;
+        String filterOP = null;
+        if(instanceLink.getString("source").equals("City") || instanceLink.getString("source").equals("Province") || instanceLink.getString("source").equals("Country") || instanceLink.getString("source").equals("District")){
+            System.out.printf(instanceLink.getString("source"));
+            filterOP = "AddressOP";
+            filterDP = "AddressDP";
+        } else {
+            filterOP = "HumanOP";
+            filterDP = "HumanDP";
         }
+        while (stmtIterator.hasNext()){
+            JSONObject node = new JSONObject(true);
+            JSONObject link = new JSONObject(true);
+            Statement statement = stmtIterator.nextStatement();
 
-            nodes.add(instanceNode);
+            // why get the AddressOP, HumanDP
+            if(!statement.getPredicate().getLocalName().equals(filterOP.toString()) && !statement.getPredicate().getLocalName().equals(filterDP.toString()
+            )) {
+                //System.out.println(statement);
+                if(statement.getObject().isLiteral()) {
+                    node.put("id", UUID.randomUUID().toString().replace("-", ""));
+                    node.put("category", 2);
+                    node.put("name", statement.getObject().asLiteral().getValue().toString());
+                    node.put("label", statement.getObject().asLiteral().getValue().toString());
+                    node.put("symbolSize", 30);
 
-            String regex = "^[A-Z].*$";
-            while (stmtIterator.hasNext()) {
-                JSONObject node = new JSONObject(true);
-                JSONObject link = new JSONObject(true);
-                Statement statement = stmtIterator.nextStatement();
-                // why get the AddressOP, HumanDP
+                    link.put("source", individual.toString().split("#")[1]);
+                    link.put("target", node.getString("id"));
+                    link.put("label", statement.getPredicate().getLocalName());
+                } else if(statement.getObject().isURIResource() && !statement.getPredicate().toString().split("#")[0].equals(rdf)){
 
-                if(!Pattern.matches(regex, statement.getPredicate().getLocalName())){
-                    if (statement.getObject().isLiteral()) {
-                        node.put("id", UUID.randomUUID().toString().replace("-", ""));
-                        node.put("category", 2);
-                        node.put("name", statement.getObject().asLiteral().getValue().toString());
-                        node.put("label", statement.getObject().asLiteral().getValue().toString());
-                        node.put("symbolSize", 30);
+                    JSONObject objectLink = new JSONObject(true);
 
-                        link.put("source", individual.toString().split("#")[1]);
-                        link.put("target", node.getString("id"));
-                        link.put("label", statement.getPredicate().getLocalName());
-                    } else if (statement.getObject().isURIResource() && !statement.getPredicate().toString().split("#")[0].equals(rdf)) {
+                    /**
+                     * Link to current individual
+                     */
+                    node.put("id", UUID.randomUUID().toString().replace("-", ""));
+                    node.put("category", 1);
+                    node.put("name", statement.getObject().asResource().toString().split("#")[1]);
+                    node.put("label", statement.getObject().asResource().toString().split("#")[1]);
+                    node.put("symbolSize", 33);
 
-                        JSONObject objectLink = new JSONObject(true);
-
-                        /**
-                         * Link to current individual
-                         */
-                        node.put("id", UUID.randomUUID().toString().replace("-", ""));
-                        node.put("category", 1);
-                        node.put("name", statement.getObject().asResource().toString().split("#")[1]);
-                        node.put("label", statement.getObject().asResource().toString().split("#")[1]);
-                        node.put("symbolSize", 33);
-
-                        link.put("source", individual.toString().split("#")[1]);
-                        link.put("target", node.getString("id"));
-                        link.put("label", statement.getPredicate().getLocalName());
+                    link.put("source", individual.toString().split("#")[1]);
+                    link.put("target", node.getString("id"));
+                    link.put("label", statement.getPredicate().getLocalName());
 
 
-                        // why get NamedIndividual instead of Province
-                        String n = statement.getObject().asResource().toString().split("#")[1];
-                        Individual ind = m.getIndividual(NS + n);
+                    // why get NamedIndividual instead of Province
+                    String n = statement.getObject().asResource().toString().split("#")[1];
+                    Individual ind = m.getIndividual(NS + n);
+//                    System.out.println(ind.getOntClass().toString().split("#")[1]);
 
-                        /**
-                         *  Link to Class
-                         */
-
-                        for (Iterator allClass = ind.listOntClasses(false); allClass.hasNext(); ) {
-                            OntClass ontClass = (OntClass) allClass.next();
-                            //JSONObject node = new JSONObject(true);
-                            JSONObject instanceLink = new JSONObject(true);
-
-                            if (!ontClass.isHierarchyRoot()) {
-                                instanceLink.put("source", ontClass.getLocalName());
-                                instanceLink.put("target", node.getString("id"));
-                                instanceLink.put("label", "Instance Of");
-
-                                links.add(instanceLink);
-                            }
-                        }
-
-                    } else {
-                        node = null;
-                        link = null;
-                    }
-                    if (node != null) {
-                        nodes.add(node);
-                    }
-                    if (link != null) {
-                        links.add(link);
-                    }
+                    /**
+                     *  Link to Class
+                     */
+                    objectLink.put("source", ind.getOntClass().toString().split("#")[1]);
+                    objectLink.put("target", node.getString("id"));
+                    objectLink.put("label", "Instance Of");
+                    links.add(objectLink);
+                } else {
+                    node = null;
+                    link = null;
                 }
-
+                if(node != null) {
+                    nodes.add(node);
+                }
+                if(link != null) {
+                    links.add(link);
+                }
             }
 
-            nodes.addAll(NODE);
-            links.addAll(LINK);
-
-            List<String> list = new ArrayList<>(Arrays.asList("概念", "实例", "数据属性"));
-            list.stream().forEach(item -> {
-                JSONObject category = new JSONObject();
-                category.put("name", item);
-                categories.add(category);
-            });
-
-            dataJSon.put("categories", categories);
-            dataJSon.put("nodes", nodes);
-            dataJSon.put("links", links);
-
-            //writeToJson(nodesPath, nodes);
-            //writeToJson(linksPath, links);
-
-            return dataJSon;
         }
 
-        //Save as JSON file
-        public static void writeToJson (String filePath, JSONArray object) throws IOException
-        {
-            File file = new File(filePath);
-            char[] stack = new char[1024];
-            int top = -1;
-            String string = object.toString();
-            StringBuffer sb = new StringBuffer();
-            char[] charArray = string.toCharArray();
-            for (int i = 0; i < charArray.length; i++) {
-                char c = charArray[i];
-                if ('{' == c || '[' == c) {
-                    stack[++top] = c;
-                    sb.append("\n" + charArray[i] + "\n");
+        nodes.addAll(NODE);
+        links.addAll(LINK);
+
+        List<String> list = new ArrayList<>(Arrays.asList("概念", "实例", "数据属性"));
+        list.stream().forEach(item->{
+            JSONObject category = new JSONObject();
+            category.put("name",item);
+            categories.add(category);
+        });
+
+        dataJSon.put("categories",categories);
+        dataJSon.put("nodes",nodes);
+        dataJSon.put("links",links);
+
+        writeToJson(nodesPath, nodes);
+        writeToJson(linksPath, links);
+
+        return dataJSon;
+    }
+
+    //Save as JSON file
+    public static void writeToJson(String filePath,JSONArray object) throws IOException
+    {
+        File file = new File(filePath);
+        char [] stack = new char[1024];
+        int top=-1;
+        String string = object.toString();
+        StringBuffer sb = new StringBuffer();
+        char [] charArray = string.toCharArray();
+        for(int i=0;i<charArray.length;i++){
+            char c= charArray[i];
+            if ('{' == c || '[' == c) {
+                stack[++top] = c;
+                sb.append("\n"+charArray[i] + "\n");
+                for (int j = 0; j <= top; j++) {
+                    sb.append("\t");
+                }
+                continue;
+            }
+            if ((i + 1) <= (charArray.length - 1)) {
+                char d = charArray[i+1];
+                if ('}' == d || ']' == d) {
+                    top--;
+                    sb.append(charArray[i] + "\n");
                     for (int j = 0; j <= top; j++) {
                         sb.append("\t");
                     }
                     continue;
                 }
-                if ((i + 1) <= (charArray.length - 1)) {
-                    char d = charArray[i + 1];
-                    if ('}' == d || ']' == d) {
-                        top--;
-                        sb.append(charArray[i] + "\n");
-                        for (int j = 0; j <= top; j++) {
-                            sb.append("\t");
-                        }
-                        continue;
-                    }
-                }
-                if (',' == c) {
-                    sb.append(charArray[i] + "");
-                    for (int j = 0; j <= top; j++) {
-                        sb.append("");
-                    }
-                    continue;
-                }
-                sb.append(c);
             }
-            Writer write = new FileWriter(file);
-            write.write(sb.toString());
-            write.flush();
-            write.close();
+            if (',' == c) {
+                sb.append(charArray[i] + "");
+                for (int j = 0; j <= top; j++) {
+                    sb.append("");
+                }
+                continue;
+            }
+            sb.append(c);
         }
+        Writer write = new FileWriter(file);
+        write.write(sb.toString());
+        write.flush();
+        write.close();
+    }
 
 }

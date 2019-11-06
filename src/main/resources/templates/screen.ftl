@@ -45,8 +45,7 @@
                     NODES.push(links[i].source);
                 }
             }
-
-            if(nodes.length>0){
+            if(NODES.length>1){
                 for(var i in nodes){
                     if(NODES.indexOf(nodes[i].id)!=-1){
                         if(pass == nodes[i].id){

@@ -29,7 +29,23 @@
     }
 
     function relation() {
-        layer.prompt({title: '输入详情名称，并确认', formType: 0}, function(pass, index){
+        layer.prompt({title: '输入概念名称，并确认', formType: 0}, function(pass, index){
+            var dataJson = ${dataJson};
+            var nodes = dataJson["nodes"];
+            var links = dataJson["links"];
+            var NODES = [];
+            NODES.push(pass);
+            for(var i in links){
+                if(links[i].source == pass){
+                    NODES.push(links[i].target);
+                }
+            }
+            for(var i in nodes){
+                if(NODES.indexOf(nodes[i].id)!=-1){
+                    nodes[i].symbolSize+=5;
+                }
+            }
+            createGraph(myChart,dataJson);
             layer.close(index);
         });
     }

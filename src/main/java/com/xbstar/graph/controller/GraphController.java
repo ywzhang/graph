@@ -302,8 +302,8 @@ public class GraphController {
         });
 
         dataJSon.put("categories",categories);
-        dataJSon.put("nodes",NODE);
-        dataJSon.put("links",LINK);
+        dataJSon.put("nodes",nodes);
+        dataJSon.put("links",links);
 
         writeToJson(nodesPath, nodes);
         writeToJson(linksPath, links);

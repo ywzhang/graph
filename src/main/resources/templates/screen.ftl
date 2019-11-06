@@ -23,6 +23,8 @@
     </div>
 </div>
 <script>
+    var width = $("#container").width();
+    var height = $("#container").height();
 
     function reset() {
         createGraph(myChart,${dataJson});
@@ -39,24 +41,34 @@
                 if(links[i].source == pass){
                     NODES.push(links[i].target);
                 }
-            }
-            for(var i in nodes){
-                if(NODES.indexOf(nodes[i].id)!=-1){
-                    nodes[i].symbolSize+=5;
-                }else{
-                    nodes[i].itemStyle = {"opacity":0.5};
+                if(links[i].target == pass){
+                    NODES.push(links[i].source);
                 }
             }
-            createGraph(myChart,dataJson);
+
+            if(nodes.length>0){
+                for(var i in nodes){
+                    if(NODES.indexOf(nodes[i].id)!=-1){
+                        if(pass == nodes[i].id){
+                            nodes[i].x = width/2;
+                            nodes[i].y = height/2;
+                            nodes[i].fixed =true;
+                        }
+                        nodes[i].symbolSize+=5;
+                    }else{
+                        nodes[i].itemStyle = {"opacity":0.5};
+                    }
+                }
+                createGraph(myChart,dataJson);
+            }else{
+                layer.msg("对不起，我没听懂，请再说一遍。")
+            }
             layer.close(index);
         });
     }
 
     function detail(){
         layer.prompt({title: '输入详情名称，并确认', formType: 0}, function(pass, index){
-            var width = $("#container").width();
-            var height = $("#container").height();
-
             var oldNodes  = option.series[0].nodes;
             var name = "";
             var category = 0;

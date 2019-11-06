@@ -43,6 +43,8 @@
             for(var i in nodes){
                 if(NODES.indexOf(nodes[i].id)!=-1){
                     nodes[i].symbolSize+=5;
+                }else{
+                    nodes[i].itemStyle = {"opacity":0.5};
                 }
             }
             createGraph(myChart,dataJson);

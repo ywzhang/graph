@@ -25,10 +25,7 @@
 <script>
 
     function reset() {
-        $.get('/data/mongo.json', function (webkitDep) {
-            jsondata={"categories":webkitDep.categories,"nodes":webkitDep.nodes,"links":webkitDep.links}
-            createGraph(myChart,jsondata);
-        });
+        createGraph(myChart,${dataJson});
     }
 
     function relation() {
@@ -49,79 +46,50 @@
 
             var oldNodes  = option.series[0].nodes;
             var name = "";
+            var category = 0;
             for(var i in oldNodes){
                 if(oldNodes[i].label.indexOf(pass)==0){
                     name =  oldNodes[i].name;
+                    category = oldNodes[i].category;
                     break;
                 }
             }
 
             //后续改为动态的
             if(name != ""){
-                if(pass== "Person"){
-                    $.get('/data/mongo-person.json', function (webkitDep) {
-                        var nodes = webkitDep.nodes;
-                        for(var i in nodes){
-                            if(nodes[i].name == name && nodes[i].category<2){
-                                nodes[i].x = width/2;
-                                nodes[i].y = height/2;
-                                nodes[i].fixed =true;
+                if(category == 0){
+                    $.ajax({
+                        url:"/graph/getInstanceByClass",
+                        data:{"className":name},
+                        dataType:"json",
+                        success:function(result){
+                            var nodes = result["nodes"];
+                            for(var i in nodes){
+                                if(nodes[i].name == name && nodes[i].category<2){
+                                    nodes[i].x = width/2;
+                                    nodes[i].y = height/2;
+                                    nodes[i].fixed =true;
+                                }
                             }
+                            createGraph(myChart,result);
                         }
-                        jsondata={"categories":webkitDep.categories,"nodes":webkitDep.nodes,"links":webkitDep.links}
-                        createGraph(myChart,jsondata);
                     });
-                }else if(pass== "Province"){
-                    $.get('/data/mongo-province.json', function (webkitDep) {
-                        var nodes = webkitDep.nodes;
-                        for(var i in nodes){
-                            if(nodes[i].name == name && nodes[i].category<2){
-                                nodes[i].x = width/2;
-                                nodes[i].y = height/2;
-                                nodes[i].fixed =true;
+                }else{
+                    $.ajax({
+                        url:"/graph/getInstanceDetailByID",
+                        data:{"id":name},
+                        dataType:"json",
+                        success:function(result){
+                            var nodes = result["nodes"];
+                            for(var i in nodes){
+                                if(nodes[i].name == name && nodes[i].category<2){
+                                    nodes[i].x = width/2;
+                                    nodes[i].y = height/2;
+                                    nodes[i].fixed =true;
+                                }
                             }
+                            createGraph(myChart,result);
                         }
-                        jsondata={"categories":webkitDep.categories,"nodes":nodes,"links":webkitDep.links}
-                        createGraph(myChart,jsondata);
-                    });
-                }else if(pass== "City"){
-                    $.get('/data/mongo-city.json', function (webkitDep) {
-                        var nodes = webkitDep.nodes;
-                        for(var i in nodes){
-                            if(nodes[i].name == name && nodes[i].category<2){
-                                nodes[i].x = width/2;
-                                nodes[i].y = height/2;
-                                nodes[i].fixed =true;
-                            }
-                        }
-                        jsondata={"categories":webkitDep.categories,"nodes":nodes,"links":webkitDep.links}
-                        createGraph(myChart,jsondata);
-                    });
-                }else if(pass== "无锡市"){
-                    $.get('/data/mongo-wuxi.json', function (webkitDep) {
-                        var nodes = webkitDep.nodes;
-                        for(var i in nodes){
-                            if(nodes[i].name == name && nodes[i].category<2){
-                                nodes[i].x = width/2;
-                                nodes[i].y = height/2;
-                                nodes[i].fixed =true;
-                            }
-                        }
-                        jsondata={"categories":webkitDep.categories,"nodes":nodes,"links":webkitDep.links}
-                        createGraph(myChart,jsondata);
-                    });
-                }else if(pass== "张三"){
-                    $.get('/data/mongo-zs.json', function (webkitDep) {
-                        var nodes = webkitDep.nodes;
-                        for(var i in nodes){
-                            if(nodes[i].name == name && nodes[i].category<2){
-                                nodes[i].x = width/2;
-                                nodes[i].y = height/2;
-                                nodes[i].fixed =true;
-                            }
-                        }
-                        jsondata={"categories":webkitDep.categories,"nodes":nodes,"links":webkitDep.links}
-                        createGraph(myChart,jsondata);
                     });
                 }
             }else{
@@ -135,12 +103,7 @@
     myChart.showLoading();
 
     //创建数据
-    jsondata = ${dataJson};
-    createGraph(myChart,jsondata);
-    // $.get('/data/mongo.json', function (webkitDep) {
-    //     jsondata={"categories":webkitDep.categories,"nodes":webkitDep.nodes,"links":webkitDep.links}
-    //     createGraph(myChart,jsondata);
-    // });
+    createGraph(myChart,${dataJson});
 </script>
 </body>
 </html>

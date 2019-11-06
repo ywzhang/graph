@@ -9,22 +9,16 @@ import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
-import com.xbstar.graph.GraphApplication;
-
-import org.springframework.boot.SpringApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.annotation.Resource;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Created by Simon on 2019/9/12 15:09
@@ -45,15 +39,15 @@ public class GraphController {
 
     public static OntModel m = ModelFactory.createOntologyModel();
 
-    public static void main(String[] args) throws IOException {
-        //SpringApplication.run(GraphApplication.class, args);
-        m.read(owlPath);
-        //listClass();
-        //getInstanceByClass("City");
-        getInstanceDetailByID("无锡市@3202");
-        //getInstanceDetailByID("张三");
-        System.out.println("Finish......");
-    }
+//    public static void main(String[] args) throws IOException {
+//        //SpringApplication.run(GraphApplication.class, args);
+//        m.read(owlPath);
+//        //listClass();
+//        //getInstanceByClass("City");
+//        getInstanceDetailByID("无锡市@3202");
+//        //getInstanceDetailByID("张三");
+//        System.out.println("Finish......");
+//    }
 
 
     @RequestMapping("/index")
@@ -64,21 +58,14 @@ public class GraphController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return "graph";
+        return "screen";
     }
 
-    /*
-    @RequestMapping("/findAll")
-    @ResponseBody
-    public JSONObject findAll(){
-
-    }*/
 
     @RequestMapping("/listClass")
     @ResponseBody
     public static JSONObject listClass() throws IOException {
         m.read(owlPath);
-
         JSONObject dataJSon = new JSONObject(true);
         JSONArray categories = new JSONArray();
 

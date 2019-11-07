@@ -143,7 +143,7 @@
             var name = "";
             var category = 0;
             for(var i in oldNodes){
-                if(oldNodes[i].label.indexOf(pass)==0){
+                if(oldNodes[i].remark.indexOf(pass)==0){
                     name =  oldNodes[i].name;
                     category = oldNodes[i].category;
                     break;

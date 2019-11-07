@@ -136,8 +136,7 @@ public class GraphController {
         listClass.getJSONArray("nodes").stream().forEach(item->{
             //System.out.println(item.getClass());
             JSONObject json = JSONObject.parseObject(item.toString());
-            //JSONObject js = (JSONObject) item;
-            //System.out.println(ontClass.getLocalName());
+
             if(json.getString("id").equals(ontClass.getLocalName())) {
                 JSONObject concept = new JSONObject();
                 concept.put("id", ontClass.getLocalName());
@@ -167,8 +166,7 @@ public class GraphController {
         JSONArray links = new JSONArray();
         JSONArray categories = new JSONArray();
 
-        //OntClass ontClass = m.getOntClass(NS + className);
-        //System.out.printf(ontClass.getLocalName().toString());
+
         for(Iterator instances = ontClass.listInstances(); instances.hasNext(); ) {
             Individual individual = (Individual) instances.next();
 
@@ -217,7 +215,6 @@ public class GraphController {
         JSONArray NODE = new JSONArray();
         JSONArray LINK = new JSONArray();
         m.read(owlPath);
-//        listClass();
         Individual individual = m.getIndividual(NS + id);
 
         listClass.getJSONArray("nodes").stream().forEach(item -> {
@@ -258,12 +255,10 @@ public class GraphController {
 
         for (Iterator allClass = individual.listOntClasses(false); allClass.hasNext(); ) {
             OntClass ontClass = (OntClass) allClass.next();
-            //JSONObject node = new JSONObject(true);
             JSONObject instanceLink = new JSONObject(true);
 
             if (!ontClass.isHierarchyRoot()) {
                 instanceLink.put("source", ontClass.getLocalName());
-                //System.out.println(individual.getOntClass().toString().split("#")[1]+"------------");
                 instanceLink.put("target", instanceNode.getString("id"));
                 instanceLink.put("label", "Instance Of");
 
@@ -272,9 +267,7 @@ public class GraphController {
         }
 
         nodes.add(instanceNode);
-        //links.add(instanceLink);
-        String filterDP = "AddressDP";
-        String filterOP = "AddressOP";
+
         String regex = "^[A-Z].*$";
         while (stmtIterator.hasNext()) {
             JSONObject node = new JSONObject(true);
@@ -321,7 +314,6 @@ public class GraphController {
 
                     for (Iterator allClass = ind.listOntClasses(false); allClass.hasNext(); ) {
                         OntClass ontClass = (OntClass) allClass.next();
-                        //JSONObject node = new JSONObject(true);
                         JSONObject instanceLink = new JSONObject(true);
 
                         if (!ontClass.isHierarchyRoot()) {

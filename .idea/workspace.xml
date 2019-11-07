@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a82fb8c-fa35-4609-aeb0-1055d465d643" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/controller/GraphController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xbstar/graph/controller/GraphController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xbstar/graph/controller/GraphController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xbstar/graph/controller/GraphController.class" afterDir="false" />
-    </list>
+    <list default="true" id="2a82fb8c-fa35-4609-aeb0-1055d465d643" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,22 +19,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>edd</find>
-      <find>ed</find>
-      <find>[[</find>
-      <find>]]</find>
-      <find>e</find>
-      <find>edges</find>
-      <find>currentGraph</find>
-      <find>-webkit-animation-duration:</find>
-      <find>init</find>
-      <find>.init</find>
-      <find>conso</find>
-      <find>console</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -84,11 +63,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Code\graph" />
       <recent name="C:\IdeaProject\graph\src\main\resources\static\images" />
       <recent name="C:\IdeaProject\graph\src\main\resources\static\css" />
       <recent name="C:\IdeaProject\graph\src\main\resources\static\js" />
       <recent name="C:\IdeaProject\graph\src\main\resources\mapper" />
-      <recent name="C:\IdeaProject\graph\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.xbstar.graph.dao" />
@@ -151,7 +130,9 @@
       <workItem from="1570710946098" duration="163000" />
       <workItem from="1570755072786" duration="2336000" />
       <workItem from="1570846713742" duration="3065000" />
-      <workItem from="1573009533114" duration="103000" />
+      <workItem from="1573009533114" duration="19542000" />
+      <workItem from="1573036208577" duration="624000" />
+      <workItem from="1573088477036" duration="1539000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1568278292180</created>
@@ -272,7 +253,49 @@
       <option name="project" value="LOCAL" />
       <updated>1569749080614</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="graph">
+      <created>1573009725667</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1573009725667</updated>
+    </task>
+    <task id="LOCAL-00019" summary="graph">
+      <created>1573009802153</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1573009802153</updated>
+    </task>
+    <task id="LOCAL-00020" summary="graph">
+      <created>1573026093791</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1573026093791</updated>
+    </task>
+    <task id="LOCAL-00021" summary="graph">
+      <created>1573032633905</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1573032633905</updated>
+    </task>
+    <task id="LOCAL-00022" summary="graph">
+      <created>1573032759834</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1573032759834</updated>
+    </task>
+    <task id="LOCAL-00023" summary="graph">
+      <created>1573089913185</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1573089913185</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

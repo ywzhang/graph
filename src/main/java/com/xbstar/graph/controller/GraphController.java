@@ -68,7 +68,7 @@ public class GraphController {
             node.put("id", ontClass.getLocalName());
             node.put("category", 0);
             node.put("name", ontClass.getLocalName());
-            node.put("label", ontClass.getLocalName());
+            node.put("remark", ontClass.getLocalName());
             node.put("symbolSize", 25);
 
             NODE.add(node);
@@ -81,7 +81,7 @@ public class GraphController {
 
                 subLink.put("source", ontClass.getLocalName());
                 subLink.put("target", subClass.getLocalName());
-                subLink.put("label", "SubClass Of");
+                subLink.put("remark", "SubClass Of");
 
                 LINK.add(subLink);
             }
@@ -94,14 +94,14 @@ public class GraphController {
 
             JSONObject link = new JSONObject(true);
 
-            if(property.getRange() != null || property.getDomain() != null) {
+            if(property.getRange() != null && property.getDomain() != null) {
                 //System.out.println(property);
                 domain = property.getDomain().getLocalName();
                 range = property.getRange().getLocalName();
 
                 link.put("source", property.getDomain().getLocalName());
                 link.put("target", property.getRange().getLocalName());
-                link.put("label", property.getLocalName());
+                link.put("remark", property.getLocalName());
 
                 LINK.add(link);
             }
@@ -142,7 +142,7 @@ public class GraphController {
                 concept.put("id", ontClass.getLocalName());
                 concept.put("category", 0);
                 concept.put("name", ontClass.getLocalName());
-                concept.put("label", ontClass.getLocalName());
+                concept.put("remark", ontClass.getLocalName());
                 concept.put("symbolSize", 37);
                 System.out.printf(ontClass.getLocalName());
                 NODE.add(concept);
@@ -176,12 +176,12 @@ public class GraphController {
             node.put("id", individual.toString().split("#")[1]);
             node.put("category", 1);
             node.put("name", individual.toString().split("#")[1]);
-            node.put("label", individual.toString().split("#")[1].split("@")[0]);
+            node.put("remark", individual.toString().split("#")[1].split("@")[0]);
             node.put("symbolSize", 31);
 
             link.put("source", ontClass.getLocalName().toString());
             link.put("target", individual.toString().split("#")[1]);
-            link.put("label", "Instances Of");
+            link.put("remark", "Instance Of");
 
             nodes.add(node);
             links.add(link);
@@ -224,7 +224,7 @@ public class GraphController {
                 concept.put("id", individual.toString().split("#")[1]);
                 concept.put("category", 1);
                 concept.put("name", individual.toString().split("#")[1]);
-                concept.put("label", individual.toString().split("#")[1].split("@")[0]);
+                concept.put("remark", individual.toString().split("#")[1].split("@")[0]);
                 concept.put("symbolSize", 37);
                 NODE.add(concept);
             } else {
@@ -250,7 +250,7 @@ public class GraphController {
         instanceNode.put("id", individual.toString().split("#")[1]);
         instanceNode.put("category", 1);
         instanceNode.put("name", individual.toString().split("#")[1]);
-        instanceNode.put("label", individual.toString().split("#")[1].split("@")[0]);
+        instanceNode.put("remark", individual.toString().split("#")[1].split("@")[0]);
         instanceNode.put("symbolSize", 38);
 
         for (Iterator allClass = individual.listOntClasses(false); allClass.hasNext(); ) {
@@ -260,7 +260,7 @@ public class GraphController {
             if (!ontClass.isHierarchyRoot()) {
                 instanceLink.put("source", ontClass.getLocalName());
                 instanceLink.put("target", instanceNode.getString("id"));
-                instanceLink.put("label", "Instance Of");
+                instanceLink.put("remark", "Instance Of");
 
                 links.add(instanceLink);
             }
@@ -280,12 +280,12 @@ public class GraphController {
                     node.put("id", UUID.randomUUID().toString().replace("-", ""));
                     node.put("category", 2);
                     node.put("name", statement.getObject().asLiteral().getValue().toString());
-                    node.put("label", statement.getObject().asLiteral().getValue().toString());
+                    node.put("remark", statement.getObject().asLiteral().getValue().toString());
                     node.put("symbolSize", 30);
 
                     link.put("source", individual.toString().split("#")[1]);
                     link.put("target", node.getString("id"));
-                    link.put("label", statement.getPredicate().getLocalName());
+                    link.put("remark", statement.getPredicate().getLocalName());
                 } else if (statement.getObject().isURIResource() && !statement.getPredicate().toString().split("#")[0].equals(rdf)) {
 
                     JSONObject objectLink = new JSONObject(true);
@@ -296,12 +296,12 @@ public class GraphController {
                     node.put("id", UUID.randomUUID().toString().replace("-", ""));
                     node.put("category", 1);
                     node.put("name", statement.getObject().asResource().toString().split("#")[1]);
-                    node.put("label", statement.getObject().asResource().toString().split("#")[1]);
+                    node.put("remark", statement.getObject().asResource().toString().split("#")[1]);
                     node.put("symbolSize", 33);
 
                     link.put("source", individual.toString().split("#")[1]);
                     link.put("target", node.getString("id"));
-                    link.put("label", statement.getPredicate().getLocalName());
+                    link.put("remark", statement.getPredicate().getLocalName());
 
 
                     // why get NamedIndividual instead of Province
@@ -319,7 +319,7 @@ public class GraphController {
                         if (!ontClass.isHierarchyRoot()) {
                             instanceLink.put("source", ontClass.getLocalName());
                             instanceLink.put("target", node.getString("id"));
-                            instanceLink.put("label", "Instance Of");
+                            instanceLink.put("remark", "Instance Of");
 
                             links.add(instanceLink);
                         }

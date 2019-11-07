@@ -65,8 +65,7 @@ pension:HumanOP rdf:type owl:ObjectProperty .
 ###  http://www.xbstar.com/ontology/pension#PensionInstitutionStatusOP
 pension:PensionInstitutionStatusOP rdf:type owl:ObjectProperty ;
                                    rdfs:subPropertyOf pension:HumanOP ;
-                                   rdfs:domain pension:PensionInstitutionStatus ;
-                                   rdfs:range pension:Employee .
+                                   rdfs:domain pension:PensionInstitutionStatus .
 
 
 ###  http://www.xbstar.com/ontology/pension#SystemOP

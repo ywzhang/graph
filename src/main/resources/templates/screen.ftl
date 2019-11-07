@@ -12,19 +12,23 @@
 <!-- 为 ECharts 准备一个具备大小（宽高）的 容器 -->
 <div id="container" style="width: 80%;height: 100%;float: left;"></div>
 <div style="width: 20%;height: 100%;float:right;">
-    <div style="padding-top: 50%;">
+    <div style="padding-top: 40%;">
         <button type="button" style="width: 90px" class="layui-btn layui-btn-normal" onclick="reset()">知识图谱</button>
     </div>
-    <div style="margin-top: 30%;">
+    <div style="margin-top: 20%;">
         <button type="button" style="width: 90px" class="layui-btn layui-btn-normal" onclick="relation(this)">概念关系</button>
     </div>
-    <div style="margin-top: 30%;">
+    <div style="margin-top: 20%;">
         <button type="button" style="width: 90px" class="layui-btn layui-btn-normal" id="change" onclick="change(this)">全量图</button>
     </div>
-    <div style="margin-top: 30%;">
+    <div style="margin-top: 20%;">
         <button type="button" style="width: 90px" class="layui-btn layui-btn-normal" onclick="detail()">详情信息</button>
     </div>
+    <div style="margin-top: 20%;">
+        <button type="button" style="width: 90px" class="layui-btn layui-btn-normal" id="changeDetail" onclick="changeDetail(this)">全量图</button>
+    </div>
     <input type="hidden" name="passname" value="">
+    <input type="hidden" name="passnameDetail" value="">
 </div>
 <script>
     var width = $("#container").width();
@@ -33,16 +37,21 @@
     function reset() {
         $("#change").html("全量图");
         $("input[name=passname]").val("")
+        $("#changeDetail").html("全量图");
+        $("input[name=passnameDetail]").val("")
         createGraph(myChart,${dataJson});
     }
 
+    //概念相关
     function relation(obj) {
         var value = $(obj).html();
         layer.prompt({title: '输入概念名称，并确认', formType: 0}, function(pass, index){
             $("input[name=passname]").val(pass)
             var data = exchange(value,pass);
-            if(data.nodes.length >0){
+            if(!jQuery.isEmptyObject(data) && data.nodes.length >0){
                 $("#change").html("全量图");
+                $("#changeDetail").html("全量图");
+                $("input[name=passnameDetail]").val("")
                 createGraph(myChart,data);
             } else{
                 layer.msg("对不起，我没听懂，请再说一遍。")
@@ -134,68 +143,100 @@
         }else{
             layer.msg("请先选择概念关系");
         }
-
     }
 
+    //详情相关
     function detail(){
         layer.prompt({title: '输入详情名称，并确认', formType: 0}, function(pass, index){
-            var oldNodes  = option.series[0].nodes;
-            var name = "";
-            var category = 0;
-            for(var i in oldNodes){
-                if(oldNodes[i].remark.indexOf(pass)==0){
-                    name =  oldNodes[i].name;
-                    category = oldNodes[i].category;
-                    break;
-                }
+            $("input[name=passnameDetail]").val(pass);
+            var result = {};
+            if(!jQuery.isEmptyObject(exchangeDetail(0,pass))){
+                result = JSON.parse(exchangeDetail(0,pass));
             }
-
-            //后续改为动态的
-            if(name != ""){
-                if(category == 0){
-                    $.ajax({
-                        url:"/graph/getInstanceByClass",
-                        data:{"className":name},
-                        dataType:"json",
-                        success:function(result){
-                            var nodes = result["nodes"];
-                            for(var i in nodes){
-                                if(nodes[i].name == name && nodes[i].category<2){
-                                    nodes[i].x = width/2;
-                                    nodes[i].y = height/2;
-                                    nodes[i].fixed =true;
-                                }
-                            }
-                            $("input[name=passname]").val("")
-                            $("#change").html("全量图");
-                            createGraph(myChart,result);
-                        }
-                    });
-                }else{
-                    $.ajax({
-                        url:"/graph/getInstanceDetailByID",
-                        data:{"id":name},
-                        dataType:"json",
-                        success:function(result){
-                            var nodes = result["nodes"];
-                            for(var i in nodes){
-                                if(nodes[i].name == name && nodes[i].category<2){
-                                    nodes[i].x = width/2;
-                                    nodes[i].y = height/2;
-                                    nodes[i].fixed =true;
-                                }
-                            }
-                            $("input[name=passname]").val("")
-                            $("#change").html("全量图");
-                            createGraph(myChart,result);
-                        }
-                    });
-                }
+            if(!jQuery.isEmptyObject(result) && result.nodes.length>0){
+                $("#change").html("全量图");
+                $("#changeDetail").html("全量图");
+                $("input[name=passname]").val("")
+                createGraph(myChart, result);
             }else{
                 layer.msg("对不起，我没听懂，请再说一遍。")
             }
             layer.close(index);
         });
+    }
+
+    function exchangeDetail(type,pass) {
+        var data = {};
+        var oldNodes  = option.series[0].nodes;
+        var name = "";
+        var category = 0;
+        for(var i in oldNodes){
+            if(oldNodes[i].remark.indexOf(pass)==0){
+                name =  oldNodes[i].name;
+                category = oldNodes[i].category;
+                break;
+            }
+        }
+
+        //后续改为动态的
+        if(name != "") {
+            if (category == 0) {
+                $.ajax({
+                    url: "/graph/getInstanceByClass",
+                    data: {"className": name, "type": type},
+                    dataType: "json",
+                    async:false,
+                    success: function (result) {
+                        var nodes = result["nodes"];
+                        for (var i in nodes) {
+                            if (nodes[i].name == name && nodes[i].category < 2) {
+                                nodes[i].x = width / 2;
+                                nodes[i].y = height / 2;
+                                nodes[i].fixed = true;
+                            }
+                        }
+                        data = result;
+                    }
+                });
+            } else {
+                $.ajax({
+                    url: "/graph/getInstanceDetailByID",
+                    data: {"id": name, "type": type},
+                    dataType: "json",
+                    async:false,
+                    success: function (result) {
+                        var nodes = result["nodes"];
+                        for (var i in nodes) {
+                            if (nodes[i].name == name && nodes[i].category < 2) {
+                                nodes[i].x = width / 2;
+                                nodes[i].y = height / 2;
+                                nodes[i].fixed = true;
+                            }
+                        }
+                        data = result;
+                    }
+                });
+            }
+            return JSON.stringify(data);
+        }
+    }
+
+    function changeDetail(obj) {
+        var value = $(obj).html();
+        var passnameDetail = $("input[name=passnameDetail]").val();
+        if(passnameDetail!=""){
+            if(value == "全量图"){
+                var data = JSON.parse(exchangeDetail(1,passnameDetail));
+                createGraph(myChart,data);
+                $(obj).html("三度图");
+            }else{
+                var data = JSON.parse(exchangeDetail(0,passnameDetail));
+                createGraph(myChart,data);
+                $(obj).html("全量图");
+            }
+        }else{
+            layer.msg("请先选择详情信息");
+        }
     }
 
     var myChart = echarts.init(document.getElementById('container'));

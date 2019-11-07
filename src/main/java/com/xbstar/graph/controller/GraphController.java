@@ -128,10 +128,17 @@ public class GraphController {
 
     @RequestMapping("/getInstanceByClass")
     @ResponseBody
-    public static JSONObject getInstanceByClass(String className) throws IOException {
+    public static JSONObject getInstanceByClass(int type, String className) throws IOException {
         JSONArray NODE = new JSONArray();
         JSONArray LINK = new JSONArray();
         OntClass ontClass = m.getOntClass(NS + className);
+
+        //m.read(owlPath);
+
+        JSONObject dataJSon = new JSONObject(true);
+        JSONArray nodes = new JSONArray();
+        JSONArray links = new JSONArray();
+        JSONArray categories = new JSONArray();
 
         listClass.getJSONArray("nodes").stream().forEach(item->{
             //System.out.println(item.getClass());
@@ -146,6 +153,9 @@ public class GraphController {
                 concept.put("symbolSize", 37);
                 System.out.printf(ontClass.getLocalName());
                 NODE.add(concept);
+                if(type == 0) {
+                    nodes.add(concept);
+                }
             } else {
                 JSONObject j = new JSONObject();
                 j.put("opacity", 0.5);
@@ -158,13 +168,6 @@ public class GraphController {
             LINK.add(item);
         });
         LINK.addAll(listClass.getJSONArray("links"));
-
-        m.read(owlPath);
-
-        JSONObject dataJSon = new JSONObject(true);
-        JSONArray nodes = new JSONArray();
-        JSONArray links = new JSONArray();
-        JSONArray categories = new JSONArray();
 
 
         for(Iterator instances = ontClass.listInstances(); instances.hasNext(); ) {
@@ -194,9 +197,10 @@ public class GraphController {
             category.put("name",item);
             categories.add(category);
         });
-
-        nodes.addAll(NODE);
-        links.addAll(LINK);
+        if(type == 1) {
+            nodes.addAll(NODE);
+            links.addAll(LINK);
+        }
 
         dataJSon.put("categories",categories);
         dataJSon.put("nodes",nodes);
@@ -217,6 +221,11 @@ public class GraphController {
         m.read(owlPath);
         Individual individual = m.getIndividual(NS + id);
 
+        JSONObject dataJSon = new JSONObject(true);
+        JSONArray categories = new JSONArray();
+        JSONArray nodes = new JSONArray();
+        JSONArray links = new JSONArray();
+
         listClass.getJSONArray("nodes").stream().forEach(item -> {
             JSONObject json = (JSONObject) item;
             if (json.getString("id") == individual.getOntClass().toString().split("#")[1]) {
@@ -227,6 +236,9 @@ public class GraphController {
                 concept.put("remark", individual.toString().split("#")[1].split("@")[0]);
                 concept.put("symbolSize", 37);
                 NODE.add(concept);
+                if(type == 0) {
+                    nodes.add(concept);
+                }
             } else {
                 JSONObject j = new JSONObject();
                 j.put("opacity", 0.5);
@@ -236,11 +248,7 @@ public class GraphController {
         });
         LINK.addAll(listClass.getJSONArray("links"));
 
-        m.read(owlPath);
-        JSONObject dataJSon = new JSONObject(true);
-        JSONArray categories = new JSONArray();
-        JSONArray nodes = new JSONArray();
-        JSONArray links = new JSONArray();
+
 
         StmtIterator stmtIterator = individual.listProperties();
         JSONObject instanceNode = new JSONObject(true);

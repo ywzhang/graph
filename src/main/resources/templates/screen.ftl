@@ -19,7 +19,7 @@
         <button type="button" style="width: 90px" class="layui-btn layui-btn-normal" onclick="relation(this)">概念关系</button>
     </div>
     <div style="margin-top: 30%;">
-        <button type="button" style="width: 90px" class="layui-btn layui-btn-normal" onclick="change(this)">全量图</button>
+        <button type="button" style="width: 90px" class="layui-btn layui-btn-normal" id="change" onclick="change(this)">全量图</button>
     </div>
     <div style="margin-top: 30%;">
         <button type="button" style="width: 90px" class="layui-btn layui-btn-normal" onclick="detail()">详情信息</button>
@@ -31,6 +31,8 @@
     var height = $("#container").height();
 
     function reset() {
+        $("#change").html("全量图");
+        $("input[name=passname]").val("")
         createGraph(myChart,${dataJson});
     }
 
@@ -40,6 +42,7 @@
             $("input[name=passname]").val(pass)
             var data = exchange(value,pass);
             if(data.nodes.length >0){
+                $("#change").html("全量图");
                 createGraph(myChart,data);
             } else{
                 layer.msg("对不起，我没听懂，请再说一遍。")
@@ -163,6 +166,8 @@
                                     nodes[i].fixed =true;
                                 }
                             }
+                            $("input[name=passname]").val("")
+                            $("#change").html("全量图");
                             createGraph(myChart,result);
                         }
                     });
@@ -180,6 +185,8 @@
                                     nodes[i].fixed =true;
                                 }
                             }
+                            $("input[name=passname]").val("")
+                            $("#change").html("全量图");
                             createGraph(myChart,result);
                         }
                     });

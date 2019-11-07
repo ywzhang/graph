@@ -211,7 +211,7 @@ public class GraphController {
 
     @RequestMapping("/getInstanceDetailByID")
     @ResponseBody
-    public static JSONObject getInstanceDetailByID (String id) throws IOException {
+    public static JSONObject getInstanceDetailByID (int type, String id) throws IOException {
         JSONArray NODE = new JSONArray();
         JSONArray LINK = new JSONArray();
         m.read(owlPath);
@@ -339,8 +339,6 @@ public class GraphController {
 
         }
 
-        nodes.addAll(NODE);
-        links.addAll(LINK);
 
         List<String> list = new ArrayList<>(Arrays.asList("概念", "实例", "数据属性"));
         list.stream().forEach(item -> {
@@ -348,6 +346,11 @@ public class GraphController {
             category.put("name", item);
             categories.add(category);
         });
+
+        if(type == 1) {
+            nodes.addAll(NODE);
+            links.addAll(LINK);
+        }
 
         dataJSon.put("categories", categories);
         dataJSon.put("nodes", nodes);

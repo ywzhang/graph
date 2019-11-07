@@ -25,7 +25,7 @@
         <button type="button" style="width: 90px" class="layui-btn layui-btn-normal" onclick="detail()">详情信息</button>
     </div>
     <div style="margin-top: 20%;">
-        <button type="button" style="width: 90px" class="layui-btn layui-btn-normal" id="changeDetail" onclick="changeDetail(this)">全量图</button>
+        <button type="button" style="width: 90px" class="layui-btn layui-btn-normal" id="changeDetail" onclick="changeDetail(this)">详情图</button>
     </div>
     <input type="hidden" name="passname" value="">
     <input type="hidden" name="passnameDetail" value="">
@@ -37,7 +37,7 @@
     function reset() {
         $("#change").html("全量图");
         $("input[name=passname]").val("")
-        $("#changeDetail").html("全量图");
+        $("#changeDetail").html("详情图");
         $("input[name=passnameDetail]").val("")
         createGraph(myChart,${dataJson});
     }
@@ -50,7 +50,7 @@
             var data = exchange(value,pass);
             if(!jQuery.isEmptyObject(data) && data.nodes.length >0){
                 $("#change").html("全量图");
-                $("#changeDetail").html("全量图");
+                $("#changeDetail").html("详情图");
                 $("input[name=passnameDetail]").val("")
                 createGraph(myChart,data);
             } else{
@@ -150,12 +150,12 @@
         layer.prompt({title: '输入详情名称，并确认', formType: 0}, function(pass, index){
             $("input[name=passnameDetail]").val(pass);
             var result = {};
-            if(!jQuery.isEmptyObject(exchangeDetail(0,pass))){
-                result = JSON.parse(exchangeDetail(0,pass));
+            if(!jQuery.isEmptyObject(exchangeDetail(1,pass))){
+                result = JSON.parse(exchangeDetail(1,pass));
             }
             if(!jQuery.isEmptyObject(result) && result.nodes.length>0){
                 $("#change").html("全量图");
-                $("#changeDetail").html("全量图");
+                $("#changeDetail").html("详情图");
                 $("input[name=passname]").val("")
                 createGraph(myChart, result);
             }else{
@@ -228,7 +228,7 @@
             if(value == "全量图"){
                 var data = JSON.parse(exchangeDetail(1,passnameDetail));
                 createGraph(myChart,data);
-                $(obj).html("三度图");
+                $(obj).html("详情图");
             }else{
                 var data = JSON.parse(exchangeDetail(0,passnameDetail));
                 createGraph(myChart,data);

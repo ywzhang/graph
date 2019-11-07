@@ -79,8 +79,8 @@ public class GraphController {
                 JSONObject subLink = new JSONObject(true);
                 OntClass subClass = (OntClass) subClasses.next();
 
-                subLink.put("source", ontClass.getLocalName());
-                subLink.put("target", subClass.getLocalName());
+                subLink.put("source", subClass.getLocalName());
+                subLink.put("target", ontClass.getLocalName());
                 subLink.put("remark", "SubClass Of");
 
                 LINK.add(subLink);

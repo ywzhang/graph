@@ -12,15 +12,19 @@
 <!-- 为 ECharts 准备一个具备大小（宽高）的 容器 -->
 <div id="container" style="width: 80%;height: 100%;float: left;"></div>
 <div style="width: 20%;height: 100%;float:right;">
-    <div style="padding-top: 80%;">
-        <button type="button" class="layui-btn layui-btn-normal" onclick="reset()">知识图谱</button>
+    <div style="padding-top: 50%;">
+        <button type="button" style="width: 90px" class="layui-btn layui-btn-normal" onclick="reset()">知识图谱</button>
     </div>
     <div style="margin-top: 30%;">
-        <button type="button" class="layui-btn layui-btn-normal" onclick="relation()">概念关系</button>
+        <button type="button" style="width: 90px" class="layui-btn layui-btn-normal" onclick="relation(this)">概念关系</button>
     </div>
     <div style="margin-top: 30%;">
-        <button type="button" class="layui-btn layui-btn-normal" onclick="detail()">详情信息</button>
+        <button type="button" style="width: 90px" class="layui-btn layui-btn-normal" onclick="change(this)">全量图</button>
     </div>
+    <div style="margin-top: 30%;">
+        <button type="button" style="width: 90px" class="layui-btn layui-btn-normal" onclick="detail()">详情信息</button>
+    </div>
+    <input type="hidden" name="passname" value="">
 </div>
 <script>
     var width = $("#container").width();
@@ -30,40 +34,104 @@
         createGraph(myChart,${dataJson});
     }
 
-    function relation() {
+    function relation(obj) {
+        var value = $(obj).html();
         layer.prompt({title: '输入概念名称，并确认', formType: 0}, function(pass, index){
-            var dataJson = ${dataJson};
-            var nodes = dataJson["nodes"];
-            var links = dataJson["links"];
-            var NODES = [];
-            NODES.push(pass);
-            for(var i in links){
-                if(links[i].source == pass){
-                    NODES.push(links[i].target);
-                }
-                if(links[i].target == pass){
-                    NODES.push(links[i].source);
-                }
-            }
-            if(NODES.length>1){
-                for(var i in nodes){
-                    if(NODES.indexOf(nodes[i].id)!=-1){
-                        if(pass == nodes[i].id){
-                            nodes[i].x = width/2;
-                            nodes[i].y = height/2;
-                            nodes[i].fixed =true;
-                        }
-                        nodes[i].symbolSize+=5;
-                    }else{
-                        nodes[i].itemStyle = {"opacity":0.5};
-                    }
-                }
-                createGraph(myChart,dataJson);
-            }else{
+            $("input[name=passname]").val(pass)
+            var data = exchange(value,pass);
+            if(data.nodes.length >0){
+                createGraph(myChart,data);
+            } else{
                 layer.msg("对不起，我没听懂，请再说一遍。")
             }
             layer.close(index);
         });
+    }
+
+    function exchange(value,pass) {
+        var data = {};
+        var dataJson = ${dataJson};
+        var nodes = dataJson["nodes"];
+        var links = dataJson["links"];
+        var NODES = [];
+        var NODES2 = [];
+        var LINKS2 = [];
+        NODES.push(pass);
+        //遍历2度节点
+        for(var i in links){
+            if(links[i].source == pass){
+                NODES.push(links[i].target);
+                LINKS2.push(links[i]);
+            }
+            if(links[i].target == pass){
+                NODES.push(links[i].source);
+                LINKS2.push(links[i]);
+            }
+        }
+        //遍历3度节点
+        for(var i in links){
+            for(var j in NODES){
+                if(links[i].source == NODES[j]){
+                    if(NODES2.indexOf(links[i].target) == -1){
+                        NODES2.push(links[i].target);
+                        LINKS2.push(links[i]);
+                    }
+                }
+                if(links[i].target == NODES[j]){
+                    if(NODES2.indexOf(links[i].source) == -1){
+                        NODES2.push(links[i].source);
+                        LINKS2.push(links[i]);
+                    }
+                }
+            }
+        }
+        var nodes2 = [];
+        if(nodes.length>0) {
+            for (var i in nodes) {
+                if (NODES2.indexOf(nodes[i].id) != -1) {
+                    if (pass == nodes[i].id) {
+                        nodes[i].x = width / 2;
+                        nodes[i].y = height / 2;
+                        nodes[i].fixed = true;
+                        nodes[i].symbolSize += 30;
+                        nodes[i].label = {"fontSize": 12};
+                        nodes2.push(nodes[i]);
+                    } else if (NODES.indexOf(nodes[i].id) != -1) {
+                        nodes[i].symbolSize += 15;
+                        nodes[i].label = {"fontSize": 10};
+                        nodes2.push(nodes[i]);
+                    } else {
+                        nodes2.push(nodes[i]);
+                    }
+                } else {
+                    nodes[i].itemStyle = {"opacity": 0.5};
+                }
+            }
+
+            if (value == "三度图" || value == "概念关系") {
+                data = {"nodes": nodes2, "links": LINKS2, "categories": dataJson["categories"]};
+            } else {
+                data = dataJson;
+            }
+            return data;
+        }
+    }
+
+    function change(obj) {
+        var value = $(obj).html();
+        var passname = $("input[name=passname]").val();
+        if(passname!=""){
+            var data = exchange(value,passname);
+            createGraph(myChart,data);
+            if(value == "全量图"){
+                $(obj).html("三度图");
+            }else{
+                $(obj).html("全量图");
+            }
+        }else{
+            layer.msg("请先选择概念关系");
+        }
+
     }
 
     function detail(){

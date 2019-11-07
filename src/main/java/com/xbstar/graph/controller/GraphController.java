@@ -183,7 +183,7 @@ public class GraphController {
 
             link.put("source", ontClass.getLocalName().toString());
             link.put("target", individual.toString().split("#")[1]);
-            link.put("label", "");
+            link.put("label", "Instances Of");
 
             nodes.add(node);
             links.add(link);

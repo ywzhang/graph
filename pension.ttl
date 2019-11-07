@@ -165,11 +165,25 @@ pension:belongHabit rdf:type owl:ObjectProperty ;
                     rdfs:range pension:Habits .
 
 
+###  http://www.xbstar.com/ontology/pension#belongHuman
+pension:belongHuman rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf pension:PensionInstitutionStatusOP ;
+                    rdfs:domain pension:PensionInstitutionStatus ;
+                    rdfs:range pension:Human .
+
+
 ###  http://www.xbstar.com/ontology/pension#belongIncomeType
 pension:belongIncomeType rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf pension:HumanOP ;
                          rdfs:domain pension:Human ;
                          rdfs:range pension:IncomeType .
+
+
+###  http://www.xbstar.com/ontology/pension#belongInstitution
+pension:belongInstitution rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf pension:PensionInstitutionStatusOP ;
+                          rdfs:domain pension:PensionInstitutionStatus ;
+                          rdfs:range pension:Institution .
 
 
 ###  http://www.xbstar.com/ontology/pension#belongIntroducer
@@ -284,6 +298,13 @@ pension:belongStreet rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf pension:AddressOP ;
                      rdfs:domain pension:Address ;
                      rdfs:range pension:Street .
+
+
+###  http://www.xbstar.com/ontology/pension#hasFriend
+pension:hasFriend rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf pension:HumanOP ;
+                  rdfs:domain pension:Human ;
+                  rdfs:range pension:Human .
 
 
 #################################################################
@@ -1367,7 +1388,7 @@ pension:布依族 rdf:type owl:NamedIndividual ,
 
 
 ###  http://www.xbstar.com/ontology/pension#张三
-pension:张三 rdf:type pension:Person ,
+pension:张三 rdf:type owl:NamedIndividual ,
                     pension:Person ;
            pension:belongBloodType pension:AB ;
            pension:belongEducation pension:本科 ;
@@ -1381,6 +1402,7 @@ pension:张三 rdf:type pension:Person ,
            pension:belongPoliticalOutlook pension:党员 ;
            pension:belongReligion pension:佛教 ;
            pension:belongSelfcareType pension:自理 ;
+           pension:hasFriend pension:李四 ;
            pension:hasAlias "小张" ;
            pension:hasBirthday "1955-03-21T22:20:12"^^xsd:dateTime ;
            pension:hasHobby "抽烟，乒乓球" ;
@@ -1468,7 +1490,8 @@ pension:本科 rdf:type owl:NamedIndividual ,
 
 ###  http://www.xbstar.com/ontology/pension#李四
 pension:李四 rdf:type owl:NamedIndividual ,
-                    pension:Person .
+                    pension:Person ;
+           pension:hasFriend pension:王五 .
 
 
 ###  http://www.xbstar.com/ontology/pension#汉族
@@ -1485,7 +1508,8 @@ pension:满族 rdf:type owl:NamedIndividual ,
 
 ###  http://www.xbstar.com/ontology/pension#王五
 pension:王五 rdf:type owl:NamedIndividual ,
-                    pension:Person .
+                    pension:Person ;
+           pension:hasFriend pension:赵六 .
 
 
 ###  http://www.xbstar.com/ontology/pension#瑶族
@@ -1580,7 +1604,8 @@ pension:试住 rdf:type owl:NamedIndividual ,
 
 ###  http://www.xbstar.com/ontology/pension#赵六
 pension:赵六 rdf:type owl:NamedIndividual ,
-                    pension:Person .
+                    pension:Person ;
+           pension:hasFriend pension:张三 .
 
 
 ###  http://www.xbstar.com/ontology/pension#退休金
@@ -31312,7 +31337,7 @@ pension:黎族 rdf:type owl:NamedIndividual ,
 
 
 ###  http://www.xbstar.com/ontology/pension#江苏省@32
-<http://www.xbstar.com/ontology/pension#江苏省@32> rdf:type pension:Province ,
+<http://www.xbstar.com/ontology/pension#江苏省@32> rdf:type owl:NamedIndividual ,
                                                          pension:Province ;
                                                 pension:isValidate "1" ;
                                                 pension:parentCode "00000" ;

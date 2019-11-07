@@ -4,6 +4,8 @@ function getOption(graphInfo){
     links=graphInfo['links']
     categories=graphInfo['categories']
     color = ['#FFCC00','#9933FF','#B3EE3A']
+    repulsion = graphInfo['repulsion']==null?100:graphInfo['repulsion'];
+    gravity=graphInfo['gravity']==null?0.03:graphInfo['gravity'];
 
     //设置option样式
     var option = {
@@ -40,8 +42,8 @@ function getOption(graphInfo){
                 roam: true,//是否开启鼠标缩放和平移漫游。默认不开启。如果只想要开启缩放或者平移，可以设置成 'scale' 或者 'move'。设置成 true 为都开启
                 symbol: 'circle',
                 force : { //力引导图基本配置
-                    repulsion : [100,120],//节点之间的斥力因子。支持数组表达斥力范围，值越大斥力越大。
-                    gravity : 0.03,//节点受到的向中心的引力因子。该值越大节点越往中心点靠拢
+                    repulsion : repulsion,//节点之间的斥力因子。支持数组表达斥力范围，值越大斥力越大。
+                    gravity : gravity,//节点受到的向中心的引力因子。该值越大节点越往中心点靠拢
                     // edgeLength :[10, 50],//边的两个节点之间的距离，这个距离也会受 repulsion。[10, 50] 。值越小则长度越长
                     layoutAnimation : true//因为力引导布局会在多次迭代后才会稳定，这个参数决定是否显示布局的迭代动画，在浏览器端节点数据较多（>100）的时候不建议关闭，布局过程会造成浏览器假死。
                 },

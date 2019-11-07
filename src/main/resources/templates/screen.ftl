@@ -48,6 +48,8 @@
         layer.prompt({title: '输入概念名称，并确认', formType: 0}, function(pass, index){
             $("input[name=passname]").val(pass)
             var data = exchange(value,pass);
+            data["repulsion"]=500;
+            data["gravity"]=0.001;
             if(!jQuery.isEmptyObject(data) && data.nodes.length >0){
                 $("#change").html("全量图");
                 $("#changeDetail").html("详情图");
@@ -132,14 +134,16 @@
     function change(obj) {
         var value = $(obj).html();
         var passname = $("input[name=passname]").val();
+        var data = exchange(value,passname);
         if(passname!=""){
-            var data = exchange(value,passname);
-            createGraph(myChart,data);
             if(value == "全量图"){
                 $(obj).html("三度图");
             }else{
+                data["repulsion"]=500;
+                data["gravity"]=0.001;
                 $(obj).html("全量图");
             }
+            createGraph(myChart,data);
         }else{
             layer.msg("请先选择概念关系");
         }

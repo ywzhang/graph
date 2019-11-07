@@ -215,7 +215,6 @@ public class GraphController {
         JSONArray NODE = new JSONArray();
         JSONArray LINK = new JSONArray();
         m.read(owlPath);
-//        listClass();
         Individual individual = m.getIndividual(NS + id);
 
         listClass.getJSONArray("nodes").stream().forEach(item -> {
@@ -315,7 +314,6 @@ public class GraphController {
 
                     for (Iterator allClass = ind.listOntClasses(false); allClass.hasNext(); ) {
                         OntClass ontClass = (OntClass) allClass.next();
-                        //JSONObject node = new JSONObject(true);
                         JSONObject instanceLink = new JSONObject(true);
 
                         if (!ontClass.isHierarchyRoot()) {
